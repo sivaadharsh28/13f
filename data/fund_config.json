@@ -1,0 +1,114 @@
+{
+  "AC": {
+    "aliases": [
+      "AKRE CAPITAL MANAGEMENT LLC"
+    ],
+    "cik": "0001112520",
+    "display_name": "Chuck Akre - Akre Capital",
+    "fallback_source": "dataroma",
+    "fund_code": "AC",
+    "name": "Akre Capital Management LLC",
+    "source": "sec"
+  },
+  "AM": {
+    "aliases": [
+      "APPALOOSA LP"
+    ],
+    "cik": "0001656456",
+    "display_name": "David Tepper - Appaloosa",
+    "fallback_source": "dataroma",
+    "fund_code": "AM",
+    "name": "Appaloosa LP",
+    "source": "sec",
+    "strategy_horizon_trading_days": 63
+  },
+  "BRK": {
+    "aliases": [
+      "BERKSHIRE HATHAWAY INC"
+    ],
+    "cik": "0001067983",
+    "display_name": "Warren Buffett - Berkshire",
+    "fallback_source": "dataroma",
+    "fund_code": "BRK",
+    "name": "Berkshire Hathaway Inc",
+    "source": "sec"
+  },
+  "DA": {
+    "aliases": [
+      "DORSEY ASSET MANAGEMENT, LLC"
+    ],
+    "cik": "0001671657",
+    "display_name": "Pat Dorsey - Dorsey Asset",
+    "fallback_source": "dataroma",
+    "fund_code": "DA",
+    "name": "Dorsey Asset Management, LLC",
+    "source": "sec"
+  },
+  "DUQ": {
+    "aliases": [
+      "DUQUESNE FAMILY OFFICE LLC"
+    ],
+    "cik": "0001536411",
+    "display_name": "Stanley Druckenmiller - Duquesne",
+    "fallback_source": null,
+    "name": "Duquesne Family Office LLC",
+    "source": "sec",
+    "strategy_horizon_trading_days": 63
+  },
+  "HC": {
+    "aliases": [
+      "HIMALAYA CAPITAL MANAGEMENT LLC"
+    ],
+    "cik": "0001709323",
+    "display_name": "Li Lu - Himalaya",
+    "fallback_source": "dataroma",
+    "fund_code": "HC",
+    "name": "Himalaya Capital Management LLC",
+    "source": "sec"
+  },
+  "PSC": {
+    "aliases": [
+      "PERSHING SQUARE CAPITAL MANAGEMENT, L.P."
+    ],
+    "cik": "0001336528",
+    "display_name": "Bill Ackman - Pershing Square",
+    "fallback_source": "dataroma",
+    "fund_code": "psc",
+    "name": "Pershing Square Capital Management, L.P.",
+    "source": "sec"
+  },
+  "TCI": {
+    "aliases": [
+      "TCI FUND MANAGEMENT LTD"
+    ],
+    "cik": "0001647251",
+    "display_name": "Chris Hohn - TCI Fund",
+    "fallback_source": "dataroma",
+    "fund_code": "tci",
+    "name": "TCI Fund Management Ltd",
+    "source": "sec"
+  },
+  "THIEL": {
+    "aliases": [
+      "THIEL MACRO LLC"
+    ],
+    "cik": "0001562087",
+    "display_name": "Peter Thiel - Thiel Macro",
+    "fallback_source": null,
+    "name": "Thiel Macro LLC",
+    "source": "sec",
+    "strategy_horizon_trading_days": 63
+  },
+  "VFC": {
+    "aliases": [
+      "VALLEY FORGE CAPITAL MANAGEMENT, LP",
+      "VALLEY FORGE ADVISORS, L.P."
+    ],
+    "cik": "0001697868",
+    "display_name": "Valley Forge Capital Management",
+    "fallback_source": "dataroma",
+    "fund_code": "VFC",
+    "name": "Valley Forge Capital Management, LP",
+    "source": "sec"
+  }
+}

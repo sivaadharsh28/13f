@@ -1,0 +1,13 @@
+ticker_clean,fund,portfolio_weight,quarter,sector,ticker,source
+AAPL,Warren Buffett - Berkshire,3.1,2024Q2,Information Technology,AAPL,demo
+AAPL,Bill Ackman - Pershing Square,2.8,2024Q2,Information Technology,AAPL,demo
+AAPL,David Tepper - Appaloosa,2.4,2024Q2,Information Technology,AAPL,demo
+MSFT,Warren Buffett - Berkshire,2.1,2024Q2,Information Technology,MSFT,demo
+AMZN,David Tepper - Appaloosa,1.9,2024Q2,Consumer Discretionary,AMZN,demo
+XOM,Stanley Druckenmiller - Duquesne,2.7,2024Q2,Energy,XOM,demo
+JPM,Bill Ackman - Pershing Square,2.3,2024Q2,Financials,JPM,demo
+PG,Warren Buffett - Berkshire,1.8,2024Q2,Consumer Staples,PG,demo
+AAPL,Warren Buffett - Berkshire,3.4,2024Q3,Information Technology,AAPL,demo
+MSFT,Bill Ackman - Pershing Square,2.9,2024Q3,Information Technology,MSFT,demo
+NVDA,David Tepper - Appaloosa,2.6,2024Q3,Information Technology,NVDA,demo
+XOM,Stanley Druckenmiller - Duquesne,3.1,2024Q3,Energy,XOM,demo

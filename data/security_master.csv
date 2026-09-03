@@ -1,0 +1,996 @@
+cusip,ticker,sector,raw_sector,quote_type,matched_name,match_method,issuer,title_of_class,valid_from,valid_to,classification_source,retrieved_at
+000000000,,Unknown,Technology,EQUITY,Unidentified 13F placeholder,reviewed_override,NAME,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+000899104,ADMA,Health Care,Healthcare,EQUITY,"ADMA Biologics, Inc.",cusip_search,Adma Biologics Inc,COM,,,Yahoo Finance search,2026-09-03
+00130H105,AES,Utilities,Utilities,EQUITY,The AES Corporation,cusip_search,Aes Corp,COM,,,Yahoo Finance search,2026-09-03
+001547108,,Unknown,,,,unresolved,AK STL HLDG CORP,COM,,,Yahoo Finance search,2026-09-03
+00162Q452,AMLP,Exchange-Traded Fund,,ETF,Alerian MLP ETF,cusip_search,ALPS ETF TR,ALERIAN MLP,,,Yahoo Finance search,2026-09-03
+00162Q866,AMLP,Exchange-Traded Fund,,ETF,Alerian MLP ETF,cusip_search,ALPS ETF TR,ALERIAN MLP,,,Yahoo Finance search,2026-09-03
+00206R102,T,Communication Services,Communication Services,EQUITY,AT&T Inc.,cusip_search,AT&T INC,COM,,,Yahoo Finance search,2026-09-03
+00214Q104,ARKK,Exchange-Traded Fund,,ETF,ARK Innovation ETF,cusip_search,ARK ETF TR,INNOVATION ETF,,,Yahoo Finance search,2026-09-03
+002824100,ABT,Health Care,Healthcare,EQUITY,Abbott Laboratories,cusip_search,Abbott Labs,COM,,,Yahoo Finance search,2026-09-03
+00287Y109,ABBV,Health Care,Healthcare,EQUITY,AbbVie Inc.,cusip_search,ABBVIE INC,COM,,,Yahoo Finance search,2026-09-03
+00288U106,ABCL,Health Care,Healthcare,EQUITY,AbCellera Biologics Inc.,cusip_search,Abcellera Biologics Inc,COM,,,Yahoo Finance search,2026-09-03
+004225108,ACAD,Health Care,Healthcare,EQUITY,ACADIA Pharmaceuticals Inc.,cusip_search,Acadia Pharmaceuticals Inc,COM,,,Yahoo Finance search,2026-09-03
+00507V109,,Unknown,,,,unresolved,ACTIVISION BLIZZARD INC,COM,,,Yahoo Finance search,2026-09-03
+00534A102,IVVD,Health Care,Healthcare,EQUITY,"Invivyd, Inc.",cusip_search,Invivyd Inc,COM,,,Yahoo Finance search,2026-09-03
+00724F101,ADBE,Information Technology,Technology,EQUITY,Adobe Inc.,cusip_search,ADOBE INC,COM,,,Yahoo Finance search,2026-09-03
+00771V108,0P0.SG,Financials,Financial Services,EQUITY,Aerie Pharmaceuticals Inc,issuer_search_review,AERIE PHARMACEUTICALS INC,COM,,,Yahoo Finance search,2026-09-03
+007903107,AMD,Information Technology,Technology,EQUITY,"Advanced Micro Devices, Inc.",cusip_search,ADVANCED MICRO DEVICES INC,COM,,,Yahoo Finance search,2026-09-03
+00827B106,AFRM,Financials,Financial Services,EQUITY,"Affirm Holdings, Inc.",cusip_search,Affirm Hldgs Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+00835Q202,AEVA,Information Technology,Technology,EQUITY,"Aeva Technologies, Inc.",cusip_search,Aeva Technologies Inc,COM NEW,,,Yahoo Finance search,2026-09-03
+00846U101,A,Health Care,Healthcare,EQUITY,"Agilent Technologies, Inc.",cusip_search,AGILENT TECHNOLOGIES INC,COM,,,Yahoo Finance search,2026-09-03
+008474108,AEM,Materials,Basic Materials,EQUITY,Agnico Eagle Mines Limited,cusip_search,Agnico Eagle Mines Ltd,COM,,,Yahoo Finance search,2026-09-03
+008916108,,Unknown,,,,unresolved,Agrium Inc,COM,,,Yahoo Finance search,2026-09-03
+009066101,ABNB,Consumer Discretionary,Consumer Cyclical,EQUITY,"Airbnb, Inc.",cusip_search,AIRBNB INC,COM CL A,,,Yahoo Finance search,2026-09-03
+009158106,APD,Materials,Basic Materials,EQUITY,"Air Products and Chemicals, Inc.",cusip_search,AIR PRODS & CHEMS INC,COM,,,Yahoo Finance search,2026-09-03
+00971T101,AKAM,Information Technology,Technology,EQUITY,"Akamai Technologies, Inc.",cusip_search,Akamai Tech Inc,COM,,,Yahoo Finance search,2026-09-03
+011642105,ALRM,Information Technology,Technology,EQUITY,"Alarm.com Holdings, Inc.",cusip_search,ALARM COM HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+013817101,,Unknown,,,,unresolved,Alcoa Inc,COM,,,Yahoo Finance search,2026-09-03
+013872106,AA,Materials,Basic Materials,EQUITY,Alcoa Corporation,cusip_search,Alcoa Corp,COM,,,Yahoo Finance search,2026-09-03
+015271109,ARE,Real Estate,Real Estate,EQUITY,"Alexandria Real Estate Equities, Inc.",cusip_search,ALEXANDRIA REAL ESTATE EQ IN,COM,,,Yahoo Finance search,2026-09-03
+015351109,,Unknown,,,,unresolved,ALEXION PHARMACEUTICALS INC,COM,,,Yahoo Finance search,2026-09-03
+01609W102,BABA,Consumer Discretionary,Consumer Cyclical,EQUITY,Alibaba Group Holding Limited,cusip_search,ALIBABA GROUP HLDG LTD,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+01626W101,ALIT,Information Technology,Technology,EQUITY,"Alight, Inc.",cusip_search,ALIGHT INC,COM CL A,,,Yahoo Finance search,2026-09-03
+01741R102,ATI,Industrials,Industrials,EQUITY,ATI Inc.,cusip_search,Allegheny Tech Inc.,COM,,,Yahoo Finance search,2026-09-03
+018490102,,Unknown,,,,unresolved,ALLERGAN INC,COM,,,Yahoo Finance search,2026-09-03
+018581108,BFH,Financials,Financial Services,EQUITY,"Bread Financial Holdings, Inc.",cusip_search,ALLIANCE DATA SYSTEMS CORP,COM,,,Yahoo Finance search,2026-09-03
+020002101,ALL,Financials,Financial Services,EQUITY,The Allstate Corporation,cusip_search,ALLSTATE CORP,COM,,,Yahoo Finance search,2026-09-03
+02005N100,ALLY,Financials,Financial Services,EQUITY,Ally Financial Inc.,cusip_search,ALLY FINL INC,COM,,,Yahoo Finance search,2026-09-03
+020398707,ALM,Materials,Basic Materials,EQUITY,Almonty Industries Inc.,cusip_search,Almonty Inds Inc,COM NEW,,,Yahoo Finance search,2026-09-03
+02043Q107,ALNY,Health Care,Healthcare,EQUITY,"Alnylam Pharmaceuticals, Inc.",cusip_search,Alnylam Pharmaceuticals Inc,COM,,,Yahoo Finance search,2026-09-03
+020764106,AMR,Materials,Basic Materials,EQUITY,"Alpha Metallurgical Resources, Inc.",cusip_search,Alpha Metallurgical Resour I,COM,,,Yahoo Finance search,2026-09-03
+02079K107,GOOG,Communication Services,Communication Services,EQUITY,Alphabet Inc.,cusip_search,ALPHABET INC,CAP STK CL C,,,Yahoo Finance search,2026-09-03
+02079K305,GOOGL,Communication Services,Communication Services,EQUITY,Alphabet Inc.,reviewed_override,ALPHABET INC,CAP STK CL A,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+021346101,,Unknown,,,,unresolved,ALTABA INC,COM,,,Yahoo Finance search,2026-09-03
+02156B103,,Unknown,,,,unresolved,ALTERYX INC,COM CL A,,,Yahoo Finance search,2026-09-03
+02209S103,MO,Consumer Staples,Consumer Defensive,EQUITY,"Altria Group, Inc.",cusip_search,ALTRIA GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+023135106,AMZN,Consumer Discretionary,Consumer Cyclical,EQUITY,"Amazon.com, Inc.",cusip_search,AMAZON COM INC,COM,,,Yahoo Finance search,2026-09-03
+023139884,OSG,Financials,Financial Services,EQUITY,"Octave Specialty Group, Inc.",cusip_search,AMBAC FINL GROUP INC,COM NEW,,,Yahoo Finance search,2026-09-03
+02376R102,AAL,Industrials,Industrials,EQUITY,American Airlines Group Inc.,cusip_search,AMERICAN AIRLS GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+025537101,AEP,Utilities,Utilities,EQUITY,"American Electric Power Company, Inc.",cusip_search,Am Elect Pwr Co Inc.,COM,,,Yahoo Finance search,2026-09-03
+02553E106,AEO,Consumer Discretionary,Consumer Cyclical,EQUITY,"American Eagle Outfitters, Inc.",cusip_search,Amer Eagle Outfitters Inc,COM,,,Yahoo Finance search,2026-09-03
+025816109,AXP,Financials,Financial Services,EQUITY,American Express Company,cusip_search,AMERICAN EXPRESS CO,COM,,,Yahoo Finance search,2026-09-03
+026874156,,Unknown,,,,unresolved,AMERICAN INTL GROUP INC,W EXP 01/19/202,,,Yahoo Finance search,2026-09-03
+026874784,AIG,Financials,Financial Services,EQUITY,"American International Group, Inc.",cusip_search,Am Int'l Grp Inc,COM,,,Yahoo Finance search,2026-09-03
+03027X100,AMT,Real Estate,Real Estate,EQUITY,American Tower Corporation,cusip_search,AMERICAN TOWER CORP NEW,COM,,,Yahoo Finance search,2026-09-03
+03027X308,,Unknown,,,,unresolved,AMERICAN TOWER CORP NEW,PFD CONV SER A,,,Yahoo Finance search,2026-09-03
+03027X407,,Unknown,,,,unresolved,AMERICAN TOWER CORP NEW,PFD CONV SER B,,,Yahoo Finance search,2026-09-03
+03076K108,ABCB,Financials,Financial Services,EQUITY,Ameris Bancorp,cusip_search,Ameris Bancorp,COM,,,Yahoo Finance search,2026-09-03
+031162100,AMGN,Health Care,Healthcare,EQUITY,Amgen Inc.,cusip_search,Amgen Inc,COM,,,Yahoo Finance search,2026-09-03
+032654105,ADI,Information Technology,Technology,EQUITY,"Analog Devices, Inc.",cusip_search,Analog Devices Inc,COM,,,Yahoo Finance search,2026-09-03
+03272L108,,Unknown,,,,unresolved,Anaplan Inc,COM,,,Yahoo Finance search,2026-09-03
+03349M105,,Unknown,,,,unresolved,Andeavor,COM,,,Yahoo Finance search,2026-09-03
+035710409,,Unknown,,,,unresolved,ANNALY CAP MGMT INC,COM,,,Yahoo Finance search,2026-09-03
+03662Q105,,Unknown,,,,unresolved,ANSYS INC,COM,,,Yahoo Finance search,2026-09-03
+03674X106,AR,Energy,Energy,EQUITY,Antero Resources Corporation,cusip_search,ANTERO RESOURCES CORP,COM,,,Yahoo Finance search,2026-09-03
+036752103,ELV,Health Care,Healthcare,EQUITY,"Elevance Health, Inc.",cusip_search,ANTHEM INC,COM,,,Yahoo Finance search,2026-09-03
+037411105,,Unknown,,,,unresolved,Apache Corp,COM,,,Yahoo Finance search,2026-09-03
+03743Q108,APA,Energy,Energy,EQUITY,APA Corporation,cusip_search,APA CORPORATION,COM,,,Yahoo Finance search,2026-09-03
+03748R101,,Unknown,,,,unresolved,APARTMENT INVT & MGMT CO,CL A,,,Yahoo Finance search,2026-09-03
+037833100,AAPL,Information Technology,Technology,EQUITY,Apple Inc.,cusip_search,APPLE INC,COM,,,Yahoo Finance search,2026-09-03
+038222105,AMAT,Information Technology,Technology,EQUITY,"Applied Materials, Inc.",cusip_search,APPLIED MATLS INC,COM,,,Yahoo Finance search,2026-09-03
+03831W108,APP,Communication Services,Communication Services,EQUITY,AppLovin Corporation,cusip_search,APPLOVIN CORP,COM CL A,,,Yahoo Finance search,2026-09-03
+039380407,,Unknown,,,,unresolved,ARCH COAL INC,CL A,,,Yahoo Finance search,2026-09-03
+03938L104,,Unknown,,,,unresolved,ARCELORMITTAL SA LUXEMBOURG,NY REGISTRY SH,,,Yahoo Finance search,2026-09-03
+03940C100,ACLX,Health Care,,,"Arcellx, Inc.",reviewed_override,Arcellx Inc,COMMON STOCK,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+03940R107,,Unknown,,,,unresolved,Arch Resources Inc,CL A,,,Yahoo Finance search,2026-09-03
+04010E109,AGX,Industrials,Industrials,EQUITY,"Argan, Inc.",cusip_search,Argan Inc,COM,,,Yahoo Finance search,2026-09-03
+04033A100,,Unknown,,,,unresolved,ARIAD Pharms Inc,COM,,,Yahoo Finance search,2026-09-03
+040413106,ANET,Information Technology,Technology,EQUITY,"Arista Networks, Inc.",issuer_search_review,Arista Networks Inc,COM,,,Yahoo Finance search,2026-09-03
+041356205,,Unknown,,,,unresolved,ARLINGTON ASSET INVT CORP,CL A NEW,,,Yahoo Finance search,2026-09-03
+042068205,ARM,Information Technology,Technology,EQUITY,Arm Holdings plc,cusip_search,Arm Holdings Plc,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+04271T100,ARRY,Information Technology,Technology,EQUITY,"Array Technologies, Inc.",cusip_search,Array Technologies Inc,COM SHS,,,Yahoo Finance search,2026-09-03
+04351P101,ASND,Health Care,Healthcare,EQUITY,Ascendis Pharma A/S,reviewed_override,Ascendis Pharma A/S,SPONSORED ADR,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+045327103,,Unknown,,,,unresolved,ASPEN TECHNOLOGY INC,COM,,,Yahoo Finance search,2026-09-03
+046353108,AZN,Health Care,Healthcare,EQUITY,AstraZeneca PLC,issuer_search_review,Astrazeneca PLC,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+047726302,BATRK,Communication Services,Communication Services,EQUITY,"Atlanta Braves Holdings, Inc.",cusip_search,ATLANTA BRAVES HLDGS INC,COM SER C,,,Yahoo Finance search,2026-09-03
+051774107,AUR,Consumer Discretionary,Consumer Cyclical,EQUITY,"Aurora Innovation, Inc.",cusip_search,Aurora Innovation Inc,CLASS A COM,,,Yahoo Finance search,2026-09-03
+052769106,ADSK,Information Technology,Technology,EQUITY,"Autodesk, Inc.",cusip_search,AUTODESK INC,COM,,,Yahoo Finance search,2026-09-03
+053015103,ADP,Information Technology,Technology,EQUITY,"Automatic Data Processing, Inc.",cusip_search,AUTOMATIC DATA PROCESSING IN,COM,,,Yahoo Finance search,2026-09-03
+053332102,AZO,Consumer Discretionary,Consumer Cyclical,EQUITY,"AutoZone, Inc.",cusip_search,AUTOZONE INC,COM,,,Yahoo Finance search,2026-09-03
+05338G106,,Unknown,,,,unresolved,AVALARA INC,COM,,,Yahoo Finance search,2026-09-03
+05352A100,AVTR,Health Care,Healthcare,EQUITY,"Avantor, Inc.",cusip_search,Avantor Inc,COM,,,Yahoo Finance search,2026-09-03
+054937107,BBT,Financials,Financial Services,EQUITY,Beacon Financial Corporation,cusip_search,BB&T Corp,COM,,,Yahoo Finance search,2026-09-03
+055622104,BP,Energy,Energy,EQUITY,BP p.l.c.,cusip_search,BP PLC,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+05605H100,BWXT,Industrials,Industrials,EQUITY,"BWX Technologies, Inc.",cusip_search,Bwx Technologies Inc,COM,,,Yahoo Finance search,2026-09-03
+056752108,BIDU,Communication Services,Communication Services,EQUITY,"Baidu, Inc.",reviewed_override,BAIDU INC,SPON ADR REP A,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+056752908,BIDU,Communication Services,Communication Services,EQUITY,"Baidu, Inc.",issuer_search_review,Baidu Inc,Spon ADR A,,,Yahoo Finance search,2026-09-03
+058498106,BALL,Consumer Discretionary,Consumer Cyclical,EQUITY,Ball Corporation,cusip_search,BALL CORP,COM,,,Yahoo Finance search,2026-09-03
+05961W105,BMA,Financials,Financial Services,EQUITY,Banco Macro S.A.,cusip_search,Banco Macro Sa,SPON ADR B,,,Yahoo Finance search,2026-09-03
+060505104,BAC,Financials,Financial Services,EQUITY,Bank of America Corporation,cusip_search,BANK AMER CORP,COM,,,Yahoo Finance search,2026-09-03
+060505146,BAC,Financials,Financial Services,EQUITY,Bank of America Corporation,issuer_search_review,BANK OF AMERICA CORPORATION,*W EXP 01/16/201,,,Yahoo Finance search,2026-09-03
+064058100,BNY,Financials,Financial Services,EQUITY,The Bank of New York Mellon Corporation,cusip_search,BANK OF NEW YORK MELLON CORP,COM,,,Yahoo Finance search,2026-09-03
+06417N103,OZK,Financials,Financial Services,EQUITY,Bank OZK,cusip_search,Bank Ozk Little Rock Ark,COM,,,Yahoo Finance search,2026-09-03
+06738E204,BCS,Financials,Financial Services,EQUITY,Barclays PLC,cusip_search,Barclays Plc,ADR,,,Yahoo Finance search,2026-09-03
+06740Q252,,Unknown,,,,unresolved,BARCLAYS BK PLC,IPATH S&P500 VIX,,,Yahoo Finance search,2026-09-03
+06742E711,,Unknown,,,,unresolved,BARCLAYS BK PLC,IPATH S&P500 VIX,,,Yahoo Finance search,2026-09-03
+06746L422,,Unknown,,,,unresolved,BARCLAYS BK PLC,IPATH S&P500 VIX,,,Yahoo Finance search,2026-09-03
+06746P621,VXX,Exchange-Traded Fund,,ETF,iPath Series B S&P 500 VIX Short-Term Futures ETN,cusip_search,BARCLAYS BK PLC,IPATH B SHRT TRM,,,Yahoo Finance search,2026-09-03
+067901108,,Unknown,,,,unresolved,Barrick Gold Corp,COM,,,Yahoo Finance search,2026-09-03
+073463101,6K5.F,Communication Services,Communication Services,EQUITY,"The Beachbody Company, Inc.",issuer_search_review,THE BEACHBODY COMPANY INC,COM CL A,,,Yahoo Finance search,2026-09-03
+073730103,,Unknown,,,,unresolved,BEAM INC,COM,,,Yahoo Finance search,2026-09-03
+07373V105,BEAM,Health Care,Healthcare,EQUITY,Beam Therapeutics Inc.,cusip_search,Beam Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+07725L102,49BA.SG,Health Care,Healthcare,EQUITY,BeiGene Ltd,cusip_search,Beigene Ltd,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+07782B104,BLTE,Health Care,Healthcare,EQUITY,"Belite Bio, Inc",cusip_search,Belite Bio Inc Sponsored,ADS,,,Yahoo Finance search,2026-09-03
+084670108,,Unknown,,,,unresolved,BERKSHIRE HATHAWAY INC DEL,CL A,,,Yahoo Finance search,2026-09-03
+084670702,BRK-B,Financials,Financial Services,EQUITY,Berkshire Hathaway Inc.,cusip_search,BERKSHIRE HATHAWAY INC DEL,CL B NEW,,,Yahoo Finance search,2026-09-03
+088606108,BHP,Materials,Basic Materials,EQUITY,BHP Group Limited,cusip_search,Bhp Billiton Ltd,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+088786108,BCYC,Health Care,Healthcare,EQUITY,Bicycle Therapeutics plc,cusip_search,Bicycle Therapeutics Plc,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+090043100,BILL,Information Technology,Technology,EQUITY,"BILL Holdings, Inc.",cusip_search,Bill Com Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+09061G101,BMRN,Health Care,Healthcare,EQUITY,BioMarin Pharmaceutical Inc.,cusip_search,Biomarin Pharmaceutical Inc,COM,,,Yahoo Finance search,2026-09-03
+09062X103,BIIB,Health Care,Healthcare,EQUITY,Biogen Inc.,cusip_search,BIOGEN INC,COM,,,Yahoo Finance search,2026-09-03
+09075V102,0A3M.IL,Health Care,Healthcare,EQUITY,BioNTech SE,cusip_search,Biontech Se,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+09260D107,BX,Financials,Financial Services,EQUITY,Blackstone Inc.,cusip_search,BLACKSTONE GROUP INC,COM CL A,,,Yahoo Finance search,2026-09-03
+093671105,HRB,Consumer Discretionary,Consumer Cyclical,EQUITY,"H&R Block, Inc.",cusip_search,BLOCK H & R INC,COM,,,Yahoo Finance search,2026-09-03
+093712107,BE,Industrials,Industrials,EQUITY,Bloom Energy Corporation,cusip_search,Bloom Energy Corp,COM CL A,,,Yahoo Finance search,2026-09-03
+09609G100,,Unknown,,,,unresolved,Bluebird Bio Inc,COM,,,Yahoo Finance search,2026-09-03
+097023105,BA,Industrials,Industrials,EQUITY,The Boeing Company,cusip_search,BOEING CO,COM,,,Yahoo Finance search,2026-09-03
+09857L108,BKNG,Consumer Discretionary,Consumer Cyclical,EQUITY,Booking Holdings Inc.,cusip_search,Booking Holdings Inc,COM,,,Yahoo Finance search,2026-09-03
+099502106,BAH,Industrials,Industrials,EQUITY,Booz Allen Hamilton Holding Corporation,cusip_search,Booz Allen Hamilton Hldg Cor,CL A,,,Yahoo Finance search,2026-09-03
+101044105,BOC,Industrials,Industrials,EQUITY,Boston Omaha Corporation,cusip_search,BOSTON OMAHA CORP,COM,,,Yahoo Finance search,2026-09-03
+101121101,BXP,Real Estate,Real Estate,EQUITY,"BXP, Inc.",cusip_search,BOSTON PROPERTIES INC,COM,,,Yahoo Finance search,2026-09-03
+101137107,BSX,Health Care,Healthcare,EQUITY,Boston Scientific Corporation,cusip_search,BOSTON SCIENTIFIC CORP,COM,,,Yahoo Finance search,2026-09-03
+101388106,,Unknown,,,,unresolved,Bottomline Tech Del Inc,COM,,,Yahoo Finance search,2026-09-03
+103304101,BYD,Consumer Discretionary,Consumer Cyclical,EQUITY,Boyd Gaming Corporation,cusip_search,BOYD GAMING CORP,COM,,,Yahoo Finance search,2026-09-03
+10806X102,BBIO,Health Care,Healthcare,EQUITY,"BridgeBio Pharma, Inc.",cusip_search,Bridgebio Pharma Inc,COM,,,Yahoo Finance search,2026-09-03
+110122108,BMY,Health Care,Healthcare,EQUITY,Bristol-Myers Squibb Company,cusip_search,BRISTOL-MYERS SQUIBB CO,COM,,,Yahoo Finance search,2026-09-03
+110448107,BTI,Consumer Staples,Consumer Defensive,EQUITY,British American Tobacco p.l.c.,cusip_search,British Amern Tob Plc,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+11135F101,AVGO,Information Technology,Technology,EQUITY,Broadcom Inc.,cusip_search,BROADCOM INC,COM,,,Yahoo Finance search,2026-09-03
+11135F200,AVGO,Information Technology,Technology,EQUITY,Broadcom Inc.,issuer_search_review,BROADCOM INC,8% CNV PFD SER A,,,Yahoo Finance search,2026-09-03
+112585104,,Unknown,,,,unresolved,BROOKFIELD ASSET MGMT INC,CL A LTD VT SH,,,Yahoo Finance search,2026-09-03
+11271J107,BN,Financials,Financial Services,EQUITY,Brookfield Corporation,reviewed_override,BROOKFIELD CORP,CL A LTD VT SH,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+113004105,BAM.TO,Financials,Financial Services,EQUITY,Brookfield Asset Management Ltd.,cusip_search,BROOKFIELD ASSET MANAGMT LTD,CL A LMT VTG SHS,,,Yahoo Finance search,2026-09-03
+12008R107,BLDR,Industrials,Industrials,EQUITY,"Builders FirstSource, Inc.",cusip_search,Builders Firstsource Inc,COM,,,Yahoo Finance search,2026-09-03
+121220107,,Unknown,,,,unresolved,BURGER KING WORLDWIDE INC,COM,,,Yahoo Finance search,2026-09-03
+122017106,BURL,Consumer Discretionary,Consumer Cyclical,EQUITY,"Burlington Stores, Inc.",cusip_search,BURLINGTON STORES INC,COM,,,Yahoo Finance search,2026-09-03
+124857202,,Unknown,,,,unresolved,CBS CORP NEW,CL B,,,Yahoo Finance search,2026-09-03
+12510Q100,CCC,Information Technology,Technology,EQUITY,CCC Intelligent Solutions Holdings Inc.,cusip_search,CCC INTELLIGENT SOLUTIONS HL,COM,,,Yahoo Finance search,2026-09-03
+12514G108,CDW,Information Technology,Technology,EQUITY,CDW Corporation,cusip_search,Cdw Corp,COM,,,Yahoo Finance search,2026-09-03
+125269100,CF,Materials,Basic Materials,EQUITY,"CF Industries Holdings, Inc.",cusip_search,Cf Inds Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+125896100,CMS,Utilities,Utilities,EQUITY,CMS Energy Corporation,cusip_search,CMS ENERGY CORP,COM,,,Yahoo Finance search,2026-09-03
+126408103,CSX,Industrials,Industrials,EQUITY,CSX Corporation,cusip_search,CSX CORP,COM,,,Yahoo Finance search,2026-09-03
+12674W109,CABA,Health Care,Healthcare,EQUITY,"Cabaletta Bio, Inc.",cusip_search,Cabaletta Bio Inc,COM,,,Yahoo Finance search,2026-09-03
+127097103,,Unknown,,,,unresolved,Cabot Oil & Gas Corp,COM,,,Yahoo Finance search,2026-09-03
+127387108,CDNS,Information Technology,Technology,EQUITY,"Cadence Design Systems, Inc.",cusip_search,Cadence Design System Inc,COM,,,Yahoo Finance search,2026-09-03
+127686103,CZR,Consumer Discretionary,Consumer Cyclical,EQUITY,"Caesars Entertainment, Inc.",cusip_search,CAESARS ENTMT CORP,COM,,,Yahoo Finance search,2026-09-03
+127686AA1,,Unknown,,,,unresolved,CAESARS ENTMT CORP,NOTE  5.000%10/0,,,Yahoo Finance search,2026-09-03
+12769G100,CZR,Consumer Discretionary,Consumer Cyclical,EQUITY,"Caesars Entertainment, Inc.",cusip_search,CAESARS ENTERTAINMENT INC NE,COM,,,Yahoo Finance search,2026-09-03
+133131102,CPT,Real Estate,Real Estate,EQUITY,Camden Property Trust,cusip_search,Camden Ppty Tr,SH BEN INT,,,Yahoo Finance search,2026-09-03
+13321L108,CCO.TO,Energy,Energy,EQUITY,Cameco Corporation,cusip_search,Cameco Corp,COM,,,Yahoo Finance search,2026-09-03
+135086106,GOOS.TO,Consumer Discretionary,Consumer Cyclical,EQUITY,Canada Goose Holdings Inc.,cusip_search,Canada Goose Holdings Inc,SHS SUB VTG,,,Yahoo Finance search,2026-09-03
+136375102,CNI,Industrials,Industrials,EQUITY,Canadian National Railway Company,reviewed_override,CANADIAN NATL RY CO,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+136385101,CNQ.TO,Energy,Energy,EQUITY,Canadian Natural Resources Limited,cusip_search,Canadian Nat Res Ltd,COM,,,Yahoo Finance search,2026-09-03
+13645T100,CP.TO,Industrials,Industrials,EQUITY,Canadian Pacific Kansas City Limited,cusip_search,CANADIAN PAC RY LTD,COM,,,Yahoo Finance search,2026-09-03
+13646K108,CP,Industrials,Industrials,EQUITY,Canadian Pacific Kansas City Limited,reviewed_override,CANADIAN PACIFIC KANSAS CITY,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+14040H105,COF,Financials,Financial Services,EQUITY,Capital One Financial Corporation,cusip_search,CAPITAL ONE FINL CORP,COM,,,Yahoo Finance search,2026-09-03
+14081R103,002068.SZ,Materials,Basic Materials,EQUITY,"Jiangxi Black Cat Carbon Black Inc.,Ltd",issuer_search_review,Carbon Black Inc,COM,,,Yahoo Finance search,2026-09-03
+142038108,CRBU,Health Care,Healthcare,EQUITY,"Caribou Biosciences, Inc.",cusip_search,Caribou Biosciences Inc,COM,,,Yahoo Finance search,2026-09-03
+142152107,CAI,Health Care,Healthcare,EQUITY,"Caris Life Sciences, Inc.",cusip_search,Caris Life Sciences Inc,COM,,,Yahoo Finance search,2026-09-03
+142339100,CSL,Industrials,Industrials,EQUITY,Carlisle Companies Incorporated,cusip_search,Carlisle Cos Inc,COM,,,Yahoo Finance search,2026-09-03
+143130102,KMX,Consumer Discretionary,Consumer Cyclical,EQUITY,"CarMax, Inc.",cusip_search,CARMAX INC,COM,,,Yahoo Finance search,2026-09-03
+143658300,CCL1N.MX,Consumer Discretionary,Consumer Cyclical,EQUITY,Carnival Corporation Ltd.,cusip_search,Carnival Corp,UNIT 99/99/9999,,,Yahoo Finance search,2026-09-03
+144285103,CRS,Industrials,Industrials,EQUITY,Carpenter Technology Corporation,cusip_search,Carpenter Technology Corp,COM,,,Yahoo Finance search,2026-09-03
+14448C104,CARR,Industrials,Industrials,EQUITY,Carrier Global Corporation,cusip_search,Carrier Global Corporation,COM,,,Yahoo Finance search,2026-09-03
+146869102,CVNA,Consumer Discretionary,Consumer Cyclical,EQUITY,Carvana Co.,cusip_search,Carvana Co,CL A,,,Yahoo Finance search,2026-09-03
+149123101,CAT,Industrials,Industrials,EQUITY,Caterpillar Inc.,cusip_search,Caterpillar Inc,COM,,,Yahoo Finance search,2026-09-03
+149568107,CVCO,Consumer Discretionary,Consumer Cyclical,EQUITY,"Cavco Industries, Inc.",cusip_search,Cavco Inds Inc Del,COM,,,Yahoo Finance search,2026-09-03
+150870103,CE,Materials,Basic Materials,EQUITY,Celanese Corporation,cusip_search,CELANESE CORP DEL,COM,,,Yahoo Finance search,2026-09-03
+15101Q207,CLS,Information Technology,Technology,EQUITY,Celestica Inc.,reviewed_override,Celestica Inc,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+151020104,,Unknown,,,,unresolved,Celgene Corp,COM,,,Yahoo Finance search,2026-09-03
+151290889,CX.BA,Materials,Basic Materials,EQUITY,Cemex SAB de CV,issuer_search_review,CEMEX SAB DE CV,SPON ADR NEW,,,Yahoo Finance search,2026-09-03
+15135B101,CNC,Health Care,Healthcare,EQUITY,Centene Corporation,cusip_search,CENTENE CORP DEL,COM,,,Yahoo Finance search,2026-09-03
+15135U109,CVE.TO,Energy,Energy,EQUITY,Cenovus Energy Inc.,cusip_search,Cenovus Energy Inc,COM,,,Yahoo Finance search,2026-09-03
+16117M305,,Unknown,,,,unresolved,CHARTER COMMUNICATIONS INC D,CL A NEW,,,Yahoo Finance search,2026-09-03
+16119P108,CHTR,Communication Services,Communication Services,EQUITY,"Charter Communications, Inc.",cusip_search,CHARTER COMMUNICATIONS INC N,CL A,,,Yahoo Finance search,2026-09-03
+163092109,CHGG,Consumer Staples,Consumer Defensive,EQUITY,"Chegg, Inc.",cusip_search,CHEGG INC,COM,,,Yahoo Finance search,2026-09-03
+163851108,CC,Materials,Basic Materials,EQUITY,The Chemours Company,cusip_search,Chemours Co,COM,,,Yahoo Finance search,2026-09-03
+16411R208,LNG,Energy,Energy,EQUITY,"Cheniere Energy, Inc.",cusip_search,CHENIERE ENERGY INC,COM NEW,,,Yahoo Finance search,2026-09-03
+165167107,CS1.DU,Energy,Energy,EQUITY,Chesapeake Energy Corp,issuer_search_review,CHESAPEAKE ENERGY CORP,COM,,,Yahoo Finance search,2026-09-03
+165167164,CS1.DU,Energy,Energy,EQUITY,Chesapeake Energy Corp,issuer_search_review,CHESAPEAKE ENERGY CORP,*W EXP 99/99/999,,,Yahoo Finance search,2026-09-03
+165167172,EXE-WT,Energy,Energy,EQUITY,Chesapeake Energy Corp,reviewed_override,CHESAPEAKE ENERGY CORP,*W EXP 02/09/202,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+165167180,EXE-WT,Energy,Energy,EQUITY,Chesapeake Energy Corp,reviewed_override,CHESAPEAKE ENERGY CORP,*W EXP 02/09/202,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+165167735,EXE,Energy,Energy,EQUITY,Expand Energy Corporation,cusip_search,CHESAPEAKE ENERGY CORP,COM,,,Yahoo Finance search,2026-09-03
+166764100,CVX,Energy,Energy,EQUITY,Chevron Corporation,cusip_search,CHEVRON CORP NEW,COM,,,Yahoo Finance search,2026-09-03
+167250109,,Unknown,,,,unresolved,CHICAGO BRIDGE & IRON CO N V,N Y REGISTRY SH,,,Yahoo Finance search,2026-09-03
+16935C109,CHYM,Information Technology,Technology,EQUITY,"Chime Financial, Inc.",cusip_search,Chime Finl Inc,COM SHS CL A,,,Yahoo Finance search,2026-09-03
+169656105,CMG,Consumer Discretionary,Consumer Cyclical,EQUITY,"Chipotle Mexican Grill, Inc.",cusip_search,CHIPOTLE MEXICAN GRILL INC,COM,,,Yahoo Finance search,2026-09-03
+171757206,CDTX,Health Care,,,"Cidara Therapeutics, Inc.",reviewed_override,Cidara Therapeutics Inc,COM NEW,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+17243V102,CNK,Communication Services,Communication Services,EQUITY,"Cinemark Holdings, Inc.",cusip_search,Cinemark Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+172967424,C,Financials,Financial Services,EQUITY,Citigroup Inc.,cusip_search,CITIGROUP INC,COM NEW,,,Yahoo Finance search,2026-09-03
+174610105,CFG,Financials,Financial Services,EQUITY,"Citizens Financial Group, Inc.",cusip_search,CITIZENS FINL GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+184692101,,Unknown,,,,unresolved,CLEARBRIDGE ENERGY MLP FD IN,COM,,,Yahoo Finance search,2026-09-03
+18539C105,NY41.DU,Utilities,Utilities,EQUITY,Clearway Energy Inc,issuer_search_review,CLEARWAY ENERGY INC,CL A,,,Yahoo Finance search,2026-09-03
+18539C204,CWEN,Utilities,Utilities,EQUITY,"Clearway Energy, Inc.",cusip_search,CLEARWAY ENERGY INC,CL C,,,Yahoo Finance search,2026-09-03
+185899101,CLF,Materials,Basic Materials,EQUITY,Cleveland-Cliffs Inc.,cusip_search,Cleveland-Cliffs Inc New,COM,,,Yahoo Finance search,2026-09-03
+18915M107,NET,Information Technology,Technology,EQUITY,"Cloudflare, Inc.",cusip_search,Cloudflare Inc,CL A COM,,,Yahoo Finance search,2026-09-03
+189464100,,Unknown,,,,unresolved,CLOVIS ONCOLOGY INC,COM,,,Yahoo Finance search,2026-09-03
+191216100,KO,Consumer Staples,Consumer Defensive,EQUITY,The Coca-Cola Company,cusip_search,COCA COLA CO,COM,,,Yahoo Finance search,2026-09-03
+19240Q201,COGT,Health Care,Healthcare,EQUITY,"Cogent Biosciences, Inc.",cusip_search,Cogent Biosciences Inc,COM,,,Yahoo Finance search,2026-09-03
+192446102,CTSH,Information Technology,Technology,EQUITY,Cognizant Technology Solutions Corporation,cusip_search,Cognizant Tech Sol'ns Corp,CL A,,,Yahoo Finance search,2026-09-03
+19247G107,COHR,Information Technology,Technology,EQUITY,Coherent Corp.,cusip_search,Coherent Corp,COM,,,Yahoo Finance search,2026-09-03
+194014106,,Unknown,,,,unresolved,COLFAX CORP,COM,,,Yahoo Finance search,2026-09-03
+194014502,ENOV,Health Care,Healthcare,EQUITY,Enovis Corporation,cusip_search,ENOVIS CORPORATION,COM,,,Yahoo Finance search,2026-09-03
+19626G108,,Unknown,,,,unresolved,COLONY CAP INC NEW,CL A COM,,,Yahoo Finance search,2026-09-03
+20030N101,CMCSA,Communication Services,Communication Services,EQUITY,Comcast Corporation,cusip_search,COMCAST CORP NEW,CL A,,,Yahoo Finance search,2026-09-03
+200340107,CMA,Financials,,,Comerica Incorporated,reviewed_override,COMERICA INC,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+203668108,CYH,Health Care,Healthcare,EQUITY,"Community Health Systems, Inc.",cusip_search,COMMUNITY HEALTH SYS INC NEW,COM,,,Yahoo Finance search,2026-09-03
+20464U100,COMP,Real Estate,Real Estate,EQUITY,"Compass, Inc.",cusip_search,Compass Inc,CL A,,,Yahoo Finance search,2026-09-03
+20605P101,,Unknown,,,,unresolved,Concho Res Inc,COM,,,Yahoo Finance search,2026-09-03
+20717M103,,Unknown,,,,unresolved,Confluent Inc,CLASS A COM,,,Yahoo Finance search,2026-09-03
+20825C104,COP,Energy,Energy,EQUITY,ConocoPhillips,cusip_search,CONOCOPHILLIPS,COM,,,Yahoo Finance search,2026-09-03
+209115104,ED,Utilities,Utilities,EQUITY,"Consolidated Edison, Inc.",cusip_search,Consolidated Edison Inc.,COM,,,Yahoo Finance search,2026-09-03
+21036P108,STZ,Consumer Staples,Consumer Defensive,EQUITY,"Constellation Brands, Inc.",cusip_search,CONSTELLATION BRANDS INC,CL A,,,Yahoo Finance search,2026-09-03
+21037T109,CEG,Utilities,Utilities,EQUITY,Constellation Energy Corporation,cusip_search,CONSTELLATION ENERGY CORP,COM,,,Yahoo Finance search,2026-09-03
+217204106,CPRT,Industrials,Industrials,EQUITY,"Copart, Inc.",cusip_search,COPART INC,COM,,,Yahoo Finance search,2026-09-03
+21873S108,CRWV,Information Technology,Technology,EQUITY,"CoreWeave, Inc.",cusip_search,COREWEAVE INC,COM CL A,,,Yahoo Finance search,2026-09-03
+21874C102,CNM,Industrials,Industrials,EQUITY,"Core & Main, Inc.",cusip_search,Core & Main Inc,CL A,,,Yahoo Finance search,2026-09-03
+219350105,GLW,Information Technology,Technology,EQUITY,Corning Incorporated,cusip_search,CORNING INC,COM,,,Yahoo Finance search,2026-09-03
+22160K105,COST,Consumer Staples,Consumer Defensive,EQUITY,Costco Wholesale Corporation,cusip_search,COSTCO WHSL CORP NEW,COM,,,Yahoo Finance search,2026-09-03
+22160N109,CSGP,Real Estate,Real Estate,EQUITY,"CoStar Group, Inc.",cusip_search,COSTAR GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+22266L106,,Unknown,,,,unresolved,Coupa Software Inc,COM,,,Yahoo Finance search,2026-09-03
+22266T109,CPNG,Consumer Discretionary,Consumer Cyclical,EQUITY,"Coupang, Inc.",cusip_search,Coupang Inc,CL A,,,Yahoo Finance search,2026-09-03
+22663K107,CRNX,Health Care,Healthcare,EQUITY,"Crinetics Pharmaceuticals, Inc.",cusip_search,Crinetics Pharmaceuticals In,COM,,,Yahoo Finance search,2026-09-03
+227046109,CROX,Consumer Discretionary,Consumer Cyclical,EQUITY,"Crocs, Inc.",cusip_search,CROCS INC,COM,,,Yahoo Finance search,2026-09-03
+22788C105,CRWD,Information Technology,Technology,EQUITY,"CrowdStrike Holdings, Inc.",cusip_search,Crowdstrike Hldgs Inc,CL A,,,Yahoo Finance search,2026-09-03
+228227500,CCIN.VI,Real Estate,Real Estate,EQUITY,Crown Castle Inc.,issuer_search_review,CROWN CASTLE INTL CORP,CNV PFD STK SR A,,,Yahoo Finance search,2026-09-03
+22822V101,CCI,Real Estate,Real Estate,EQUITY,Crown Castle Inc.,cusip_search,Crown Castle Intl Corp New,COM,,,Yahoo Finance search,2026-09-03
+22822V200,CCIN.VI,Real Estate,Real Estate,EQUITY,Crown Castle Inc.,issuer_search_review,CROWN CASTLE INTL CORP,CNV PFD STK SR A,,,Yahoo Finance search,2026-09-03
+22943F100,,Unknown,,,,unresolved,Ctrip Com Intl Ltd,AMERICAN DEP SHS,,,Yahoo Finance search,2026-09-03
+231021106,CMI,Industrials,Industrials,EQUITY,Cummins Inc.,cusip_search,Cummins Inc,COM,,,Yahoo Finance search,2026-09-03
+233051879,ASHR,Exchange-Traded Fund,,ETF,Xtrackers Harvest CSI 300 China A-Shares ETF,cusip_search,Dbx Etf Tr,XTRACK HRVST CSI,,,Yahoo Finance search,2026-09-03
+23306J309,DBVT,Health Care,Healthcare,EQUITY,DBV Technologies S.A.,cusip_search,Dbv Technologies S A Sponsored,ADS,,,Yahoo Finance search,2026-09-03
+23331A109,DHI,Consumer Discretionary,Consumer Cyclical,EQUITY,"D.R. Horton, Inc.",cusip_search,D R HORTON INC,COM,,,Yahoo Finance search,2026-09-03
+233331107,DTE,Utilities,Utilities,EQUITY,DTE Energy Company,cusip_search,DTE ENERGY CO,COM,,,Yahoo Finance search,2026-09-03
+234264109,DAKT,Information Technology,Technology,EQUITY,"Daktronics, Inc.",cusip_search,Daktronics Inc,COM,,,Yahoo Finance search,2026-09-03
+235851102,DHR,Health Care,Healthcare,EQUITY,Danaher Corporation,cusip_search,DANAHER CORP DEL,COM,,,Yahoo Finance search,2026-09-03
+23804L103,DDOG,Information Technology,Technology,EQUITY,"Datadog, Inc.",cusip_search,Datadog Inc,CL A COM,,,Yahoo Finance search,2026-09-03
+23918K108,DVA,Health Care,Healthcare,EQUITY,DaVita Inc.,reviewed_override,DAVITA HEALTHCARE PARTNERS I,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+24279D105,,Unknown,,,,unresolved,Decarbonization Plus Acqu Ii,CLASS A COM,,,Yahoo Finance search,2026-09-03
+244199105,DE,Industrials,Industrials,EQUITY,Deere & Company,cusip_search,DEERE & CO,COM,,,Yahoo Finance search,2026-09-03
+24477V105,DFTX,Health Care,Healthcare,EQUITY,"Definium Therapeutics, Inc.",cusip_search,Definium Therapeutics Inc,COM SHS,,,Yahoo Finance search,2026-09-03
+24703L103,12DA.DU,Information Technology,Technology,EQUITY,Dell Technologies Inc,issuer_search_review,DELL TECHNOLOGIES INC,COM CL V,,,Yahoo Finance search,2026-09-03
+247361702,DAL,Industrials,Industrials,EQUITY,"Delta Air Lines, Inc.",cusip_search,DELTA AIR LINES INC DEL,COM NEW,,,Yahoo Finance search,2026-09-03
+249906108,DSG.TO,Information Technology,Technology,EQUITY,The Descartes Systems Group Inc.,cusip_search,DESCARTES SYS GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+25179M103,DVN,Energy,Energy,EQUITY,Devon Energy Corporation,cusip_search,Devon Energy Corp New,COM,,,Yahoo Finance search,2026-09-03
+25243Q205,DEO,Consumer Staples,Consumer Defensive,EQUITY,Diageo plc,cusip_search,DIAGEO P L C,SPON ADR NEW,,,Yahoo Finance search,2026-09-03
+25264R207,,Unknown,,,,unresolved,DIAMOND HILL INVESTMENT GROU,COM NEW,,,Yahoo Finance search,2026-09-03
+253393102,DKS,Consumer Discretionary,Consumer Cyclical,EQUITY,"DICK'S Sporting Goods, Inc.",cusip_search,Dicks Sporting Goods Inc,COM,,,Yahoo Finance search,2026-09-03
+25401T108,6CL.MU,Financials,Financial Services,EQUITY,DigitalBridge Group Inc,issuer_search_review,DIGITALBRIDGE GROUP INC,CL A COM,,,Yahoo Finance search,2026-09-03
+25401T603,DBRG,Financials,Financial Services,EQUITY,"DigitalBridge Group, Inc.",cusip_search,DIGITALBRIDGE GROUP INC,CL A COM,,,Yahoo Finance search,2026-09-03
+254687106,DIS,Communication Services,Communication Services,EQUITY,The Walt Disney Company,cusip_search,DISNEY WALT CO,COM,,,Yahoo Finance search,2026-09-03
+254709108,DFS,Financials,,,Discover Financial Services,reviewed_override,Discover Finl Svcs,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+25470F104,J5AD.XD,Unknown,,EQUITY,Warner Bros Discovery Inc,issuer_search_review,DISCOVERY INC,COM SER A,,,Yahoo Finance search,2026-09-03
+25470F302,,Unknown,,,,unresolved,DISCOVERY COMMUNICATNS NEW,COM SER A,,,Yahoo Finance search,2026-09-03
+25470M109,,Unknown,,,,unresolved,Dish Network Corporation,CL A,,,Yahoo Finance search,2026-09-03
+25490A309,,Unknown,,,,unresolved,DIRECTV,COM,,,Yahoo Finance search,2026-09-03
+256163106,DOCU,Information Technology,Technology,EQUITY,"DocuSign, Inc.",cusip_search,Docusign Inc,COM,,,Yahoo Finance search,2026-09-03
+256677105,DG,Consumer Staples,Consumer Defensive,EQUITY,Dollar General Corporation,cusip_search,DOLLAR GEN CORP NEW,COM,,,Yahoo Finance search,2026-09-03
+256746108,DLTR,Consumer Staples,Consumer Defensive,EQUITY,"Dollar Tree, Inc.",cusip_search,DOLLAR TREE INC,COM,,,Yahoo Finance search,2026-09-03
+25754A201,DPZ,Consumer Discretionary,Consumer Cyclical,EQUITY,"Domino's Pizza, Inc.",cusip_search,DOMINOS PIZZA INC,COM,,,Yahoo Finance search,2026-09-03
+25809K105,DASH,Consumer Discretionary,Consumer Cyclical,EQUITY,"DoorDash, Inc.",cusip_search,Doordash Inc,CL A,,,Yahoo Finance search,2026-09-03
+260003108,DOV,Industrials,Industrials,EQUITY,Dover Corporation,cusip_search,Dover Corp,COM,,,Yahoo Finance search,2026-09-03
+260543103,,Unknown,,,,unresolved,Dow Chemical Co,COM,,,Yahoo Finance search,2026-09-03
+26142R104,DKNG,Consumer Discretionary,Consumer Cyclical,EQUITY,DraftKings Inc.,cusip_search,Draftkings Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+26142V105,DKNG,Consumer Discretionary,Consumer Cyclical,EQUITY,DraftKings Inc.,cusip_search,Draftkings Inc New,COM CL A,,,Yahoo Finance search,2026-09-03
+26441C204,DUK,Utilities,Utilities,EQUITY,Duke Energy Corporation,cusip_search,Duke Energy Corp,COM,,,Yahoo Finance search,2026-09-03
+26443V101,DLTH,Consumer Discretionary,Consumer Cyclical,EQUITY,Duluth Holdings Inc.,cusip_search,DULUTH HLDGS INC,COM CL B,,,Yahoo Finance search,2026-09-03
+26856L103,ELF,Consumer Staples,Consumer Defensive,EQUITY,"e.l.f. Beauty, Inc.",cusip_search,E L F Beauty Inc,COM,,,Yahoo Finance search,2026-09-03
+26875P101,EOG,Energy,Energy,EQUITY,"EOG Resources, Inc.",cusip_search,Eog Res Inc,COM,,,Yahoo Finance search,2026-09-03
+26884L109,EQT,Energy,Energy,EQUITY,EQT Corporation,cusip_search,EQT CORP,COM,,,Yahoo Finance search,2026-09-03
+26969P108,EXP,Materials,Basic Materials,EQUITY,Eagle Materials Inc.,cusip_search,Eagle Materials Inc,COM,,,Yahoo Finance search,2026-09-03
+27579R104,EWBC,Financials,Financial Services,EQUITY,"East West Bancorp, Inc.",cusip_search,EAST WEST BANCORP INC,COM,,,Yahoo Finance search,2026-09-03
+277432100,EMN,Materials,Basic Materials,EQUITY,Eastman Chemical Company,cusip_search,Eastman Chemical Co,COM,,,Yahoo Finance search,2026-09-03
+278642103,EBAY,Consumer Discretionary,Consumer Cyclical,EQUITY,eBay Inc.,cusip_search,EBAY INC,COM,,,Yahoo Finance search,2026-09-03
+278768106,ECHO,Communication Services,Communication Services,EQUITY,EchoStar Corporation,cusip_search,Echostar Corp,CL A,,,Yahoo Finance search,2026-09-03
+281020107,EIX,Utilities,Utilities,EQUITY,Edison International,cusip_search,Edison Intl,COM,,,Yahoo Finance search,2026-09-03
+28414H103,ELAN,Health Care,Healthcare,EQUITY,Elanco Animal Health Incorporated,cusip_search,Elanco Animal Health Inc,COM,,,Yahoo Finance search,2026-09-03
+285512109,ERT.MU,Communication Services,Communication Services,EQUITY,Electronic Arts Inc,issuer_search_review,Electronic Arts Inc,COM,,,Yahoo Finance search,2026-09-03
+291011104,EMR,Industrials,Industrials,EQUITY,Emerson Electric Co.,cusip_search,EMERSON ELEC CO,COM,,,Yahoo Finance search,2026-09-03
+29109X106,AZPN,Information Technology,,,"Aspen Technology, Inc.",reviewed_override,ASPEN TECHNOLOGY INC,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+292480100,,Unknown,,,,unresolved,ENABLE MIDSTREAM PARTNERS LP,COM UNIT RP IN,,,Yahoo Finance search,2026-09-03
+292505104,,Unknown,,,,unresolved,Encana Corp,COM,,,Yahoo Finance search,2026-09-03
+29273R109,,Unknown,,,,unresolved,ENERGY TRANSFER PRTNRS L P,UNIT LTD PARTN,,,Yahoo Finance search,2026-09-03
+29273V100,ET,Energy,Energy,EQUITY,Energy Transfer LP,cusip_search,ENERGY TRANSFER L P,COM UT LTD PTN,,,Yahoo Finance search,2026-09-03
+29278N103,,Unknown,,,,unresolved,ENERGY TRANSFER PARTNERS LP,UNIT LTD PRT INT,,,Yahoo Finance search,2026-09-03
+29337E102,ELVN,Health Care,Healthcare,EQUITY,"Enliven Therapeutics, Inc.",cusip_search,Enliven Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+293594107,ENVX,Industrials,Industrials,EQUITY,Enovix Corporation,cusip_search,Enovix Corporation,COM,,,Yahoo Finance search,2026-09-03
+29362U104,ENTG,Information Technology,Technology,EQUITY,"Entegris, Inc.",cusip_search,Entegris Inc,COM,,,Yahoo Finance search,2026-09-03
+293792107,EPD,Energy,Energy,EQUITY,Enterprise Products Partners L.P.,cusip_search,ENTERPRISE PRODS PARTNERS L,COM,,,Yahoo Finance search,2026-09-03
+294429105,EFX,Industrials,Industrials,EQUITY,Equifax Inc.,cusip_search,EQUIFAX INC,COM,,,Yahoo Finance search,2026-09-03
+29444U502,EQN2.HA,Exchange-Traded Fund,,ETF,Equinix Inc,issuer_search_review,EQUINIX INC,COM NEW,,,Yahoo Finance search,2026-09-03
+29444U700,EQIX,Real Estate,Real Estate,EQUITY,"Equinix, Inc.",cusip_search,Equinix Inc,COM,,,Yahoo Finance search,2026-09-03
+29788T103,,Unknown,,,,unresolved,E2OPEN PARENT HOLDINGS INC,COM CL A,,,Yahoo Finance search,2026-09-03
+30212P303,EXPE,Consumer Discretionary,Consumer Cyclical,EQUITY,"Expedia Group, Inc.",cusip_search,Expedia Group Inc,COM NEW,,,Yahoo Finance search,2026-09-03
+302130109,EXPD,Industrials,Industrials,EQUITY,"Expeditors International of Washington, Inc.",cusip_search,Expeditors Int'l of Wash Inc.,COM,,,Yahoo Finance search,2026-09-03
+30219G108,,Unknown,,,,unresolved,EXPRESS SCRIPTS HLDG CO,COM,,,Yahoo Finance search,2026-09-03
+30231G102,XOM,Energy,Energy,EQUITY,ExxonMobil Holdings Corporation,cusip_search,EXXON MOBIL CORP,COM,,,Yahoo Finance search,2026-09-03
+302491303,FMC,Materials,Basic Materials,EQUITY,FMC Corporation,cusip_search,FMC CORP,COM NEW,,,Yahoo Finance search,2026-09-03
+30303M102,META,Communication Services,Communication Services,EQUITY,"Meta Platforms, Inc.",cusip_search,FACEBOOK INC,CL A,,,Yahoo Finance search,2026-09-03
+303075105,FDS,Financials,Financial Services,EQUITY,FactSet Research Systems Inc.,cusip_search,FACTSET RESH SYS INC,COM,,,Yahoo Finance search,2026-09-03
+303250104,FICO,Information Technology,Technology,EQUITY,Fair Isaac Corporation,cusip_search,FAIR ISAAC CORP,COM,,,Yahoo Finance search,2026-09-03
+30744W107,FTCHQ,Consumer Discretionary,Consumer Cyclical,EQUITY,Farfetch Limited,cusip_search,Farfetch Ltd,ORD SH CL A,,,Yahoo Finance search,2026-09-03
+31188V100,FSLY,Information Technology,Technology,EQUITY,"Fastly, Inc.",cusip_search,Fastly Inc,CL A,,,Yahoo Finance search,2026-09-03
+31428X106,FDX,Industrials,Industrials,EQUITY,FedEx Corporation,cusip_search,FEDEX CORP,COM,,,Yahoo Finance search,2026-09-03
+315616102,FFIV,Information Technology,Technology,EQUITY,"F5, Inc.",cusip_search,F5 Inc,COM,,,Yahoo Finance search,2026-09-03
+31620M106,FIS,Information Technology,Technology,EQUITY,"Fidelity National Information Services, Inc.",cusip_search,Fidelity Natl Information Sv,COM,,,Yahoo Finance search,2026-09-03
+31946M103,FCNCA,Financials,Financial Services,EQUITY,"First Citizens BancShares, Inc.",cusip_search,First Ctzns Bancshares Inc N,CL A,,,Yahoo Finance search,2026-09-03
+320517105,FHN,Financials,Financial Services,EQUITY,First Horizon Corporation,cusip_search,First Horizon Corporation,COM,,,Yahoo Finance search,2026-09-03
+336433107,FSLR,Information Technology,Technology,EQUITY,"First Solar, Inc.",cusip_search,First Solar Inc,COM,,,Yahoo Finance search,2026-09-03
+337738108,FISV,Information Technology,Technology,EQUITY,"Fiserv, Inc.",cusip_search,FISERV INC,COM,,,Yahoo Finance search,2026-09-03
+337932107,FE,Utilities,Utilities,EQUITY,FirstEnergy Corp.,cusip_search,FIRSTENERGY CORP,COM,,,Yahoo Finance search,2026-09-03
+33813J106,,Unknown,,,,unresolved,Fisker Inc,CL A COM STK,,,Yahoo Finance search,2026-09-03
+339041105,,Unknown,,,,unresolved,Fleetcor Technologies Inc,COM,,,Yahoo Finance search,2026-09-03
+339750101,FND,Consumer Discretionary,Consumer Cyclical,EQUITY,"Floor & Decor Holdings, Inc.",cusip_search,FLOOR & DECOR HLDGS INC,CL A,,,Yahoo Finance search,2026-09-03
+343412102,FLR,Industrials,Industrials,EQUITY,Fluor Corporation,cusip_search,Fluor Corp,COM,,,Yahoo Finance search,2026-09-03
+34417P100,,Unknown,,,,unresolved,FOCUS FINL PARTNERS INC,COM CL A,,,Yahoo Finance search,2026-09-03
+344849104,,Unknown,,,,unresolved,Foot Locker Inc,COM,,,Yahoo Finance search,2026-09-03
+345370860,F,Consumer Discretionary,Consumer Cyclical,EQUITY,Ford Motor Company,cusip_search,Ford Mtr Co Del,COM,,,Yahoo Finance search,2026-09-03
+349381103,FIGR,Financials,Financial Services,EQUITY,"Figure Technology Solutions, Inc.",cusip_search,Figure Technology Solutio,COM CL A,,,Yahoo Finance search,2026-09-03
+34959J108,FTV,Information Technology,Technology,EQUITY,Fortive Corporation,cusip_search,FORTIVE CORP,COM,,,Yahoo Finance search,2026-09-03
+34983P104,,Unknown,,,,unresolved,Forty Seven Inc,COM,,,Yahoo Finance search,2026-09-03
+35137L105,FOXA,Communication Services,Communication Services,EQUITY,Fox Corporation,cusip_search,Fox Corp,CL A COM,,,Yahoo Finance search,2026-09-03
+35137L204,FOX,Communication Services,Communication Services,EQUITY,Fox Corporation,cusip_search,Fox Corp,CL B COM,,,Yahoo Finance search,2026-09-03
+35671D857,FCX,Materials,Basic Materials,EQUITY,Freeport-McMoRan Inc.,cusip_search,Freeport-Mcmoran Inc,CL B,,,Yahoo Finance search,2026-09-03
+359694106,FUL,Materials,Basic Materials,EQUITY,H.B. Fuller Company,cusip_search,Fuller H B Co,COM,,,Yahoo Finance search,2026-09-03
+36118A100,,Unknown,,,,unresolved,Fusion Pharmaceuticals Inc,COM,,,Yahoo Finance search,2026-09-03
+36197T103,,Unknown,,,,unresolved,GW PHARMACEUTICALS PLC,ADS,,,Yahoo Finance search,2026-09-03
+36467W109,GME,Consumer Discretionary,Consumer Cyclical,EQUITY,GameStop Corp.,cusip_search,Gamestop Corp New,CL A,,,Yahoo Finance search,2026-09-03
+364760108,GAP,Consumer Discretionary,Consumer Cyclical,EQUITY,"The Gap, Inc.",cusip_search,GAP INC,COM,,,Yahoo Finance search,2026-09-03
+36828A101,GEV,Industrials,Industrials,EQUITY,GE Vernova Inc.,cusip_search,Ge Vernova Inc,COM,,,Yahoo Finance search,2026-09-03
+369550108,GD,Industrials,Industrials,EQUITY,General Dynamics Corporation,cusip_search,General Dynamics Corp,COM,,,Yahoo Finance search,2026-09-03
+369604103,GE,Industrials,Industrials,EQUITY,GE Aerospace,cusip_search,GENERAL ELECTRIC CO,COM,,,Yahoo Finance search,2026-09-03
+369604301,GE,Industrials,Industrials,EQUITY,GE Aerospace,cusip_search,GE AEROSPACE,COM NEW,,,Yahoo Finance search,2026-09-03
+37045V100,GM,Consumer Discretionary,Consumer Cyclical,EQUITY,General Motors Company,cusip_search,GENERAL MTRS CO,COM,,,Yahoo Finance search,2026-09-03
+37045V118,,Unknown,,,,unresolved,GENERAL MTRS CO,*W EXP 07/10/201,,,Yahoo Finance search,2026-09-03
+37045V126,,Unknown,,,,unresolved,GENERAL MTRS CO,*W EXP 07/10/201,,,Yahoo Finance search,2026-09-03
+372460105,GPC,Consumer Discretionary,Consumer Cyclical,EQUITY,Genuine Parts Company,reviewed_override,Genuine Parts Co,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+375558103,GILD,Health Care,Healthcare,EQUITY,"Gilead Sciences, Inc.",cusip_search,Gilead Sciences Inc,COM,,,Yahoo Finance search,2026-09-03
+37950E259,ARGT,Country/Regional Equity ETF,,ETF,Global X MSCI Argentina ETF,reviewed_override,Global X Fds,GB MSCI AR ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+37950E366,GREK,Exchange-Traded Fund,,ETF,Global X MSCI Greece ETF,cusip_search,GLOBAL X FDS,MSCI GREECE ETF,,,Yahoo Finance search,2026-09-03
+37959E102,GL,Financials,Financial Services,EQUITY,Globe Life Inc.,cusip_search,GLOBE LIFE INC,COM,,,Yahoo Finance search,2026-09-03
+38141G104,GS,Financials,Financial Services,EQUITY,"The Goldman Sachs Group, Inc.",cusip_search,GOLDMAN SACHS GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+382550101,GT,Consumer Discretionary,Consumer Cyclical,EQUITY,The Goodyear Tire & Rubber Company,cusip_search,GOODYEAR TIRE & RUBR CO,COM,,,Yahoo Finance search,2026-09-03
+38259P508,GOOG,Communication Services,Communication Services,EQUITY,Alphabet Inc.,issuer_search_review,Google Inc,CL A,,,Yahoo Finance search,2026-09-03
+38259P706,GOOG,Communication Services,Communication Services,EQUITY,Alphabet Inc.,issuer_search_review,Google Inc,CL C,,,Yahoo Finance search,2026-09-03
+38267D109,GSHD,Financials,Financial Services,EQUITY,"Goosehead Insurance, Inc.",cusip_search,GOOSEHEAD INS INC,COM CL A,,,Yahoo Finance search,2026-09-03
+384637104,GHC,Industrials,Industrials,EQUITY,Graham Holdings Company,cusip_search,GRAHAM HLDGS CO,COM,,,Yahoo Finance search,2026-09-03
+39957D201,GROV,Consumer Staples,Consumer Defensive,EQUITY,"Grove Collaborative Holdings, Inc.",cusip_search,Grove Collaborative Hold Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+399909100,GGAL,Financials,Financial Services,EQUITY,Grupo Financiero Galicia S.A.,cusip_search,Grupo Financiero Galicia S.A,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+40171V100,GWRE,Information Technology,Technology,EQUITY,"Guidewire Software, Inc.",cusip_search,Guidewire Software Inc,COM,,,Yahoo Finance search,2026-09-03
+40412C101,HCA,Health Care,Healthcare,EQUITY,"HCA Healthcare, Inc.",cusip_search,HCA HEALTHCARE INC,COM,,,Yahoo Finance search,2026-09-03
+40415F101,HDB,Financials,Financial Services,EQUITY,HDFC Bank Limited,issuer_search_review,HDFC Bank Ltd,ADR REPS 3 SHS,,,Yahoo Finance search,2026-09-03
+40416M105,,Unknown,,,,unresolved,HD SUPPLY HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+40434L105,HPQ,Information Technology,Technology,EQUITY,HP Inc.,cusip_search,HP INC,COM,,,Yahoo Finance search,2026-09-03
+405217100,HAIN,Consumer Staples,Consumer Defensive,EQUITY,"The Hain Celestial Group, Inc.",cusip_search,HAIN CELESTIAL GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+406216101,HAL,Energy,Energy,EQUITY,Halliburton Company,cusip_search,Halliburton Co,COM,,,Yahoo Finance search,2026-09-03
+416515104,HIG,Financials,Financial Services,EQUITY,"The Hartford Insurance Group, Inc.",cusip_search,HARTFORD FINL SVCS GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+418056107,HAS,Consumer Discretionary,Consumer Cyclical,EQUITY,"Hasbro, Inc.",cusip_search,Hasbro Inc,COM,,,Yahoo Finance search,2026-09-03
+422806208,HEI-A,Industrials,Industrials,EQUITY,HEICO Corporation,cusip_search,HEICO CORP NEW,CL A,,,Yahoo Finance search,2026-09-03
+42589T206,HCICU,Financials,Financial Services,EQUITY,Hennessy Capital Investment Corp. VIII,cusip_search,HENNESSY CAPITAL INVS CORP V,UNIT 01/15/2025,,,Yahoo Finance search,2026-09-03
+42704L104,HRI,Industrials,Industrials,EQUITY,Herc Holdings Inc.,cusip_search,HERC HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+42806J700,HTZ,Industrials,Industrials,EQUITY,"Hertz Global Holdings, Inc.",cusip_search,HERTZ GLOBAL HLDGS INC,COM NEW,,,Yahoo Finance search,2026-09-03
+42809H107,,Unknown,,,,unresolved,Hess Corp,COM,,,Yahoo Finance search,2026-09-03
+43300A203,HLT,Consumer Discretionary,Consumer Cyclical,EQUITY,Hilton Worldwide Holdings Inc.,cusip_search,HILTON WORLDWIDE HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+436440101,,Unknown,,,,unresolved,Hologic Inc,COM,,,Yahoo Finance search,2026-09-03
+437076102,HDI.MU,Consumer Discretionary,Consumer Cyclical,EQUITY,The Home Depot Inc,issuer_search_review,Home Depot Inc,COM,,,Yahoo Finance search,2026-09-03
+437306103,,Unknown,,,,unresolved,HOME PROPERTIES INC,COM,,,Yahoo Finance search,2026-09-03
+44267D107,,Unknown,,,,unresolved,HOWARD HUGHES CORP,COM,,,Yahoo Finance search,2026-09-03
+44267T102,HHH,Real Estate,Real Estate,EQUITY,Howard Hughes Holdings Inc.,reviewed_override,HOWARD HUGHES HOLDINGS INC,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+443573100,HUBS,Information Technology,Technology,EQUITY,"HubSpot, Inc.",cusip_search,Hubspot Inc,COM,,,Yahoo Finance search,2026-09-03
+444859102,HUM,Health Care,Healthcare,EQUITY,Humana Inc.,cusip_search,HUMANA INC,COM,,,Yahoo Finance search,2026-09-03
+446150104,HBAN,Financials,Financial Services,EQUITY,Huntington Bancshares Incorporated,cusip_search,Huntington Bancshares Inc,COM,,,Yahoo Finance search,2026-09-03
+447011107,HUN,Materials,Basic Materials,EQUITY,Huntsman Corporation,cusip_search,HUNTSMAN CORP,COM,,,Yahoo Finance search,2026-09-03
+44812J104,HUT,Financials,Financial Services,EQUITY,Hut 8 Corp.,cusip_search,Hut 8 Corp,COM,,,Yahoo Finance search,2026-09-03
+44916Y106,PURR,Financials,Financial Services,EQUITY,Hyperliquid Strategies Inc.,cusip_search,Hyperliquid Strategies Inc,COM,,,Yahoo Finance search,2026-09-03
+450047204,IRY.SG,Real Estate,Real Estate,EQUITY,IRSA Inversiones y Representaciones SA,issuer_search_review,IRSA Inversiones Y Rep SA,GLOBAL DEP RCPT,,,Yahoo Finance search,2026-09-03
+452327109,ILMN,Health Care,Healthcare,EQUITY,"Illumina, Inc.",cusip_search,Illumina Inc,COM,,,Yahoo Finance search,2026-09-03
+453204109,PI,Information Technology,Technology,EQUITY,"Impinj, Inc.",cusip_search,Impinj Inc,COM,,,Yahoo Finance search,2026-09-03
+45337C102,INCY,Health Care,Healthcare,EQUITY,Incyte Corporation,cusip_search,Incyte Corp,COM,,,Yahoo Finance search,2026-09-03
+456788108,INFY,Information Technology,Technology,EQUITY,Infosys Limited,cusip_search,Infosys Ltd,SPON ADR,,,Yahoo Finance search,2026-09-03
+45687V106,IR,Industrials,Industrials,EQUITY,Ingersoll Rand Inc.,cusip_search,Ingersoll Rand Inc,COM,,,Yahoo Finance search,2026-09-03
+457669307,INSM,Health Care,Healthcare,EQUITY,Insmed Incorporated,cusip_search,Insmed Inc,COM PAR $.01,,,Yahoo Finance search,2026-09-03
+45790VAB6,,Unknown,,,,unresolved,INTELSAT S A,NOTE  4.500% 6/1,,,Yahoo Finance search,2026-09-03
+458140100,INTC,Information Technology,Technology,EQUITY,Intel Corporation,cusip_search,INTEL CORP,COM,,,Yahoo Finance search,2026-09-03
+459200101,IBM,Information Technology,Technology,EQUITY,International Business Machines Corporation,cusip_search,INTERNATIONAL BUSINESS MACHS,COM,,,Yahoo Finance search,2026-09-03
+46090E103,QQQ,Exchange-Traded Fund,,ETF,Invesco QQQ Trust,cusip_search,INVESCO QQQ TR,UNIT SER 1,,,Yahoo Finance search,2026-09-03
+46116X101,,Unknown,,,,unresolved,INTRA CELLULAR THERAPIES INC,COM,,,Yahoo Finance search,2026-09-03
+461202103,INTU,Information Technology,Technology,EQUITY,Intuit Inc.,cusip_search,INTUIT,COM,,,Yahoo Finance search,2026-09-03
+46120E602,ISRG,Health Care,Healthcare,EQUITY,"Intuitive Surgical, Inc.",cusip_search,Intuitive Surgical Inc,COM NEW,,,Yahoo Finance search,2026-09-03
+46137V357,RSP,Diversified Equity ETF,,ETF,Invesco S&P 500 Equal Weight ETF,reviewed_override,Invesco Exchange Traded Fd T,S&P500 EQL WGT,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+46138G508,BKLN,Exchange-Traded Fund,,ETF,Invesco Senior Loan ETF,cusip_search,INVESCO EXCHANGE-TRADED FD T,SR LN ETF,,,Yahoo Finance search,2026-09-03
+46266C105,IQV,Health Care,Healthcare,EQUITY,IQVIA Holdings Inc.,cusip_search,Iqvia Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+46267X108,IQ,Communication Services,Communication Services,EQUITY,"iQIYI, Inc.",cusip_search,IQIYI INC,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+464286103,EWA,Exchange-Traded Fund,,ETF,iShares MSCI Australia ETF,cusip_search,ISHARES INC,MSCI AUST ETF,,,Yahoo Finance search,2026-09-03
+464286400,EWZ,Country/Regional Equity ETF,,ETF,iShares MSCI Brazil ETF,reviewed_override,Ishares Inc,MSCI BRAZIL ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+464286509,EWC,Exchange-Traded Fund,,ETF,iShares MSCI Canada ETF,cusip_search,ISHARES INC,MSCI CDA ETF,,,Yahoo Finance search,2026-09-03
+464286640,ECH,Exchange-Traded Fund,,ETF,iShares MSCI Chile ETF,cusip_search,ISh MSCI Chile Cap Inv Mkt Idx Fd,MSCI CH CAP ETF,,,Yahoo Finance search,2026-09-03
+464286772,EWY,Country/Regional Equity ETF,,ETF,iShares MSCI South Korea ETF,reviewed_override,ISHARES INC,MSCI STH KOR ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+464286822,EWW,Exchange-Traded Fund,,ETF,iShares MSCI Mexico ETF,cusip_search,ISHARES INC,MSCI MEXICO ETF,,,Yahoo Finance search,2026-09-03
+464286848,0JLU.L,Exchange-Traded Fund,,ETF,"iShares, Inc. - iShares MSCI Japan ETF",cusip_search,ISHARES,MSCI JAPAN ETF,,,Yahoo Finance search,2026-09-03
+464287184,FXI,Country/Regional Equity ETF,,ETF,iShares China Large-Cap ETF,reviewed_override,ISHARES TR,CHINA LG-CAP ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+464287192,IYT,Exchange-Traded Fund,,ETF,iShares Transportation Average ETF,cusip_search,ISHARES TR,TRANS AVG ETF,,,Yahoo Finance search,2026-09-03
+464287234,EEM,Country/Regional Equity ETF,,ETF,iShares MSCI Emerging Markets ETF,reviewed_override,ISHARES TR,MSCI EMG MKT ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+464287556,IBB,Exchange-Traded Fund,,ETF,iShares Biotechnology ETF,cusip_search,Ishares Tr,NASDAQ BIOTECH,,,Yahoo Finance search,2026-09-03
+464287630,IWN,Exchange-Traded Fund,,ETF,iShares Russell 2000 Value ETF,cusip_search,ISHARES TR,RUS 2000 VAL ETF,,,Yahoo Finance search,2026-09-03
+464287655,IWM,Diversified Equity ETF,,ETF,iShares Russell 2000 ETF,reviewed_override,Ishares Tr,RUSSELL 2000 ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+464288240,ACWX,Exchange-Traded Fund,,ETF,iShares MSCI ACWI ex U.S. ETF,cusip_search,ISHARES TR,MSCI ACWI EX US,,,Yahoo Finance search,2026-09-03
+464288281,EMB,Exchange-Traded Fund,,ETF,iShares J.P. Morgan USD Emerging Markets Bond ETF,cusip_search,ISHARES TR,JPMORGAN USD EMG,,,Yahoo Finance search,2026-09-03
+464288513,HYG,Exchange-Traded Fund,,ETF,iShares iBoxx $ High Yield Corporate Bond ETF,cusip_search,ISHARES TR,IBOXX HI YD ETF,,,Yahoo Finance search,2026-09-03
+464288760,ITA,Exchange-Traded Fund,,ETF,iShares U.S. Aerospace & Defense ETF,cusip_search,ISHARES TR,U.S. AER&DEF ETF,,,Yahoo Finance search,2026-09-03
+46428R107,GSG,Commodities,,ETF,iShares S&P GSCI Commodity-Indexed Trust,reviewed_override,Ishares S&P Gsci Commodity-,UNIT BEN INT,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+46429B408,EPHE,Exchange-Traded Fund,,ETF,iShares MSCI Philippines ETF,cusip_search,ISh MSCI Phillipines Inv Mkt Idx Fd,MSCI PHILIPS ETF,,,Yahoo Finance search,2026-09-03
+46429B598,INDA,Exchange-Traded Fund,,ETF,iShares MSCI India ETF,cusip_search,Ishares Tr,MSCI INDIA ETF,,,Yahoo Finance search,2026-09-03
+46583P102,,Unknown,,,,unresolved,Iveric Bio Inc,COM,,,Yahoo Finance search,2026-09-03
+46625H100,JPM,Financials,Financial Services,EQUITY,JPMorgan Chase & Co.,cusip_search,JPMORGAN CHASE & CO,COM,,,Yahoo Finance search,2026-09-03
+46625H365,JPM,Financials,Financial Services,EQUITY,JPMorgan Chase & Co.,issuer_search_review,JPMORGAN CHASE & CO,ALERIAN ML ETN,,,Yahoo Finance search,2026-09-03
+466313103,JBL,Information Technology,Technology,EQUITY,Jabil Inc.,cusip_search,Jabil Inc,COM,,,Yahoo Finance search,2026-09-03
+46982L108,J,Industrials,Industrials,EQUITY,Jacobs Solutions Inc.,cusip_search,Jacobs Solutions Inc,COM,,,Yahoo Finance search,2026-09-03
+47215P106,JD,Consumer Discretionary,Consumer Cyclical,EQUITY,JD.com Inc,reviewed_override,Jd Com Inc,SPON ADR CL A,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+47233W109,JEF,Financials,Financial Services,EQUITY,Jefferies Financial Group Inc.,cusip_search,JEFFERIES FINL GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+478160104,JNJ,Health Care,Healthcare,EQUITY,Johnson & Johnson,cusip_search,JOHNSON & JOHNSON,COM,,,Yahoo Finance search,2026-09-03
+48205A109,,Unknown,,,,unresolved,Juno Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+48242W106,KBR,Industrials,Industrials,EQUITY,"KBR, Inc.",cusip_search,Kbr Inc,COM,,,Yahoo Finance search,2026-09-03
+482480100,KLAC,Information Technology,Technology,EQUITY,KLA Corporation,cusip_search,KLA CORP,COM NEW,,,Yahoo Finance search,2026-09-03
+48248M102,KKRC.MX,Financials,Financial Services,EQUITY,KKR & Co. Inc.,cusip_search,KKR & CO L P DEL,COM UNITS,,,Yahoo Finance search,2026-09-03
+482497104,BEKE,Real Estate,Real Estate,EQUITY,KE Holdings Inc.,cusip_search,KE HLDGS INC,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+48251W104,KKR,Financials,Financial Services,EQUITY,KKR & Co. Inc.,cusip_search,KKR & CO L P DEL,COM UNITS,,,Yahoo Finance search,2026-09-03
+485170302,,Unknown,,,,unresolved,KANSAS CITY SOUTHERN,COM NEW,,,Yahoo Finance search,2026-09-03
+486606106,KYN,Financials,Financial Services,EQUITY,"Kayne Anderson Energy Infrastructure Fund, Inc.",cusip_search,KAYNE ANDERSON MLP INVT CO,COM,,,Yahoo Finance search,2026-09-03
+48666K109,KBH,Consumer Discretionary,Consumer Cyclical,EQUITY,KB Home,cusip_search,Kb Home,COM,,,Yahoo Finance search,2026-09-03
+489170100,KMT,Industrials,Industrials,EQUITY,Kennametal Inc.,cusip_search,KENNAMETAL INC,COM,,,Yahoo Finance search,2026-09-03
+493267108,KEY,Financials,Financial Services,EQUITY,KeyCorp,cusip_search,Keycorp,COM,,,Yahoo Finance search,2026-09-03
+49427F108,KRC,Real Estate,Real Estate,EQUITY,Kilroy Realty Corporation,cusip_search,KILROY RLTY CORP,COM,,,Yahoo Finance search,2026-09-03
+49456B101,KMI,Energy,Energy,EQUITY,"Kinder Morgan, Inc.",cusip_search,KINDER MORGAN INC DEL,COM,,,Yahoo Finance search,2026-09-03
+49456B119,,Unknown,,,,unresolved,KINDER MORGAN INC DEL,*W EXP 05/25/201,,,Yahoo Finance search,2026-09-03
+49803L109,,Unknown,,,,unresolved,Kite Pharma Inc,COM,,,Yahoo Finance search,2026-09-03
+499049104,KNX,Industrials,Industrials,EQUITY,Knight-Swift Transportation Holdings Inc.,cusip_search,KNIGHT SWIFT TRANSN HLDGS IN,CL A,,,Yahoo Finance search,2026-09-03
+500255104,KSS,Consumer Discretionary,Consumer Cyclical,EQUITY,Kohl's Corporation,cusip_search,KOHLS CORP,COM,,,Yahoo Finance search,2026-09-03
+500754106,KHC,Consumer Staples,Consumer Defensive,EQUITY,The Kraft Heinz Company,cusip_search,KRAFT HEINZ CO,COM,,,Yahoo Finance search,2026-09-03
+500767306,KWEB,Thematic Equity ETF,,ETF,KraneShares CSI China Internet ETF,reviewed_override,KRANESHARES TRUST,CSI CHI INTERNET,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+50076Q106,,Unknown,,,,unresolved,KRAFT FOODS GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+501044101,KR,Consumer Staples,Consumer Defensive,EQUITY,The Kroger Co.,cusip_search,KROGER CO,COM,,,Yahoo Finance search,2026-09-03
+501797104,LB,Energy,Energy,EQUITY,LandBridge Company LLC,cusip_search,L Brands Inc,COM,,,Yahoo Finance search,2026-09-03
+50187T106,LGIH,Consumer Discretionary,Consumer Cyclical,EQUITY,"LGI Homes, Inc.",cusip_search,Lgi Homes Inc,COM,,,Yahoo Finance search,2026-09-03
+501889208,LKQ,Consumer Discretionary,Consumer Cyclical,EQUITY,LKQ Corporation,cusip_search,LKQ CORP,COM,,,Yahoo Finance search,2026-09-03
+50212V100,LPLA,Financials,Financial Services,EQUITY,LPL Financial Holdings Inc.,cusip_search,LPL FINL HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+502431109,LHX,Industrials,Industrials,EQUITY,"L3Harris Technologies, Inc.",cusip_search,L3HARRIS TECHNOLOGIES INC,COM,,,Yahoo Finance search,2026-09-03
+512807108,LRCX,Information Technology,Technology,EQUITY,Lam Research Corporation,reviewed_override,LAM RESEARCH CORP,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+512807306,LRCX,Information Technology,Technology,EQUITY,Lam Research Corporation,cusip_search,LAM RESEARCH CORP,COM NEW,,,Yahoo Finance search,2026-09-03
+512815101,6LA.F,Real Estate,Real Estate,EQUITY,Lamar Advertising Company,cusip_search,LAMAR ADVERTISING CO,CL A,,,Yahoo Finance search,2026-09-03
+512816109,LAMR,Real Estate,Real Estate,EQUITY,Lamar Advertising Company,cusip_search,LAMAR ADVERTISING CO,CL A,,,Yahoo Finance search,2026-09-03
+513272104,LW,Consumer Staples,Consumer Defensive,EQUITY,"Lamb Weston Holdings, Inc.",cusip_search,Lamb Weston Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+517834107,LVS,Consumer Discretionary,Consumer Cyclical,EQUITY,Las Vegas Sands Corp.,cusip_search,Las Vegas Sands Corp,COM,,,Yahoo Finance search,2026-09-03
+518415104,LSCC,Information Technology,Technology,EQUITY,Lattice Semiconductor Corporation,cusip_search,Lattice Semiconductor Corp,COM,,,Yahoo Finance search,2026-09-03
+518439104,EL,Consumer Staples,Consumer Defensive,EQUITY,The Estée Lauder Companies Inc.,cusip_search,The Estee Lauder Co Inc.,CL A,,,Yahoo Finance search,2026-09-03
+523768109,US5237684064.SG,Unknown,,EQUITY,Lee Enterprises Inc.,issuer_search_review,LEE ENTERPRISES INC,COM,,,Yahoo Finance search,2026-09-03
+52490G102,LEGN,Health Care,Healthcare,EQUITY,Legend Biotech Corporation,cusip_search,Legend Biotech Corp,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+526057104,LEN,Consumer Discretionary,Consumer Cyclical,EQUITY,Lennar Corporation,cusip_search,LENNAR CORP,CL A,,,Yahoo Finance search,2026-09-03
+526057302,LEN-B,Consumer Discretionary,Consumer Cyclical,EQUITY,Lennar Corporation,cusip_search,LENNAR CORP,CL B,,,Yahoo Finance search,2026-09-03
+527288104,LN3.F,Financials,Financial Services,EQUITY,Jefferies Financial Group Inc.,cusip_search,LEUCADIA NATL CORP,COM,,,Yahoo Finance search,2026-09-03
+53071M880,,Unknown,,,,unresolved,LIBERTY INTERACTIVE CORP,INT COM SER A,,,Yahoo Finance search,2026-09-03
+53073L203,,Unknown,,,,unresolved,LIBERTY MEDIA ACQUISITION CO,UNIT 01/22/2026,,,Yahoo Finance search,2026-09-03
+530909100,LLYVA,Communication Services,Communication Services,EQUITY,"Liberty Live Holdings, Inc.",cusip_search,LIBERTY LIVE HOLDINGS INC,COM SER A,,,Yahoo Finance search,2026-09-03
+530909308,LLYVK,Communication Services,Communication Services,EQUITY,"Liberty Live Holdings, Inc.",cusip_search,LIBERTY LIVE HOLDINGS INC,COM SHS SER C,,,Yahoo Finance search,2026-09-03
+531229102,,Unknown,,,,unresolved,LIBERTY MEDIA CORP DELAWARE,CL A,,,Yahoo Finance search,2026-09-03
+531229300,,Unknown,,,,unresolved,LIBERTY MEDIA CORP DELAWARE,COM SER C,,,Yahoo Finance search,2026-09-03
+531229409,,Unknown,,,,unresolved,LIBERTY MEDIA CORP DELAWARE,COM A SIRIUSXM,,,Yahoo Finance search,2026-09-03
+531229607,,Unknown,,,,unresolved,LIBERTY MEDIA CORP DELAWARE,COM C SIRIUSXM,,,Yahoo Finance search,2026-09-03
+531229722,LLYVK,Communication Services,,,Liberty Media Corporation Series C Liberty Live,reviewed_override,LIBERTY MEDIA CORP DEL,COM LBTY LIV S C,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+531229748,LLYVA,Communication Services,Communication Services,EQUITY,"Liberty Live Holdings, Inc.",cusip_search,LIBERTY MEDIA CORP DEL,COM LBTY LIV S A,,,Yahoo Finance search,2026-09-03
+531229755,FWONK,Communication Services,Communication Services,EQUITY,Formula One Group,cusip_search,LIBERTY MEDIA CORP DEL,COM LBTY ONE S C,,,Yahoo Finance search,2026-09-03
+531229789,,Unknown,,,,unresolved,LIBERTY MEDIA CORP DEL,COM LBTY SRM S C,,,Yahoo Finance search,2026-09-03
+531229813,,Unknown,,,,unresolved,LIBERTY MEDIA CORP DEL,COM LBTY SRM S A,,,Yahoo Finance search,2026-09-03
+531229854,FWONK,Communication Services,,,Liberty Formula One Series C,reviewed_override,LIBERTY MEDIA CORP DEL,COM SER C FRMLA,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+531229870,FWONA,Communication Services,Communication Services,EQUITY,Formula One Group,cusip_search,LIBERTY MEDIA CORP DELAWARE,COM A MEDIA GRP,,,Yahoo Finance search,2026-09-03
+532457108,LLY,Health Care,Healthcare,EQUITY,Eli Lilly and Company,cusip_search,Eli Lilly & Co,COM,,,Yahoo Finance search,2026-09-03
+536797103,LAD,Consumer Discretionary,Consumer Cyclical,EQUITY,"Lithia Motors, Inc.",cusip_search,Lithia Mtrs Inc,COM,,,Yahoo Finance search,2026-09-03
+538034109,LYV,Communication Services,Communication Services,EQUITY,"Live Nation Entertainment, Inc.",cusip_search,LIVE NATION ENTERTAINMENT IN,COM,,,Yahoo Finance search,2026-09-03
+539830109,LMT,Industrials,Industrials,EQUITY,Lockheed Martin Corporation,cusip_search,Lockheed Martin Corp,COM,,,Yahoo Finance search,2026-09-03
+54150E104,8LN.MU,Materials,Basic Materials,EQUITY,Loma Negra Cia Industria Argentina SA,cusip_search,Loma Negra Corp,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+546347105,LPX,Industrials,Industrials,EQUITY,Louisiana-Pacific Corporation,cusip_search,LOUISIANA PAC CORP,COM,,,Yahoo Finance search,2026-09-03
+548661107,LOW,Consumer Discretionary,Consumer Cyclical,EQUITY,"Lowe's Companies, Inc.",cusip_search,LOWES COS INC,COM,,,Yahoo Finance search,2026-09-03
+54951L109,LC0A.HA,Consumer Discretionary,Consumer Cyclical,EQUITY,Luckin Coffee Inc,cusip_search,Luckin Coffee Inc,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+55024U109,LITE,Information Technology,Technology,EQUITY,Lumentum Holdings Inc.,cusip_search,Lumentum Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+55087P104,LYFT,Information Technology,Technology,EQUITY,"Lyft, Inc.",cusip_search,LYFT INC,CL A COM,,,Yahoo Finance search,2026-09-03
+55261F104,MTB,Financials,Financial Services,EQUITY,M&T Bank Corporation,cusip_search,M & T BK CORP,COM,,,Yahoo Finance search,2026-09-03
+552953101,MGM,Consumer Discretionary,Consumer Cyclical,EQUITY,MGM Resorts International,cusip_search,MGM RESORTS INTERNATIONAL,COM,,,Yahoo Finance search,2026-09-03
+55336V100,MPLX,Energy,Energy,EQUITY,MPLX LP,cusip_search,MPLX LP,COM UNIT REP LTD,,,Yahoo Finance search,2026-09-03
+55354G100,MSCI,Financials,Financial Services,EQUITY,MSCI Inc.,cusip_search,MSCI INC,COM,,,Yahoo Finance search,2026-09-03
+556099109,MGNX,Health Care,Healthcare,EQUITY,"MacroGenics, Inc.",cusip_search,Macrogenics Inc,COM,,,Yahoo Finance search,2026-09-03
+55616P104,M,Consumer Discretionary,Consumer Cyclical,EQUITY,"Macy's, Inc.",cusip_search,MACYS INC,COM,,,Yahoo Finance search,2026-09-03
+558256103,MSGE,Communication Services,Communication Services,EQUITY,Madison Square Garden Entertainment Corp.,cusip_search,Madison Square Garden Entmt,COM CL A,,,Yahoo Finance search,2026-09-03
+55826T102,SPHR,Communication Services,Communication Services,EQUITY,Sphere Entertainment Co.,cusip_search,Sphere Entertainment Co,CL A,,,Yahoo Finance search,2026-09-03
+559080106,,Unknown,,,,unresolved,MAGELLAN MIDSTREAM PRTNRS LP,COM UNIT RP LP,,,Yahoo Finance search,2026-09-03
+565849106,,Unknown,,,,unresolved,Marathon Oil Corp,COM,,,Yahoo Finance search,2026-09-03
+56585A102,MPC,Energy,Energy,EQUITY,Marathon Petroleum Corporation,cusip_search,Marathon Pete Corp,COM,,,Yahoo Finance search,2026-09-03
+570535104,MKL,Financials,Financial Services,EQUITY,Markel Group Inc.,cusip_search,MARKEL CORP,COM,,,Yahoo Finance search,2026-09-03
+57060U100,,Unknown,,,,unresolved,Mkt Vectors Gld Miners ETF,GOLD MINER ETF,,,Yahoo Finance search,2026-09-03
+570759100,,Unknown,,,,unresolved,MARKWEST ENERGY PARTNERS L P,UNIT LTD PARTN,,,Yahoo Finance search,2026-09-03
+571748102,MRSH,Financials,Financial Services,EQUITY,"Marsh & McLennan Companies, Inc.",cusip_search,MARSH & MCLENNAN COS INC,COM,,,Yahoo Finance search,2026-09-03
+571903202,MAR,Consumer Discretionary,Consumer Cyclical,EQUITY,"Marriott International, Inc.",cusip_search,MARRIOTT INTL INC NEW,CL A,,,Yahoo Finance search,2026-09-03
+573284106,MLM,Materials,Basic Materials,EQUITY,"Martin Marietta Materials, Inc.",cusip_search,MARTIN MARIETTA MATLS INC,COM,,,Yahoo Finance search,2026-09-03
+573874104,MRVL,Information Technology,Technology,EQUITY,"Marvell Technology, Inc.",cusip_search,Marvell Technology Inc,COM,,,Yahoo Finance search,2026-09-03
+574599106,MAS,Industrials,Industrials,EQUITY,Masco Corporation,cusip_search,MASCO CORP,COM,,,Yahoo Finance search,2026-09-03
+57636Q104,MA,Financials,Financial Services,EQUITY,Mastercard Incorporated,cusip_search,MASTERCARD INC,CL A,,,Yahoo Finance search,2026-09-03
+57667L107,MTCH,Communication Services,Communication Services,EQUITY,"Match Group, Inc.",cusip_search,MATCH GROUP INC NEW,COM,,,Yahoo Finance search,2026-09-03
+57722W106,,Unknown,,,,unresolved,Mattress Firm Hldg Corp,COM,,,Yahoo Finance search,2026-09-03
+580037109,,Unknown,,,,unresolved,McDermott Int'l Inc.,COM,,,Yahoo Finance search,2026-09-03
+580135101,MCD,Consumer Discretionary,Consumer Cyclical,EQUITY,McDonald's Corporation,cusip_search,McDonald's Corp,COM,,,Yahoo Finance search,2026-09-03
+58155Q103,MCK,Health Care,Healthcare,EQUITY,McKesson Corporation,cusip_search,MCKESSON CORP,COM,,,Yahoo Finance search,2026-09-03
+582839106,,Unknown,,,,unresolved,Mead Johnson Nut'n Co,COM,,,Yahoo Finance search,2026-09-03
+584404107,,Unknown,,,,unresolved,MEDIA GEN INC,CL A,,,Yahoo Finance search,2026-09-03
+58441K100,,Unknown,,,,unresolved,MEDIA GEN INC NEW,COM,,,Yahoo Finance search,2026-09-03
+584688105,2L9.DU,Industrials,Industrials,EQUITY,Blueprint Medicines Corp,issuer_search_review,Medicines Co,COM,,,Yahoo Finance search,2026-09-03
+58733R102,MELI,Consumer Discretionary,Consumer Cyclical,EQUITY,"MercadoLibre, Inc.",cusip_search,Mercadolibre Inc,COM,,,Yahoo Finance search,2026-09-03
+58933Y105,MRK,Health Care,Healthcare,EQUITY,"Merck & Co., Inc.",cusip_search,Merck & Co Inc,COM,,,Yahoo Finance search,2026-09-03
+594918104,MSFT,Information Technology,Technology,EQUITY,Microsoft Corporation,cusip_search,MICROSOFT CORP,COM,,,Yahoo Finance search,2026-09-03
+595112103,MU,Information Technology,Technology,EQUITY,"Micron Technology, Inc.",cusip_search,MICRON TECHNOLOGY INC,COM,,,Yahoo Finance search,2026-09-03
+59522J103,MAA,Real Estate,Real Estate,EQUITY,"Mid-America Apartment Communities, Inc.",cusip_search,Mid-Amer Apt Cmntys Inc,COM,,,Yahoo Finance search,2026-09-03
+60471A101,MIR,Industrials,Industrials,EQUITY,"Mirion Technologies, Inc.",cusip_search,Mirion Technologies Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+60770K107,MRNA,Health Care,Healthcare,EQUITY,"Moderna, Inc.",cusip_search,Moderna Inc,COM,,,Yahoo Finance search,2026-09-03
+608190104,MHK,Consumer Discretionary,Consumer Cyclical,EQUITY,"Mohawk Industries, Inc.",cusip_search,MOHAWK INDS INC,COM,,,Yahoo Finance search,2026-09-03
+609207105,MDLZ,Consumer Staples,Consumer Defensive,EQUITY,"Mondelez International, Inc.",cusip_search,MONDELEZ INTL INC,CL A,,,Yahoo Finance search,2026-09-03
+60937P106,MDB,Information Technology,Technology,EQUITY,"MongoDB, Inc.",cusip_search,Mongodb Inc,CL A,,,Yahoo Finance search,2026-09-03
+610236101,MNRO,Consumer Discretionary,Consumer Cyclical,EQUITY,"Monro, Inc.",cusip_search,MONRO MUFFLER BRAKE INC,COM,,,Yahoo Finance search,2026-09-03
+61166W101,,Unknown,,,,unresolved,MOSANTO CO NEW,COM,,,Yahoo Finance search,2026-09-03
+61174X109,MNST,Consumer Staples,Consumer Defensive,EQUITY,Monster Beverage Corporation,cusip_search,MONSTER BEVERAGE CORP NEW,COM,,,Yahoo Finance search,2026-09-03
+61225M102,GLUE,Health Care,Healthcare,EQUITY,"Monte Rosa Therapeutics, Inc.",cusip_search,Monte Rosa Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+615369105,MCO,Financials,Financial Services,EQUITY,Moody's Corporation,cusip_search,MOODYS CORP,COM,,,Yahoo Finance search,2026-09-03
+61559X104,MLTX,Health Care,Healthcare,EQUITY,MoonLake Immunotherapeutics,cusip_search,Moonlake Immunotherapeutics,CLASS A ORD,,,Yahoo Finance search,2026-09-03
+617446448,MS,Financials,Financial Services,EQUITY,Morgan Stanley,cusip_search,Morgan Stanley,COM,,,Yahoo Finance search,2026-09-03
+61945C103,MOS,Materials,Basic Materials,EQUITY,The Mosaic Company,cusip_search,MOSAIC CO NEW,COM,,,Yahoo Finance search,2026-09-03
+62482R107,,Unknown,,,,unresolved,MR COOPER GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+629377508,NRG,Utilities,Utilities,EQUITY,"NRG Energy, Inc.",cusip_search,NRG ENERGY INC,COM NEW,,,Yahoo Finance search,2026-09-03
+62944T105,NVR,Consumer Discretionary,Consumer Cyclical,EQUITY,"NVR, Inc.",cusip_search,NVR INC,COM,,,Yahoo Finance search,2026-09-03
+632307104,NTRA,Health Care,Healthcare,EQUITY,"Natera, Inc.",cusip_search,Natera Inc,COM,,,Yahoo Finance search,2026-09-03
+637071101,NOV,Energy,Energy,EQUITY,NOV Inc.,cusip_search,NATIONAL OILWELL VARCO INC,COM,,,Yahoo Finance search,2026-09-03
+63942X106,NVTS,Information Technology,Technology,EQUITY,Navitas Semiconductor Corporation,cusip_search,Navitas Semiconductor Corp,COM,,,Yahoo Finance search,2026-09-03
+640268108,NKTR,Health Care,Healthcare,EQUITY,Nektar Therapeutics,cusip_search,Nektar Therapeutics,COM,,,Yahoo Finance search,2026-09-03
+64073B103,NP,Financials,Financial Services,EQUITY,Neptune Insurance Holdings Inc.,cusip_search,Neptune Ins Hldgs Inc,CL A,,,Yahoo Finance search,2026-09-03
+64110L106,NFLX,Communication Services,Communication Services,EQUITY,"Netflix, Inc.",cusip_search,Netflix Inc,COM,,,Yahoo Finance search,2026-09-03
+64110W102,NTES,Communication Services,Communication Services,EQUITY,"NetEase, Inc.",cusip_search,Netease Inc,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+644393100,NFE,Energy,Energy,EQUITY,New Fortress Energy Inc.,cusip_search,New Fortress Energy Llc Cl A Shs Rp,LLC,,,Yahoo Finance search,2026-09-03
+647581107,EDU,Consumer Staples,Consumer Defensive,EQUITY,New Oriental Education & Technology Group Inc.,cusip_search,New Oriental Ed & Tech Grp I,SPON ADR,,,Yahoo Finance search,2026-09-03
+64829B100,,Unknown,,,,unresolved,New Relic Inc,COM,,,Yahoo Finance search,2026-09-03
+650111107,NYT,Communication Services,Communication Services,EQUITY,The New York Times Company,cusip_search,NEW YORK TIMES CO MTN BE,CL A,,,Yahoo Finance search,2026-09-03
+651511107,,Unknown,,,,unresolved,NewLink Genetics Corp,COM,,,Yahoo Finance search,2026-09-03
+651639106,NEM,Materials,Basic Materials,EQUITY,Newmont Corporation,cusip_search,Newmont Mining Corp,COM,,,Yahoo Finance search,2026-09-03
+65249B109,NWSA,Communication Services,Communication Services,EQUITY,News Corporation,cusip_search,News Corp New,CL A,,,Yahoo Finance search,2026-09-03
+65249B208,NWS,Communication Services,Communication Services,EQUITY,News Corporation,cusip_search,News Corp New,CL B,,,Yahoo Finance search,2026-09-03
+65339F101,NEE,Utilities,Utilities,EQUITY,"NextEra Energy, Inc.",cusip_search,Nextera Energy Inc,COM,,,Yahoo Finance search,2026-09-03
+65340P106,NXE.TO,Energy,Energy,EQUITY,NexGen Energy Ltd.,cusip_search,Nexgen Energy Ltd,COM,,,Yahoo Finance search,2026-09-03
+65343E108,NXTC,Health Care,Healthcare,EQUITY,"NextCure, Inc.",cusip_search,Nextcure Inc,COM,,,Yahoo Finance search,2026-09-03
+654106103,NKE,Consumer Discretionary,Consumer Cyclical,EQUITY,"NIKE, Inc.",cusip_search,NIKE INC,CL B,,,Yahoo Finance search,2026-09-03
+654902204,NOK,Information Technology,Technology,EQUITY,Nokia Oyj,cusip_search,Nokia Corp,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+655044105,,Unknown,,,,unresolved,Noble Energy Inc,COM,,,Yahoo Finance search,2026-09-03
+655664100,,Unknown,,,,unresolved,Nordstrom Inc,COM,,,Yahoo Finance search,2026-09-03
+655844108,NSC,Industrials,Industrials,EQUITY,Norfolk Southern Corporation,cusip_search,NORFOLK SOUTHERN CORP,COM,,,Yahoo Finance search,2026-09-03
+666807102,NOC,Industrials,Industrials,EQUITY,Northrop Grumman Corporation,cusip_search,Northrop Grumman Corp,COM,,,Yahoo Finance search,2026-09-03
+67011P100,DNOW,Industrials,Industrials,EQUITY,DNOW Inc.,cusip_search,NOW INC,COM,,,Yahoo Finance search,2026-09-03
+67020Y100,,Unknown,,,,unresolved,Nuance Communications Inc,COM,,,Yahoo Finance search,2026-09-03
+670346105,NUE,Materials,Basic Materials,EQUITY,Nucor Corporation,cusip_search,NUCOR CORP,COM,,,Yahoo Finance search,2026-09-03
+67059L102,,Unknown,,,,unresolved,NUSTAR GP HOLDINGS LLC,UNIT RESTG LLC,,,Yahoo Finance search,2026-09-03
+67059N108,NTNX,Information Technology,Technology,EQUITY,"Nutanix, Inc.",cusip_search,Nutanix Inc,CL A,,,Yahoo Finance search,2026-09-03
+67066G104,NVDA,Information Technology,Technology,EQUITY,NVIDIA Corporation,cusip_search,NVIDIA CORPORATION,COM,,,Yahoo Finance search,2026-09-03
+67080M103,NRIX,Health Care,Healthcare,EQUITY,"Nurix Therapeutics, Inc.",cusip_search,Nurix Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+67080N101,NUVB,Health Care,Healthcare,EQUITY,Nuvation Bio Inc.,cusip_search,Nuvation Bio Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+67103H107,ORLY,Consumer Discretionary,Consumer Cyclical,EQUITY,"O'Reilly Automotive, Inc.",cusip_search,O REILLY AUTOMOTIVE INC NEW,COM,,,Yahoo Finance search,2026-09-03
+674599105,OXY,Energy,Energy,EQUITY,Occidental Petroleum Corporation,cusip_search,OCCIDENTAL PETE CORP,COM,,,Yahoo Finance search,2026-09-03
+679295105,OKTA,Information Technology,Technology,EQUITY,"Okta, Inc.",cusip_search,Okta Inc,CL A,,,Yahoo Finance search,2026-09-03
+68062P106,OLMA,Health Care,Healthcare,EQUITY,"Olema Pharmaceuticals, Inc.",cusip_search,Olema Pharmaceuticals Inc,COM,,,Yahoo Finance search,2026-09-03
+681116109,OLLI,Consumer Staples,Consumer Defensive,EQUITY,"Ollie's Bargain Outlet Holdings, Inc.",cusip_search,OLLIES BARGAIN OUTLT HLDGS I,COM,,,Yahoo Finance search,2026-09-03
+682189105,ON,Information Technology,Technology,EQUITY,ON Semiconductor Corporation,cusip_search,On Semiconductor Corp,COM,,,Yahoo Finance search,2026-09-03
+68268W103,OMF,Financials,Financial Services,EQUITY,"OneMain Holdings, Inc.",cusip_search,Onemain Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+683712103,OPEN,Real Estate,Real Estate,EQUITY,Opendoor Technologies Inc.,cusip_search,Opendoor Technologies Inc,COM,,,Yahoo Finance search,2026-09-03
+68389X105,ORCL,Information Technology,Technology,EQUITY,Oracle Corporation,cusip_search,ORACLE CORP,COM,,,Yahoo Finance search,2026-09-03
+68404L201,OPCH,Health Care,Healthcare,EQUITY,"Option Care Health, Inc.",cusip_search,Option Care Health Inc,COM NEW,,,Yahoo Finance search,2026-09-03
+68622V106,OGN,Health Care,Healthcare,EQUITY,Organon & Co.,cusip_search,ORGANON & CO,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+687793109,9VY.HM,Health Care,Healthcare,EQUITY,Oscar Health Inc,issuer_search_review,Oscar Health Inc,CL A,,,Yahoo Finance search,2026-09-03
+690370101,NXH,Consumer Discretionary,Consumer Cyclical,EQUITY,"Neighborhood Intelligence, Inc.",cusip_search,Overstock Com Inc Del,COM,,,Yahoo Finance search,2026-09-03
+69047Q102,OVV,Energy,Energy,EQUITY,Ovintiv Inc.,cusip_search,Ovintiv Inc,COM,,,Yahoo Finance search,2026-09-03
+690742101,OC,Industrials,Industrials,EQUITY,Owens Corning,cusip_search,OWENS CORNING NEW,COM,,,Yahoo Finance search,2026-09-03
+69331C108,PCG,Utilities,Utilities,EQUITY,PG&E Corporation,cusip_search,PG&E CORP,COM,,,Yahoo Finance search,2026-09-03
+69331C140,PCG.SG,Utilities,Utilities,EQUITY,PG&E Corp,issuer_search_review,PG&E CORP,UNIT 99/99/9999,,,Yahoo Finance search,2026-09-03
+693475105,PNC,Financials,Financial Services,EQUITY,"The PNC Financial Services Group, Inc.",cusip_search,PNC FINL SVCS GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+693506107,PPG,Materials,Basic Materials,EQUITY,"PPG Industries, Inc.",cusip_search,PPG INDS INC,COM,,,Yahoo Finance search,2026-09-03
+69351T106,PPL,Utilities,Utilities,EQUITY,PPL Corporation,cusip_search,PPL Corp,COM,,,Yahoo Finance search,2026-09-03
+69370C100,PTC,Information Technology,Technology,EQUITY,PTC Inc.,cusip_search,Ptc Inc,COM,,,Yahoo Finance search,2026-09-03
+69608A108,PLTR,Information Technology,Technology,EQUITY,Palantir Technologies Inc.,cusip_search,Palantir Technologies Inc,CL A,,,Yahoo Finance search,2026-09-03
+697435105,PANW,Information Technology,Technology,EQUITY,"Palo Alto Networks, Inc.",cusip_search,Palo Alto Networks Inc,COM,,,Yahoo Finance search,2026-09-03
+697660207,PAM,Industrials,Industrials,EQUITY,Pampa Energía S.A.,cusip_search,Pampa Energia SA,SPONS ADR LVL I,,,Yahoo Finance search,2026-09-03
+700517105,PK,Real Estate,Real Estate,EQUITY,Park Hotels & Resorts Inc.,cusip_search,PARK HOTELS RESORTS INC,COM,,,Yahoo Finance search,2026-09-03
+701094104,PH,Industrials,Industrials,EQUITY,Parker-Hannifin Corporation,cusip_search,Parker-Hannifin Corp,COM,,,Yahoo Finance search,2026-09-03
+70450Y103,PYPL,Financials,Financial Services,EQUITY,"PayPal Holdings, Inc.",cusip_search,PAYPAL HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+704551100,BTU,Energy,Energy,EQUITY,Peabody Energy Corporation,cusip_search,PEABODY ENERGY CORP NEW,COM,,,Yahoo Finance search,2026-09-03
+704551407,,Unknown,,,,unresolved,PEABODY ENERGY CORP NEW,8.5% PFD CONV A,,,Yahoo Finance search,2026-09-03
+707569109,PENN,Consumer Discretionary,Consumer Cyclical,EQUITY,"PENN Entertainment, Inc.",cusip_search,Penn Natl Gaming Inc,COM,,,Yahoo Finance search,2026-09-03
+708160106,,Unknown,,,,unresolved,PENNEY J C INC,COM,,,Yahoo Finance search,2026-09-03
+70959W103,PAG,Consumer Discretionary,Consumer Cyclical,EQUITY,"Penske Automotive Group, Inc.",cusip_search,Penske Automotive Grp Inc,COM,,,Yahoo Finance search,2026-09-03
+713448108,PEP,Consumer Staples,Consumer Defensive,EQUITY,"PepsiCo, Inc.",cusip_search,Pepsico Inc.,COM,,,Yahoo Finance search,2026-09-03
+71385M107,PRM,Materials,Basic Materials,EQUITY,"Perimeter Solutions, Inc.",cusip_search,PERIMETER SOLUTIONS INC,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+71654V408,PBR,Energy,Energy,EQUITY,Petróleo Brasileiro S.A. - Petrobras,cusip_search,Petroleo Brasileiro SA,SPON ADR,,,Yahoo Finance search,2026-09-03
+717081103,PFE,Health Care,Healthcare,EQUITY,Pfizer Inc.,cusip_search,PFIZER INC,COM,,,Yahoo Finance search,2026-09-03
+718172109,PM,Consumer Staples,Consumer Defensive,EQUITY,Philip Morris International Inc.,cusip_search,Philip Morris Intl Inc,COM,,,Yahoo Finance search,2026-09-03
+718546104,PSX,Energy,Energy,EQUITY,Phillips 66,cusip_search,PHILLIPS 66,COM,,,Yahoo Finance search,2026-09-03
+722304102,PDD,Consumer Discretionary,Consumer Cyclical,EQUITY,PDD Holdings Inc.,reviewed_override,PDD HOLDINGS INC,SPONSORED ADS,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+723787107,,Unknown,,,,unresolved,Pioneer Nat Res Co,COM,,,Yahoo Finance search,2026-09-03
+72766Q105,PLQ.F,Materials,Basic Materials,EQUITY,Element Solutions Inc,cusip_search,PLATFORM SPECIALTY PRODS COR,COM,,,Yahoo Finance search,2026-09-03
+73278L105,POOL,Industrials,Industrials,EQUITY,Pool Corporation,cusip_search,POOL CORP,COM,,,Yahoo Finance search,2026-09-03
+737010108,,Unknown,,,,unresolved,PORTOLA PHARMACEUTICALS INC,COM,,,Yahoo Finance search,2026-09-03
+73739W104,,Unknown,,,,unresolved,POSHMARK INC,COM CL A,,,Yahoo Finance search,2026-09-03
+737446104,POST,Consumer Staples,Consumer Defensive,EQUITY,"Post Holdings, Inc.",cusip_search,Post Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+73755L107,,Unknown,,,,unresolved,Potash Corp Sask Inc,COM,,,Yahoo Finance search,2026-09-03
+73935A104,QQQ,Exchange-Traded Fund,,ETF,Invesco QQQ Trust,issuer_search_review,POWERSHARES QQQ TRUST,UNIT SER 1,,,Yahoo Finance search,2026-09-03
+73936D107,,Unknown,,,,unresolved,POWERSHS DB US DOLLAR INDEX,DOLL INDX BULL,,,Yahoo Finance search,2026-09-03
+74005P104,,Unknown,,,,unresolved,Praxair Inc,COM,,,Yahoo Finance search,2026-09-03
+740189105,,Unknown,,,,unresolved,PRECISION CASTPARTS CORP,COM,,,Yahoo Finance search,2026-09-03
+741503403,PCE1.F,Consumer Discretionary,Consumer Cyclical,EQUITY,Booking Holdings Inc.,cusip_search,Priceline Grp Inc,COM NEW,,,Yahoo Finance search,2026-09-03
+74165N105,,Unknown,,,,unresolved,PRIMO WTR CORP,COM,,,Yahoo Finance search,2026-09-03
+74167P108,,Unknown,,,,unresolved,PRIMO WTR CORP,COM,,,Yahoo Finance search,2026-09-03
+742718109,PG,Consumer Staples,Consumer Defensive,EQUITY,The Procter & Gamble Company,cusip_search,PROCTER & GAMBLE CO,COM,,,Yahoo Finance search,2026-09-03
+74276L105,PRCT,Health Care,Healthcare,EQUITY,PROCEPT BioRobotics Corporation,cusip_search,Procept Biorobotics Corp,COM,,,Yahoo Finance search,2026-09-03
+74340E103,PGNY,Health Care,Healthcare,EQUITY,"Progyny, Inc.",cusip_search,Progyny Inc,COM,,,Yahoo Finance search,2026-09-03
+74347W239,0KQ0.L,Exchange-Traded Fund,,ETF,ProShares Trust II - ProShares Ultra Silver,issuer_search_review,PROSHARES TR II,ULTRA VIX ETF,,,Yahoo Finance search,2026-09-03
+74347W627,SVXY,Exchange-Traded Fund,,ETF,ProShares Short VIX Short-Term Futures ETF,cusip_search,PROSHARES TR II,SHT VIX ST TRM,,,Yahoo Finance search,2026-09-03
+74366E102,PTGX,Health Care,Healthcare,EQUITY,"Protagonist Therapeutics, Inc.",cusip_search,Protagonist Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+745867101,PHM,Consumer Discretionary,Consumer Cyclical,EQUITY,"PulteGroup, Inc.",cusip_search,PULTE GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+74623V103,PCT,Industrials,Industrials,EQUITY,"PureCycle Technologies, Inc.",cusip_search,Purecycle Technologies Inc,COM,,,Yahoo Finance search,2026-09-03
+74624M102,P,Information Technology,Technology,EQUITY,"Everpure, Inc.",cusip_search,Pure Storage Inc,CL A,,,Yahoo Finance search,2026-09-03
+74736K101,QRVO,Information Technology,Technology,EQUITY,"Qorvo, Inc.",cusip_search,Qorvo Inc,COM,,,Yahoo Finance search,2026-09-03
+74743L100,Q,Information Technology,Technology,EQUITY,"Qnity Electronics, Inc.",cusip_search,Qnity Electronics Inc,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+747525103,QCOM,Information Technology,Technology,EQUITY,QUALCOMM Incorporated,cusip_search,QUALCOMM INC,COM,,,Yahoo Finance search,2026-09-03
+74909E106,,Unknown,,,,unresolved,QUORUM HEALTH CORP,COM,,,Yahoo Finance search,2026-09-03
+74967X103,RH,Consumer Discretionary,Consumer Cyclical,EQUITY,RH,cusip_search,RH,COM,,,Yahoo Finance search,2026-09-03
+749685103,RPM,Materials,Basic Materials,EQUITY,RPM International Inc.,cusip_search,Rpm Intl Inc,COM,,,Yahoo Finance search,2026-09-03
+750917106,RMB.HM,Information Technology,Technology,EQUITY,Rambus Inc,issuer_search_review,Rambus Inc Del,COM,,,Yahoo Finance search,2026-09-03
+75281A109,RRC,Energy,Energy,EQUITY,Range Resources Corporation,cusip_search,RANGE RES CORP,COM,,,Yahoo Finance search,2026-09-03
+755111507,,Unknown,,,,unresolved,RAYTHEON CO,COM NEW,,,Yahoo Finance search,2026-09-03
+75513E101,RTX,Industrials,Industrials,EQUITY,RTX Corporation,cusip_search,RTX CORPORATION,COM,,,Yahoo Finance search,2026-09-03
+75606N109,,Unknown,,,,unresolved,Realpage Inc,COM,,,Yahoo Finance search,2026-09-03
+75615P103,,Unknown,,,,unresolved,Reata Pharmaceuticals Inc,CL A,,,Yahoo Finance search,2026-09-03
+75629V104,RXRX,Health Care,Healthcare,EQUITY,"Recursion Pharmaceuticals, Inc.",cusip_search,Recursion Pharmaceuticals In,CL A,,,Yahoo Finance search,2026-09-03
+756577102,,Unknown,,,,unresolved,RED HAT INC,COM,,,Yahoo Finance search,2026-09-03
+75734B100,RDDT,Communication Services,Communication Services,EQUITY,"Reddit, Inc.",cusip_search,Reddit Inc,CL A,,,Yahoo Finance search,2026-09-03
+75886F107,REGN,Health Care,Healthcare,EQUITY,"Regeneron Pharmaceuticals, Inc.",cusip_search,Regeneron Pharmaceuticals,COM,,,Yahoo Finance search,2026-09-03
+7591EP100,RF,Financials,Financial Services,EQUITY,Regions Financial Corporation,cusip_search,REGIONS FINL CORP NEW,COM,,,Yahoo Finance search,2026-09-03
+75943R102,RLAY,Health Care,Healthcare,EQUITY,"Relay Therapeutics, Inc.",cusip_search,Relay Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+759916109,RGEN,Health Care,Healthcare,EQUITY,Repligen Corporation,cusip_search,Repligen Corp,COM,,,Yahoo Finance search,2026-09-03
+76131D103,QSR,Consumer Discretionary,Consumer Cyclical,EQUITY,Restaurant Brands International Inc.,cusip_search,RESTAURANT BRANDS INTL INC,COM,,,Yahoo Finance search,2026-09-03
+76155X100,RVMD,Health Care,Healthcare,EQUITY,"Revolution Medicines, Inc.",cusip_search,Revolution Medicines Inc,COM,,,Yahoo Finance search,2026-09-03
+76243J105,RYTM,Health Care,Healthcare,EQUITY,"Rhythm Pharmaceuticals, Inc.",cusip_search,Rhythm Pharmaceuticals Inc,COM,,,Yahoo Finance search,2026-09-03
+762760106,,Unknown,,,,unresolved,Rice Energy Inc,COM,,,Yahoo Finance search,2026-09-03
+767204100,RIO,Materials,Basic Materials,EQUITY,Rio Tinto Group,cusip_search,RIO TINTO PLC,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+767292105,RIOT,Financials,Financial Services,EQUITY,"Riot Platforms, Inc.",cusip_search,Riot Platforms Inc,COM,,,Yahoo Finance search,2026-09-03
+771049103,RBLX,Communication Services,Communication Services,EQUITY,Roblox Corporation,cusip_search,Roblox Corp,CL A,,,Yahoo Finance search,2026-09-03
+77311W101,RKT,Financials,Financial Services,EQUITY,"Rocket Companies, Inc.",cusip_search,Rocket Cos Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+773903109,ROK,Industrials,Industrials,EQUITY,"Rockwell Automation, Inc.",cusip_search,Rockwell Automation Inc,COM,,,Yahoo Finance search,2026-09-03
+77543R102,ROKU,Communication Services,Communication Services,EQUITY,"Roku, Inc.",cusip_search,ROKU INC,COM CL A,,,Yahoo Finance search,2026-09-03
+776696106,ROP,Information Technology,Technology,EQUITY,"Roper Technologies, Inc.",cusip_search,ROPER INDS INC NEW,COM,,,Yahoo Finance search,2026-09-03
+778296103,ROST,Consumer Discretionary,Consumer Cyclical,EQUITY,"Ross Stores, Inc.",cusip_search,ROSS STORES INC,COM,,,Yahoo Finance search,2026-09-03
+780259107,,Unknown,,,,unresolved,ROYAL DUTCH SHELL PLC,SPON ADR B,,,Yahoo Finance search,2026-09-03
+780259206,,Unknown,,,,unresolved,ROYAL DUTCH SHELL PLC,SPONS ADR A,,,Yahoo Finance search,2026-09-03
+78388J106,0KYZ.L,Unknown,,EQUITY,SBA Communications Corporation,cusip_search,SBA COMMUNICATIONS CORP,COM,,,Yahoo Finance search,2026-09-03
+78409V104,SPGI,Financials,Financial Services,EQUITY,S&P Global Inc.,cusip_search,S&P GLOBAL INC,COM,,,Yahoo Finance search,2026-09-03
+78410G104,SBAC,Real Estate,Real Estate,EQUITY,SBA Communications Corporation,cusip_search,SBA COMMUNICATIONS CORP,COM,,,Yahoo Finance search,2026-09-03
+78442P106,SLM,Financials,Financial Services,EQUITY,SLM Corporation,cusip_search,Slm Corp,COM,,,Yahoo Finance search,2026-09-03
+78462F103,SPY,Diversified Equity ETF,,ETF,State Street SPDR S&P 500 ETF Trust,reviewed_override,SPDR S&P 500 ETF TR,TR UNIT,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+78463V907,GLD.MX,Exchange-Traded Fund,,ETF,SPDR Gold Shares,issuer_search_review,SPDR Gold Trust,GOLD SHS,,,Yahoo Finance search,2026-09-03
+78464A698,KRE,Financials,,ETF,State Street SPDR S&P Regional Banking ETF,reviewed_override,Spdr Ser Tr,S&P REGL BKG,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+78464A714,XRT,Exchange-Traded Fund,,ETF,State Street SPDR S&P Retail ETF,cusip_search,SPDR SERIES TRUST,S&P RETAIL ETF,,,Yahoo Finance search,2026-09-03
+78464A730,XOP,Exchange-Traded Fund,,ETF,State Street SPDR S&P Oil & Gas Exploration & Production ETF,cusip_search,SPDR SERIES TRUST,S&P OILGAS EXP,,,Yahoo Finance search,2026-09-03
+78464A755,XME,Exchange-Traded Fund,,ETF,State Street SPDR S&P Metals & Mining ETF,cusip_search,SPDR SERIES TRUST,S&P METALS MNG,,,Yahoo Finance search,2026-09-03
+78464A797,KBE,Financials,,ETF,State Street SPDR S&P Bank ETF,reviewed_override,SPDR SERIES TRUST,S&P BK ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+78464A870,XBI,Exchange-Traded Fund,,ETF,State Street SPDR S&P Biotech ETF,cusip_search,SPDR SERIES TRUST,S&P BIOTECH,,,Yahoo Finance search,2026-09-03
+78464A888,XHB,Exchange-Traded Fund,,ETF,State Street SPDR S&P Homebuilders ETF,cusip_search,SPDR SERIES TRUST,S&P HOMEBUILD,,,Yahoo Finance search,2026-09-03
+78467X109,DIA,Exchange-Traded Fund,,ETF,State Street SPDR Dow Jones Industrial Average ETF Trust,cusip_search,SPDR D.J. Ind'l Avg ETF Tst,UT SER 1,,,Yahoo Finance search,2026-09-03
+78468R556,XOP,Exchange-Traded Fund,,ETF,State Street SPDR S&P Oil & Gas Exploration & Production ETF,cusip_search,SPDR SER TR,S&P OILGAS EXP,,,Yahoo Finance search,2026-09-03
+78468R796,SPYX,Diversified Equity ETF,,ETF,State Street SPDR S&P 500 Fossil Fuel Reserves Free ETF,reviewed_override,SPDR SER TR,SPDR S&P 500 ETF,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+78574H104,SOC,Energy,Energy,EQUITY,Sable Offshore Corp.,cusip_search,SABLE OFFSHORE CORP,COM,,,Yahoo Finance search,2026-09-03
+78781P105,SAIL,Information Technology,Technology,EQUITY,"SailPoint, Inc.",cusip_search,Sailpoint Technlgies Hldgs I,COM,,,Yahoo Finance search,2026-09-03
+79466L302,CRM,Information Technology,Technology,EQUITY,"Salesforce, Inc.",cusip_search,SALESFORCE COM INC,COM,,,Yahoo Finance search,2026-09-03
+79589L106,IOT,Information Technology,Technology,EQUITY,Samsara Inc.,cusip_search,Samsara Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+799566104,SANA,Health Care,Healthcare,EQUITY,"Sana Biotechnology, Inc.",cusip_search,Sana Biotechnology Inc,COM,,,Yahoo Finance search,2026-09-03
+80004C101,SNDK.NE,Unknown,,EQUITY,SANDISK CORP/DE,issuer_search_review,SanDisk Corp,COM,,,Yahoo Finance search,2026-09-03
+80004C200,SNDK,Information Technology,Technology,EQUITY,Sandisk Corporation,cusip_search,Sandisk Corp,COM,,,Yahoo Finance search,2026-09-03
+80105N105,SNY,Health Care,Healthcare,EQUITY,Sanofi,cusip_search,SANOFI,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+803607100,SRPT,Health Care,Healthcare,EQUITY,"Sarepta Therapeutics, Inc.",cusip_search,Sarepta Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+808513105,SCHW,Financials,Financial Services,EQUITY,The Charles Schwab Corporation,cusip_search,Schwab Charles Corp,COM,,,Yahoo Finance search,2026-09-03
+81141R100,SE,Consumer Discretionary,Consumer Cyclical,EQUITY,Sea Limited,cusip_search,Sea Ltd,SPONSORD ADS,,,Yahoo Finance search,2026-09-03
+812215101,SEG-RT,Real Estate,,,Seaport Entertainment Group rights,reviewed_override,SEAPORT ENTMT GROUP INC,RIGHT 10/10/2024,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+812215200,SEG,Real Estate,Real Estate,EQUITY,Seaport Entertainment Group Inc.,cusip_search,SEAPORT ENTMT GROUP INC,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+81369Y100,XLB,Exchange-Traded Fund,,ETF,State Street Materials Select Sector SPDR ETF,cusip_search,Mat's Select Sctr SPDR Trust,SBI MATERIALS,,,Yahoo Finance search,2026-09-03
+81369Y209,XLV,Exchange-Traded Fund,,ETF,State Street Health Care Select Sector SPDR ETF,cusip_search,Hlth Care Select Sctr SPDR,SBI HEALTHCARE,,,Yahoo Finance search,2026-09-03
+81369Y308,XLP,Exchange-Traded Fund,,ETF,State Street Consumer Staples Select Sector SPDR ETF,cusip_search,SELECT SECTOR SPDR TR,SBI CONS STPLS,,,Yahoo Finance search,2026-09-03
+81369Y506,XLE,Exchange-Traded Fund,,ETF,State Street Energy Select Sector SPDR ETF,cusip_search,SELECT SECTOR SPDR TR,ENERGY,,,Yahoo Finance search,2026-09-03
+81369Y605,XLF,Financials,,ETF,State Street Financial Select Sector SPDR ETF,reviewed_override,SELECT SECTOR SPDR TR,SBI INT-FINL,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+81369Y704,XLI,Exchange-Traded Fund,,ETF,State Street Industrial Select Sector SPDR ETF,cusip_search,Select Sector Spdr Tr,SBI INT-INDS,,,Yahoo Finance search,2026-09-03
+81369Y803,XLK,Exchange-Traded Fund,,ETF,State Street Technology Select Sector SPDR ETF,cusip_search,Tech Select Sctr SPDR Fnd,TECHNOLOGY,,,Yahoo Finance search,2026-09-03
+81369Y886,XLU,Exchange-Traded Fund,,ETF,State Street Utilities Select Sector SPDR ETF,cusip_search,SELECT SECTOR SPDR TR,SBI INT-UTILS,,,Yahoo Finance search,2026-09-03
+816850101,SMTC,Information Technology,Technology,EQUITY,Semtech Corporation,cusip_search,Semtech Corp,COM,,,Yahoo Finance search,2026-09-03
+81686C104,SEMR,Information Technology,,,"Semrush Holdings, Inc.",reviewed_override,SEMRUSH HLDGS INC,CL A COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+81728A108,,Unknown,,,,unresolved,Sensei Biotherapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+81730H109,S,Information Technology,Technology,EQUITY,"SentinelOne, Inc.",cusip_search,Sentinelone Inc,CL A,,,Yahoo Finance search,2026-09-03
+81762P102,NOW,Information Technology,Technology,EQUITY,"ServiceNow, Inc.",cusip_search,Servicenow Inc,COM,,,Yahoo Finance search,2026-09-03
+82509L107,SHOP,Information Technology,Technology,EQUITY,Shopify Inc.,cusip_search,Shopify Inc,CL A,,,Yahoo Finance search,2026-09-03
+82686Q101,SLN,Health Care,Healthcare,EQUITY,Silence Therapeutics plc,reviewed_override,Silence Therapeutics Plc,ADS,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+82835W108,SPRY,Health Care,Healthcare,EQUITY,"ARS Pharmaceuticals, Inc.",cusip_search,Ars Pharmaceuticals Inc,COM,,,Yahoo Finance search,2026-09-03
+82968B103,SIRI,Communication Services,Communication Services,EQUITY,Sirius XM Holdings Inc.,cusip_search,SIRIUS XM HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+82982L103,SITE,Industrials,Industrials,EQUITY,"SiteOne Landscape Supply, Inc.",cusip_search,SITEONE LANDSCAPE SUPPLY INC,COM,,,Yahoo Finance search,2026-09-03
+829933100,SIRI,Communication Services,Communication Services,EQUITY,Sirius XM Holdings Inc.,cusip_search,SIRIUS XM HOLDINGS INC,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+830566105,SKX,Consumer Discretionary,,,"Skechers U.S.A., Inc.",reviewed_override,Skechers U S A Inc,CL A,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+83056P715,SKE,Materials,Basic Materials,EQUITY,Skeena Resources Limited,reviewed_override,Skeena Res Ltd New,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+830830105,SKY,Consumer Discretionary,Consumer Cyclical,EQUITY,"Champion Homes, Inc.",cusip_search,Champion Homes Inc,COM,,,Yahoo Finance search,2026-09-03
+83200N103,SMAR,Information Technology,,,Smartsheet Inc.,reviewed_override,SMARTSHEET INC,COM CL A,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+83304A106,SNAP,Communication Services,Communication Services,EQUITY,Snap Inc.,cusip_search,Snap Inc,CL A,,,Yahoo Finance search,2026-09-03
+833445109,SNOW,Information Technology,Technology,EQUITY,Snowflake Inc.,cusip_search,SNOWFLAKE INC,CL A,,,Yahoo Finance search,2026-09-03
+83417M104,SEDG,Information Technology,Technology,EQUITY,"SolarEdge Technologies, Inc.",cusip_search,Solaredge Technologies Inc,COM,,,Yahoo Finance search,2026-09-03
+83418M103,SEI,Energy,Energy,EQUITY,"Solaris Energy Infrastructure, Inc.",cusip_search,Solaris Energy Infras Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+83443Q103,SOLS,Materials,Basic Materials,EQUITY,"Solstice Advanced Materials, Inc.",cusip_search,Solstice Advanced Matls Inc,COM SHS,,,Yahoo Finance search,2026-09-03
+835699307,SON1.VI,Information Technology,Technology,EQUITY,Sony Group Corporation,issuer_search_review,Sony Corp,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+842587107,SO,Utilities,Utilities,EQUITY,The Southern Company,cusip_search,Southern Co,COM,,,Yahoo Finance search,2026-09-03
+84265V105,SCCO,Materials,Basic Materials,EQUITY,Southern Copper Corporation,cusip_search,Southern Copper Corp,COM,,,Yahoo Finance search,2026-09-03
+844741108,LUV,Industrials,Industrials,EQUITY,Southwest Airlines Co.,cusip_search,SOUTHWEST AIRLS CO,COM,,,Yahoo Finance search,2026-09-03
+845467109,SWN,Energy,,,Southwestern Energy Company,reviewed_override,SOUTHWESTERN ENERGY CO,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+84615Q103,SPCX,Industrials,Industrials,EQUITY,Space Exploration Technologies Corp.,issuer_search_review,SPACE EXPLORATION TECHN CORP,CLASS A COM STK,,,Yahoo Finance search,2026-09-03
+848637104,,Unknown,,,,unresolved,SPLUNK INC,COM,,,Yahoo Finance search,2026-09-03
+85205L107,SWTX,Health Care,,,"SpringWorks Therapeutics, Inc.",reviewed_override,Springworks Therapeutics Inc,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+85207U105,S,Information Technology,Technology,EQUITY,"SentinelOne, Inc.",cusip_search,Sprint Corporation,COM,,,Yahoo Finance search,2026-09-03
+85209W109,SPT,Information Technology,Technology,EQUITY,"Sprout Social, Inc.",cusip_search,SPROUT SOCIAL INC,COM CL A,,,Yahoo Finance search,2026-09-03
+852234103,XYZ,Information Technology,Technology,EQUITY,"Block, Inc.",cusip_search,SQUARE INC,CL A,,,Yahoo Finance search,2026-09-03
+852857200,,Unknown,,,,unresolved,Stamps Com Inc,COM NEW,,,Yahoo Finance search,2026-09-03
+855244109,SBUX,Consumer Discretionary,Consumer Cyclical,EQUITY,Starbucks Corporation,cusip_search,STARBUCKS CORP,COM,,,Yahoo Finance search,2026-09-03
+85571Q102,8043.T,Consumer Staples,Consumer Defensive,EQUITY,Starzen Company Limited,issuer_search_review,STARZ,LIBRTY CAP COM A,,,Yahoo Finance search,2026-09-03
+857477103,STT,Financials,Financial Services,EQUITY,State Street Corporation,cusip_search,STATE STR CORP,COM,,,Yahoo Finance search,2026-09-03
+858119100,STLD,Materials,Basic Materials,EQUITY,"Steel Dynamics, Inc.",cusip_search,Steel Dynamics Inc,COM,,,Yahoo Finance search,2026-09-03
+85917A100,,Unknown,,,,unresolved,Sterling Bancorp Del,COM,,,Yahoo Finance search,2026-09-03
+861012102,STM,Information Technology,Technology,EQUITY,STMicroelectronics N.V.,cusip_search,Stmicroelectronics N V,NY REGISTRY,,,Yahoo Finance search,2026-09-03
+862121100,,Unknown,,,,unresolved,STORE CAP CORP,COM,,,Yahoo Finance search,2026-09-03
+863667101,SYK,Health Care,Healthcare,EQUITY,Stryker Corporation,cusip_search,STRYKER CORP,COM,,,Yahoo Finance search,2026-09-03
+86366E106,GPCR,Health Care,Healthcare,EQUITY,Structure Therapeutics Inc.,cusip_search,Structure Therapeutics Inc,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+86384P109,STUB,Communication Services,Communication Services,EQUITY,"StubHub Holdings, Inc.",cusip_search,Stubhub Hldgs Inc,CL A,,,Yahoo Finance search,2026-09-03
+86614U100,,Unknown,,,,unresolved,SUMMIT MATLS INC,CL A,,,Yahoo Finance search,2026-09-03
+866966104,SUNB,Industrials,Industrials,EQUITY,"Sunbelt Rentals Holdings, Inc.",cusip_search,SUNBELT RENTALS HOLDINGS INC,SHS,,,Yahoo Finance search,2026-09-03
+867224107,SU.TO,Energy,Energy,EQUITY,Suncor Energy Inc.,cusip_search,SUNCOR ENERGY INC NEW,COM,,,Yahoo Finance search,2026-09-03
+867652406,,Unknown,,,,unresolved,Sunpower Corp,COM,,,Yahoo Finance search,2026-09-03
+86771W105,RUN,Information Technology,Technology,EQUITY,Sunrun Inc.,cusip_search,Sunrun Inc,COM,,,Yahoo Finance search,2026-09-03
+867914103,STI,Industrials,Industrials,EQUITY,"Solidion Technology, Inc.",cusip_search,SunTrust Banks Inc,COM,,,Yahoo Finance search,2026-09-03
+867975104,SNRE,Communication Services,,,Sunrise Communications AG ADS,reviewed_override,Sunrise Communications Ag Ads,CL A,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+871503108,,Unknown,,,,unresolved,SYMANTEC CORP,COM,,,Yahoo Finance search,2026-09-03
+871607107,SNPS,Information Technology,Technology,EQUITY,"Synopsys, Inc.",cusip_search,SYNOPSYS INC,COM,,,Yahoo Finance search,2026-09-03
+87165B103,SYF,Financials,Financial Services,EQUITY,Synchrony Financial,cusip_search,SYNCHRONY FINL,COM,,,Yahoo Finance search,2026-09-03
+871829107,SYY,Consumer Staples,Consumer Defensive,EQUITY,Sysco Corporation,cusip_search,SYSCO CORP,COM,,,Yahoo Finance search,2026-09-03
+87236Y108,AMTD,Financials,Financial Services,EQUITY,AMTD IDEA Group,cusip_search,TD AMERITRADE HLDG CORP,COM,,,Yahoo Finance search,2026-09-03
+87256C101,TKO,Communication Services,Communication Services,EQUITY,"TKO Group Holdings, Inc.",cusip_search,Tko Group Holdings Inc,CL A,,,Yahoo Finance search,2026-09-03
+872590104,TMUS,Communication Services,Communication Services,EQUITY,"T-Mobile US, Inc.",cusip_search,T-MOBILE US INC,COM,,,Yahoo Finance search,2026-09-03
+872590112,TM5.MU,Communication Services,Communication Services,EQUITY,T-Mobile US Inc,issuer_search_review,T-Mobile Us Inc,RIGHT 07/27/2020,,,Yahoo Finance search,2026-09-03
+872657101,TPG,Financials,Financial Services,EQUITY,TPG Inc.,cusip_search,Tpg Inc,COM CL A,,,Yahoo Finance search,2026-09-03
+87336U105,,Unknown,,,,unresolved,Tableau Software Inc,CL A,,,Yahoo Finance search,2026-09-03
+874039100,TSM,Information Technology,Technology,EQUITY,Taiwan Semiconductor Manufacturing Company Limited,reviewed_override,TAIWAN SEMICONDUCTOR MFG LTD,SPONSORED ADS,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+874054109,TTWO,Communication Services,Communication Services,EQUITY,"Take-Two Interactive Software, Inc.",cusip_search,Take-Two Interactive Softwar,COM,,,Yahoo Finance search,2026-09-03
+874080104,TAL,Consumer Staples,Consumer Defensive,EQUITY,TAL Education Group,cusip_search,Tal Education Group,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+87612E106,TGT,Consumer Staples,Consumer Defensive,EQUITY,Target Corporation,cusip_search,Target Corp,COM,,,Yahoo Finance search,2026-09-03
+87652V109,TASK,Information Technology,Technology,EQUITY,"TaskUs, Inc.",cusip_search,Taskus Inc,CLASS A COM,,,Yahoo Finance search,2026-09-03
+87807B107,TRP,Energy,Energy,EQUITY,TC Energy Corporation,reviewed_override,Tc Energy Corp,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+878742204,TECK,Materials,Basic Materials,EQUITY,Teck Resources Limited,reviewed_override,Teck Resources Ltd,CL B,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+879273209,TEO,Communication Services,Communication Services,EQUITY,Telecom Argentina S.A.,cusip_search,Telecom Argentina Sa,SPON ADR REP B,,,Yahoo Finance search,2026-09-03
+88023U101,SGI,Consumer Discretionary,Consumer Cyclical,EQUITY,Somnigroup International Inc.,cusip_search,Tempur Sealy Intl Inc,COM,,,Yahoo Finance search,2026-09-03
+88025U109,TXG,Health Care,Healthcare,EQUITY,"10x Genomics, Inc.",cusip_search,10X Genomics Inc,CL A COM,,,Yahoo Finance search,2026-09-03
+88033G407,THC,Health Care,Healthcare,EQUITY,Tenet Healthcare Corporation,cusip_search,TENET HEALTHCARE CORP,COM NEW,,,Yahoo Finance search,2026-09-03
+880349105,TEN,Energy,Energy,EQUITY,Tsakos Energy Navigation Limited,issuer_search_review,TENNECO INC,CL A VTG COM STK,,,Yahoo Finance search,2026-09-03
+88034P109,TME,Communication Services,Communication Services,EQUITY,Tencent Music Entertainment Group,reviewed_override,TENCENT MUSIC ENTMT GROUP,SPON ADS,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+88080T104,WULF,Financials,Financial Services,EQUITY,TeraWulf Inc.,cusip_search,Terawulf Inc,COM,,,Yahoo Finance search,2026-09-03
+88104M101,,Unknown,,,,unresolved,TERRAFORM GLOBAL INC,CL A,,,Yahoo Finance search,2026-09-03
+88104R100,,Unknown,,,,unresolved,TERRAFORM PWR INC,CL A COM,,,Yahoo Finance search,2026-09-03
+88104R209,,Unknown,,,,unresolved,TERRAFORM PWR INC,COM CL A,,,Yahoo Finance search,2026-09-03
+88160R101,TSLA,Consumer Discretionary,Consumer Cyclical,EQUITY,"Tesla, Inc.",cusip_search,TESLA INC,COM,,,Yahoo Finance search,2026-09-03
+881624209,TEVA,Health Care,Healthcare,EQUITY,Teva Pharmaceutical Industries Limited,cusip_search,TEVA PHARMACEUTICAL INDS LTD,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+882681109,TXRH,Consumer Discretionary,Consumer Cyclical,EQUITY,"Texas Roadhouse, Inc.",cusip_search,Texas Roadhouse Inc,COM,,,Yahoo Finance search,2026-09-03
+88322Q108,TGTX,Health Care,Healthcare,EQUITY,"TG Therapeutics, Inc.",cusip_search,Tg Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+88339J105,TTD,Communication Services,Communication Services,EQUITY,"The Trade Desk, Inc.",cusip_search,THE TRADE DESK INC,COM CL A,,,Yahoo Finance search,2026-09-03
+883556102,TMO,Health Care,Healthcare,EQUITY,Thermo Fisher Scientific Inc.,cusip_search,THERMO FISHER SCIENTIFIC INC,COM,,,Yahoo Finance search,2026-09-03
+88556E102,TDUP,Consumer Discretionary,Consumer Cyclical,EQUITY,ThredUp Inc.,cusip_search,THREDUP INC,CL A,,,Yahoo Finance search,2026-09-03
+887317303,,Unknown,,,,unresolved,TIME WARNER INC,COM NEW,,,Yahoo Finance search,2026-09-03
+88732J207,,Unknown,,,,unresolved,TIME WARNER CABLE INC,COM,,,Yahoo Finance search,2026-09-03
+888787108,TOST,Information Technology,Technology,EQUITY,"Toast, Inc.",cusip_search,Toast Inc,CL A,,,Yahoo Finance search,2026-09-03
+891027104,,Unknown,,,,unresolved,TORCHMARK CORP,COM,,,Yahoo Finance search,2026-09-03
+893641100,TDG,Industrials,Industrials,EQUITY,TransDigm Group Incorporated,cusip_search,TRANSDIGM GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+89417E109,TRV,Financials,Financial Services,EQUITY,"The Travelers Companies, Inc.",cusip_search,TRAVELERS COMPANIES INC,COM,,,Yahoo Finance search,2026-09-03
+89610F101,,Unknown,,,,unresolved,Tricida Inc,COM,,,Yahoo Finance search,2026-09-03
+89680M101,TLSI,Health Care,Healthcare,EQUITY,"TriSalus Life Sciences, Inc.",cusip_search,Trisalus Life Sciences Inc,COM,,,Yahoo Finance search,2026-09-03
+896818101,,Unknown,,,,unresolved,TRIUMPH GROUP INC NEW,COM,,,Yahoo Finance search,2026-09-03
+89832Q109,TFC,Financials,Financial Services,EQUITY,Truist Financial Corporation,cusip_search,Truist Finl Corp,COM,,,Yahoo Finance search,2026-09-03
+90130A101,,Unknown,,,,unresolved,TWENTY FIRST CENTY FOX INC,CL A,,,Yahoo Finance search,2026-09-03
+90130A200,,Unknown,,,,unresolved,TWENTY FIRST CENTY FOX INC,CL B,,,Yahoo Finance search,2026-09-03
+90138F102,TWLO,Information Technology,Technology,EQUITY,Twilio Inc.,cusip_search,Twilio Inc,CL A,,,Yahoo Finance search,2026-09-03
+90184D100,TWST,Health Care,Healthcare,EQUITY,Twist Bioscience Corporation,cusip_search,Twist Bioscience Corp,COM,,,Yahoo Finance search,2026-09-03
+90184L102,,Unknown,,,,unresolved,TWITTER INC,COM,,,Yahoo Finance search,2026-09-03
+90214J101,,Unknown,,,,unresolved,2U Inc,COM,,,Yahoo Finance search,2026-09-03
+902664200,,Unknown,,,,unresolved,UBS AG JERSEY BRANCH,2XMN ALR MLP INF,,,Yahoo Finance search,2026-09-03
+902973304,USB,Financials,Financial Services,EQUITY,U.S. Bancorp,cusip_search,US BANCORP DEL,COM NEW,,,Yahoo Finance search,2026-09-03
+903293405,USG,Exchange-Traded Fund,,ETF,USCF Gold Strategy Plus Income Fund,cusip_search,U S G CORP,COM NEW,,,Yahoo Finance search,2026-09-03
+90347A100,,Unknown,,,,unresolved,UBIQUITI NETWORKS INC,COM,,,Yahoo Finance search,2026-09-03
+90353T100,UBER,Information Technology,Technology,EQUITY,"Uber Technologies, Inc.",cusip_search,UBER TECHNOLOGIES INC,COM,,,Yahoo Finance search,2026-09-03
+90384S303,ULTA,Consumer Discretionary,Consumer Cyclical,EQUITY,"Ulta Beauty, Inc.",cusip_search,ULTA BEAUTY INC,COM,,,Yahoo Finance search,2026-09-03
+90400D108,RARE,Health Care,Healthcare,EQUITY,Ultragenyx Pharmaceutical Inc.,cusip_search,Ultragenyx Pharmaceutical In,COM,,,Yahoo Finance search,2026-09-03
+904311107,UAA,Consumer Discretionary,Consumer Cyclical,EQUITY,"Under Armour, Inc.",cusip_search,"Under Armour, Inc",CL A,,,Yahoo Finance search,2026-09-03
+907818108,UNP,Industrials,Industrials,EQUITY,Union Pacific Corporation,cusip_search,UNION PAC CORP,COM,,,Yahoo Finance search,2026-09-03
+910047109,UAL,Industrials,Industrials,EQUITY,"United Airlines Holdings, Inc.",cusip_search,UNITED CONTL HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+911312106,UPS,Industrials,Industrials,EQUITY,"United Parcel Service, Inc.",cusip_search,UNITED PARCEL SERVICE INC,CL B,,,Yahoo Finance search,2026-09-03
+911363109,URI,Industrials,Industrials,EQUITY,"United Rentals, Inc.",cusip_search,UNITED RENTALS INC,COM,,,Yahoo Finance search,2026-09-03
+912008109,USFD,Consumer Staples,Consumer Defensive,EQUITY,US Foods Holding Corp.,cusip_search,Us Foods Hldg Corp,COM,,,Yahoo Finance search,2026-09-03
+912909108,X,Materials,,,United States Steel Corporation,reviewed_override,United States Stl Corp New,COM,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+913017109,,Unknown,,,,unresolved,UNITED TECHNOLOGIES CORP,COM,,,Yahoo Finance search,2026-09-03
+91324P102,UNH,Health Care,Healthcare,EQUITY,UnitedHealth Group Incorporated,cusip_search,UNITEDHEALTH GROUP INC,COM,,,Yahoo Finance search,2026-09-03
+91332U101,U,Information Technology,Technology,EQUITY,Unity Software Inc.,cusip_search,Unity Software Inc,COM,,,Yahoo Finance search,2026-09-03
+91336L107,,Unknown,,,,unresolved,UNIVAR SOLUTIONS INC,COM,,,Yahoo Finance search,2026-09-03
+91347P105,OLED,Information Technology,Technology,EQUITY,Universal Display Corporation,cusip_search,Universal Display Corp,COM,,,Yahoo Finance search,2026-09-03
+91531W106,1M5.DU,Financials,Financial Services,EQUITY,UP Fintech Holding Ltd,cusip_search,Up Fintech Hldg Ltd,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+91688F104,UPWK,Communication Services,Communication Services,EQUITY,Upwork Inc.,cusip_search,UPWORK INC,COM,,,Yahoo Finance search,2026-09-03
+91823B109,UWMC,Financials,Financial Services,EQUITY,UWM Holdings Corporation,cusip_search,Uwm Holdings Corporation,COM CL A,,,Yahoo Finance search,2026-09-03
+91911K102,,Unknown,,,,unresolved,VALEANT PHARMACEUTICALS INTL,COM,,,Yahoo Finance search,2026-09-03
+91912E105,VALE,Materials,Basic Materials,EQUITY,Vale S.A.,cusip_search,Vale S A,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+91913Y100,VLO,Energy,Energy,EQUITY,Valero Energy Corporation,cusip_search,Valero Energy Corporation,COM,,,Yahoo Finance search,2026-09-03
+92189F106,GDX,Exchange-Traded Fund,,ETF,VanEck Gold Miners ETF,cusip_search,VANECK VECTORS ETF TR,GOLD MINERS ETF,,,Yahoo Finance search,2026-09-03
+92189F676,SMH,Information Technology,,ETF,VanEck Semiconductor ETF,reviewed_override,VANECK VECTORS ETF TR,SEMICONDUCTOR ET,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+92189F718,OIH,Exchange-Traded Fund,,ETF,VanEck Oil Services ETF,cusip_search,VANECK VECTORS ETF TR,OIL SVCS ETF,,,Yahoo Finance search,2026-09-03
+92189F791,GDXJ,Exchange-Traded Fund,,ETF,VanEck Junior Gold Miners ETF,cusip_search,VANECK VECTORS ETF TR,JR GOLD MINERS E,,,Yahoo Finance search,2026-09-03
+922107107,,Unknown,,,,unresolved,Vapotherm Inc,COM,,,Yahoo Finance search,2026-09-03
+92243G108,PCVX,Health Care,Healthcare,EQUITY,"Vaxcyte, Inc.",cusip_search,Vaxcyte Inc,COM,,,Yahoo Finance search,2026-09-03
+922475108,VEEV,Health Care,Healthcare,EQUITY,Veeva Systems Inc.,cusip_search,Veeva Sys Inc,CL A COM,,,Yahoo Finance search,2026-09-03
+922908363,VOO,Diversified Equity ETF,,ETF,Vanguard S&P 500 ETF,reviewed_override,VANGUARD INDEX FDS,S&P 500 ETF SHS,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+92337F107,VCYT,Health Care,Healthcare,EQUITY,"Veracyte, Inc.",cusip_search,Veracyte Inc,COM,,,Yahoo Finance search,2026-09-03
+92343E102,VRSN,Information Technology,Technology,EQUITY,"VeriSign, Inc.",cusip_search,VERISIGN INC,COM,,,Yahoo Finance search,2026-09-03
+92343V104,VZ,Communication Services,Communication Services,EQUITY,Verizon Communications Inc.,cusip_search,VERIZON COMMUNICATIONS INC,COM,,,Yahoo Finance search,2026-09-03
+92345Y106,VRSK,Industrials,Industrials,EQUITY,"Verisk Analytics, Inc.",cusip_search,VERISK ANALYTICS INC,CL A,,,Yahoo Finance search,2026-09-03
+925050106,VRNA,Health Care,,,Verona Pharma plc,reviewed_override,Verona Pharma Plc,SPONSORED ADS,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+92532F100,VRTX,Health Care,Healthcare,EQUITY,Vertex Pharmaceuticals Incorporated,cusip_search,Vertex Pharms Inc,COM,,,Yahoo Finance search,2026-09-03
+92537N108,VRT,Industrials,Industrials,EQUITY,Vertiv Holdings Co,cusip_search,Vertiv Holdings Co,COM CL A,,,Yahoo Finance search,2026-09-03
+92553P201,,Unknown,,,,unresolved,VIACOM INC NEW,CL B,,,Yahoo Finance search,2026-09-03
+92556H206,,Unknown,,,,unresolved,PARAMOUNT GLOBAL,CLASS B COM,,,Yahoo Finance search,2026-09-03
+92686J106,VKTX,Health Care,Healthcare,EQUITY,"Viking Therapeutics, Inc.",cusip_search,Viking Therapeutics Inc,COM,,,Yahoo Finance search,2026-09-03
+92763W103,1VPA.SG,Consumer Discretionary,Consumer Cyclical,EQUITY,Vipshop Holdings Ltd,cusip_search,Vipshop Hldgs Ltd,SPONSORED ADR,,,Yahoo Finance search,2026-09-03
+92765X208,,Unknown,,,,unresolved,Virgin America Inc,COM VTG,,,Yahoo Finance search,2026-09-03
+92826C839,V,Financials,Financial Services,EQUITY,Visa Inc.,cusip_search,VISA INC,COM CL A,,,Yahoo Finance search,2026-09-03
+92837L109,VIST,Energy,Energy,EQUITY,"Vista Energy, S.A.B. de C.V.",cusip_search,Vista Energy S.A.B. De C.V.,SPONSORED ADS,,,Yahoo Finance search,2026-09-03
+92840M102,VST,Utilities,Utilities,EQUITY,Vistra Corp.,cusip_search,VISTRA CORP,COM,,,Yahoo Finance search,2026-09-03
+92852X103,VTS,Energy,Energy,EQUITY,"Vitesse Energy, Inc.",cusip_search,VITESSE ENERGY INC,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+928563402,,Unknown,,,,unresolved,VMWARE INC,CL A COM,,,Yahoo Finance search,2026-09-03
+929042109,VNO,Real Estate,Real Estate,EQUITY,Vornado Realty Trust,cusip_search,VORNADO RLTY TR,SH BEN INT,,,Yahoo Finance search,2026-09-03
+929160109,VMC,Materials,Basic Materials,EQUITY,Vulcan Materials Company,cusip_search,Vulcan Matls Co,COM,,,Yahoo Finance search,2026-09-03
+92927K102,,Unknown,,,,unresolved,WABCO HLDGS INC,COM,,,Yahoo Finance search,2026-09-03
+92936P100,,Unknown,,,,unresolved,WMIH CORP,COM,,,Yahoo Finance search,2026-09-03
+92939U106,WEC,Utilities,Utilities,EQUITY,"WEC Energy Group, Inc.",cusip_search,WEC Energy Grp Inc.,COM,,,Yahoo Finance search,2026-09-03
+929740108,WAB,Industrials,Industrials,EQUITY,Westinghouse Air Brake Technologies Corporation,cusip_search,Wabtec,COM,,,Yahoo Finance search,2026-09-03
+931142103,WMT,Consumer Staples,Consumer Defensive,EQUITY,Walmart Inc.,cusip_search,WAL MART STORES INC,COM,,,Yahoo Finance search,2026-09-03
+931422109,,Unknown,,,,unresolved,Walgreen Co,COM,,,Yahoo Finance search,2026-09-03
+93403J106,WRBY,Health Care,Healthcare,EQUITY,Warby Parker Inc.,cusip_search,Warby Parker Inc,CL A COM,,,Yahoo Finance search,2026-09-03
+934423104,WBD,Communication Services,Communication Services,EQUITY,"Warner Bros. Discovery, Inc.",cusip_search,Warner Bros Discovery Inc,COM SER A,,,Yahoo Finance search,2026-09-03
+94419L101,W,Consumer Discretionary,Consumer Cyclical,EQUITY,Wayfair Inc.,cusip_search,Wayfair Inc,CL A,,,Yahoo Finance search,2026-09-03
+948596101,WB,Communication Services,Communication Services,EQUITY,Weibo Corporation,cusip_search,Weibo Corp,Spon ADR,,,Yahoo Finance search,2026-09-03
+949746101,WFC,Financials,Financial Services,EQUITY,Wells Fargo & Company,cusip_search,WELLS FARGO & CO NEW,COM,,,Yahoo Finance search,2026-09-03
+95058W100,WEN,Consumer Discretionary,Consumer Cyclical,EQUITY,The Wendy's Company,cusip_search,Wendys Co,COM,,,Yahoo Finance search,2026-09-03
+95082P105,WCC,Industrials,Industrials,EQUITY,"WESCO International, Inc.",cusip_search,Wesco Intl Inc,COM,,,Yahoo Finance search,2026-09-03
+957638109,WAL,Financials,Financial Services,EQUITY,Western Alliance Bancorporation,cusip_search,WESTERN ALLIANCE BANCORP,COM,,,Yahoo Finance search,2026-09-03
+958102105,WDC,Information Technology,Technology,EQUITY,Western Digital Corporation,cusip_search,WESTERN DIGITAL CORP,COM,,,Yahoo Finance search,2026-09-03
+958669103,WES,Energy,Energy,EQUITY,"Western Midstream Partners, LP",cusip_search,WESTERN MIDSTREAM PARTNERS L,COM UNIT LP INT,,,Yahoo Finance search,2026-09-03
+960413102,WLK,Materials,Basic Materials,EQUITY,Westlake Corporation,cusip_search,Westlake Corporation,COM,,,Yahoo Finance search,2026-09-03
+963320106,WHR,Consumer Discretionary,Consumer Cyclical,EQUITY,Whirlpool Corporation,cusip_search,WHIRLPOOL CORP,COM,,,Yahoo Finance search,2026-09-03
+966244105,,Unknown,,,,unresolved,WhiteWave Foods Co,COM,,,Yahoo Finance search,2026-09-03
+969457100,WMB,Energy,Energy,EQUITY,"The Williams Companies, Inc.",cusip_search,WILLIAMS COS INC DEL,COM,,,Yahoo Finance search,2026-09-03
+96949L105,,Unknown,,,,unresolved,WILLIAMS PARTNERS L P NEW,COM UNIT LTD PAR,,,Yahoo Finance search,2026-09-03
+969904101,WSM,Consumer Discretionary,Consumer Cyclical,EQUITY,"Williams-Sonoma, Inc.",cusip_search,Williams-Sonoma Inc,COM,,,Yahoo Finance search,2026-09-03
+971378104,WSC,Industrials,Industrials,EQUITY,WillScot Holdings Corporation,cusip_search,Willscot Mobil Mini Hldng Co,COM CL A,,,Yahoo Finance search,2026-09-03
+97717W422,EPI,Exchange-Traded Fund,,ETF,WisdomTree India Earnings Fund,cusip_search,WISDOMTREE TR,INDIA ERNGS FD,,,Yahoo Finance search,2026-09-03
+97717W851,DXJ,Exchange-Traded Fund,,ETF,WisdomTree Japan Hedged Equity Fund,cusip_search,WISDOMTREE TR,JAPN HEDGE EQT,,,Yahoo Finance search,2026-09-03
+97785W106,WOLF,Information Technology,Technology,EQUITY,"Wolfspeed, Inc.",cusip_search,Wolfspeed Inc,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+980745103,WWD,Industrials,Industrials,EQUITY,"Woodward, Inc.",cusip_search,Woodward Inc,COM,,,Yahoo Finance search,2026-09-03
+98138H101,WDAY,Information Technology,Technology,EQUITY,"Workday, Inc.",cusip_search,Workday Inc,CL A,,,Yahoo Finance search,2026-09-03
+98139A105,WK,Information Technology,Technology,EQUITY,Workiva Inc.,cusip_search,WORKIVA INC,COM CL A,,,Yahoo Finance search,2026-09-03
+981558109,,Unknown,,,,unresolved,Worldpay Inc,CL A,,,Yahoo Finance search,2026-09-03
+98156Q108,,Unknown,,,,unresolved,World Wrestling Entmt Inc,CL A,,,Yahoo Finance search,2026-09-03
+983134107,WYNN,Consumer Discretionary,Consumer Cyclical,EQUITY,"Wynn Resorts, Limited",cusip_search,WYNN RESORTS LTD,COM,,,Yahoo Finance search,2026-09-03
+983793100,XPO,Industrials,Industrials,EQUITY,"XPO, Inc.",cusip_search,XPO LOGISTICS INC,COM,,,Yahoo Finance search,2026-09-03
+98386P102,XE,Industrials,Industrials,EQUITY,"X-Energy, Inc.",cusip_search,X-ENERGY INC,COM CL A,,,Yahoo Finance search,2026-09-03
+983919101,,Unknown,,,,unresolved,Xilinx Inc,COM,,,Yahoo Finance search,2026-09-03
+98420N105,XENE,Health Care,Healthcare,EQUITY,Xenon Pharmaceuticals Inc.,cusip_search,Xenon Pharmaceuticals Inc,COM,,,Yahoo Finance search,2026-09-03
+984245100,YPF,Energy,Energy,EQUITY,YPF Sociedad Anónima,cusip_search,Ypf Sociedad Anonima,SPON ADR CL D,,,Yahoo Finance search,2026-09-03
+984332106,,Unknown,,,,unresolved,YAHOO INC,COM,,,Yahoo Finance search,2026-09-03
+985817105,YELP,Communication Services,Communication Services,EQUITY,Yelp Inc.,cusip_search,YELP INC,CL A,,,Yahoo Finance search,2026-09-03
+988498101,YUM,Consumer Discretionary,Consumer Cyclical,EQUITY,"Yum! Brands, Inc.",cusip_search,Yum Brands Inc,COM,,,Yahoo Finance search,2026-09-03
+98850P109,YUMC,Consumer Discretionary,Consumer Cyclical,EQUITY,"Yum China Holdings, Inc.",cusip_search,Yum China Hldgs Inc,COM,,,Yahoo Finance search,2026-09-03
+98887Q104,ZLAB,Health Care,Healthcare,EQUITY,Zai Lab Limited,cusip_search,Zai Lab Ltd,ADR,,,Yahoo Finance search,2026-09-03
+98936J101,,Unknown,,,,unresolved,Zendesk Inc,COM,,,Yahoo Finance search,2026-09-03
+98954M200,Z,Communication Services,Communication Services,EQUITY,"Zillow Group, Inc.",cusip_search,Zillow Group Inc,CL C CAP STK,,,Yahoo Finance search,2026-09-03
+98956P102,ZBH,Health Care,Healthcare,EQUITY,"Zimmer Biomet Holdings, Inc.",cusip_search,Zimmer Biomet Holdings Inc,COM,,,Yahoo Finance search,2026-09-03
+989701107,ZION,Financials,Financial Services,EQUITY,"Zions Bancorporation, National Association",cusip_search,ZIONS BANCORPORATION N A,COM,,,Yahoo Finance search,2026-09-03
+98978V103,ZTS,Health Care,Healthcare,EQUITY,Zoetis Inc.,cusip_search,ZOETIS INC,CL A,,,Yahoo Finance search,2026-09-03
+98980F104,GTM,Information Technology,Technology,EQUITY,ZoomInfo Technologies Inc.,cusip_search,Zoominfo Technologies Inc,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+98980L101,ZM,Information Technology,Technology,EQUITY,"Zoom Communications, Inc.",cusip_search,Zoom Video Communications In,CL A,,,Yahoo Finance search,2026-09-03
+D18190898,DB,Financials,Financial Services,EQUITY,Deutsche Bank Aktiengesellschaft,reviewed_override,DEUTSCHE BANK A G,NAMEN AKT,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+G00349103,AY3.F,Consumer Discretionary,Consumer Cyclical,EQUITY,Guming Holdings Limited,cusip_search,ABENGOA YIELD PLC,ORD SHS,,,Yahoo Finance search,2026-09-03
+G0083B108,ACT,Financials,Financial Services,EQUITY,"Enact Holdings, Inc.",issuer_search_review,ACTAVIS PLC,SHS,,,Yahoo Finance search,2026-09-03
+G0176J109,ALLE,Industrials,Industrials,EQUITY,Allegion plc,cusip_search,ALLEGION PLC,ORD SHS,,,Yahoo Finance search,2026-09-03
+G0177J108,,Unknown,,,,unresolved,ALLERGAN PLC,SHS,,,Yahoo Finance search,2026-09-03
+G0371B109,,Unknown,,,,unresolved,ALTIMETER GROWTH CORP 2,COM CL A,,,Yahoo Finance search,2026-09-03
+G0403H108,AON,Financials,Financial Services,EQUITY,Aon plc,cusip_search,AON PLC,SHS CL A,,,Yahoo Finance search,2026-09-03
+G04553106,,Unknown,,,,unresolved,Arco Platform Ltd Com,CL A,,,Yahoo Finance search,2026-09-03
+G06242104,TEAM.MX,Information Technology,Technology,EQUITY,Atlassian Corporation,cusip_search,Atlassian Corp Plc,CL A,,,Yahoo Finance search,2026-09-03
+G0750C108,AXTA,Materials,Basic Materials,EQUITY,Axalta Coating Systems Ltd.,cusip_search,AXALTA COATING SYS LTD,COM,,,Yahoo Finance search,2026-09-03
+G0751N103,,Unknown,,,,unresolved,ATLANTICA YIELD PLC,SHS,,,Yahoo Finance search,2026-09-03
+G0896C103,TBBB,Consumer Staples,Consumer Defensive,EQUITY,BBB Foods Inc.,cusip_search,Bbb Foods Inc,CL A COM,,,Yahoo Finance search,2026-09-03
+G11448100,BTDR,Information Technology,Technology,EQUITY,Bitdeer Technologies Group,cusip_search,Bitdeer Technologies Group,CL A ORD SHS,,,Yahoo Finance search,2026-09-03
+G16169107,9JG.SG,Financials,Financial Services,EQUITY,Brookfield Asset Management Reinsurance Partners Ltd,cusip_search,BROOKFIELD ASSET MGMT REINS,CL A EXCH LT VTG,,,Yahoo Finance search,2026-09-03
+G1992N118,,Unknown,,,,unresolved,CC NEUBERGER PRINCIPAL HOLDN,UNIT 99/99/9999,,,Yahoo Finance search,2026-09-03
+G2007L105,CZOOF,Consumer Discretionary,Consumer Cyclical,EQUITY,Cazoo Group Ltd,issuer_search_review,Cazoo Group Ltd,COM,,,Yahoo Finance search,2026-09-03
+G25508105,CRH,Materials,Basic Materials,EQUITY,CRH plc,cusip_search,Crh Plc,ORD,,,Yahoo Finance search,2026-09-03
+G27358103,,Unknown,,,,unresolved,DESPEGAR COM CORP,ORD SHS,,,Yahoo Finance search,2026-09-03
+G28302100,,Unknown,,,,unresolved,Dragoneer Growth Opportun Co,COM CL A,,,Yahoo Finance search,2026-09-03
+G28314105,,Unknown,,,,unresolved,DRAGONEER GROWTH OPPTY CORP,SHS CL A,,,Yahoo Finance search,2026-09-03
+G29183103,ETN,Industrials,Industrials,EQUITY,Eaton Corporation plc,cusip_search,Eaton Corp Plc,SHS,,,Yahoo Finance search,2026-09-03
+G3075P101,ESGRF,Financials,Financial Services,EQUITY,Enstar Group Limited,issuer_search_review,ENSTAR GROUP LIMITED,SHS,,,Yahoo Finance search,2026-09-03
+G3421J106,,Unknown,,,,unresolved,FERGUSON PLC NEW,SHS,,,Yahoo Finance search,2026-09-03
+G3643J108,FLUT,Consumer Discretionary,Consumer Cyclical,EQUITY,Flutter Entertainment plc,cusip_search,Flutter Entmt Plc,SHS,,,Yahoo Finance search,2026-09-03
+G3730V105,FTAI,Industrials,Industrials,EQUITY,FTAI Aviation Ltd.,cusip_search,Ftai Aviation Ltd,SHS,,,Yahoo Finance search,2026-09-03
+G4701H109,IHS,Real Estate,Real Estate,EQUITY,IHS Holding Limited,cusip_search,Ihs Holding Limited,ORD SHS,,,Yahoo Finance search,2026-09-03
+G47567105,,Unknown,,,,unresolved,Ihs Markit Ltd,SHS,,,Yahoo Finance search,2026-09-03
+G47791101,IR,Industrials,Industrials,EQUITY,Ingersoll Rand Inc.,cusip_search,INGERSOLL-RAND PLC,SHS,,,Yahoo Finance search,2026-09-03
+G5480U104,,Unknown,,,,unresolved,LIBERTY GLOBAL PLC,SHS CL A,,,Yahoo Finance search,2026-09-03
+G5480U120,,Unknown,,,,unresolved,LIBERTY GLOBAL PLC,SHS CL C,,,Yahoo Finance search,2026-09-03
+G5480U138,,Unknown,,,,unresolved,LIBERTY GLOBAL PLC,LILAC SHS CL A,,,Yahoo Finance search,2026-09-03
+G5480U153,,Unknown,,,,unresolved,LIBERTY GLOBAL PLC,LILAC SHS CL C,,,Yahoo Finance search,2026-09-03
+G5494J103,LIN,Materials,Basic Materials,EQUITY,Linde plc,issuer_search_review,Linde Plc,SHS,,,Yahoo Finance search,2026-09-03
+G54950103,LIN,Materials,Basic Materials,EQUITY,Linde plc,cusip_search,Linde Plc,SHS,,,Yahoo Finance search,2026-09-03
+G5960L103,MDT,Health Care,Healthcare,EQUITY,Medtronic plc,cusip_search,Medtronic Plc,SHS,,,Yahoo Finance search,2026-09-03
+G6095L109,APTV,Consumer Discretionary,Consumer Cyclical,EQUITY,Aptiv PLC,issuer_search_review,APTIV PLC,SHS,,,Yahoo Finance search,2026-09-03
+G61188101,LBTYA,Communication Services,Communication Services,EQUITY,Liberty Global Ltd.,cusip_search,Liberty Global Ltd,COM CL A,,,Yahoo Finance search,2026-09-03
+G61188127,LBTYK,Communication Services,Communication Services,EQUITY,Liberty Global Ltd.,cusip_search,Liberty Global Ltd,COM CL C,,,Yahoo Finance search,2026-09-03
+G6359F103,NBR,Energy,Energy,EQUITY,Nabors Industries Ltd.,cusip_search,NABORS INDUSTRIES LTD,SHS,,,Yahoo Finance search,2026-09-03
+G65163100,JOBY,Industrials,Industrials,EQUITY,"Joby Aviation, Inc.",cusip_search,Joby Aviation Inc,COMMON STOCK,,,Yahoo Finance search,2026-09-03
+G6564A105,NOMD,Consumer Staples,Consumer Defensive,EQUITY,Nomad Foods Limited,cusip_search,NOMAD HLDGS LTD,USD ORD SHS,,,Yahoo Finance search,2026-09-03
+G6683N103,NU,Financials,Financial Services,EQUITY,Nu Holdings Ltd.,cusip_search,NU HLDGS LTD,ORD SHS CL A,,,Yahoo Finance search,2026-09-03
+G6693N103,,Unknown,,,,unresolved,NU HLDGS LTD,ORD SHS CL A,,,Yahoo Finance search,2026-09-03
+G6700G107,NVT,Industrials,Industrials,EQUITY,nVent Electric plc,cusip_search,Nvent Electric Plc,SHS,,,Yahoo Finance search,2026-09-03
+G68707101,PAGS,Information Technology,Technology,EQUITY,PagSeguro Digital Ltd.,cusip_search,Pagseguro Digital Ltd Com,CL A,,,Yahoo Finance search,2026-09-03
+G6964L107,PSFE,Information Technology,Technology,EQUITY,Paysafe Limited,cusip_search,PAYSAFE LIMITED,ORD,,,Yahoo Finance search,2026-09-03
+G7709Q104,RPRX,Health Care,Healthcare,EQUITY,Royalty Pharma plc,cusip_search,ROYALTY PHARMA PLC,SHS CLASS A,,,Yahoo Finance search,2026-09-03
+G7997R103,STX,Information Technology,Technology,EQUITY,Seagate Technology Holdings plc,cusip_search,Seagate Technology Hldngs Pl,ORD SHS,,,Yahoo Finance search,2026-09-03
+G81477104,,Unknown,,,,unresolved,Sina Corp,Ord,,,Yahoo Finance search,2026-09-03
+G85158106,STNE,Information Technology,Technology,EQUITY,StoneCo Ltd.,cusip_search,STONECO LTD,COM CL A,,,Yahoo Finance search,2026-09-03
+G8601L110,,Unknown,,,,unresolved,SVF INVESTMENT CORP,UNIT 12/20/2025,,,Yahoo Finance search,2026-09-03
+G8704C124,,Unknown,,,,unresolved,TCV ACQUISITION CORP,CL A SHS,,,Yahoo Finance search,2026-09-03
+G9001E102,LILA,Communication Services,Communication Services,EQUITY,Liberty Latin America Ltd.,cusip_search,LIBERTY LATIN AMERICA LTD,COM CL A,,,Yahoo Finance search,2026-09-03
+G9001E128,LILAK,Communication Services,Communication Services,EQUITY,Liberty Latin America Ltd.,cusip_search,LIBERTY LATIN AMERICA LTD,COM CL C,,,Yahoo Finance search,2026-09-03
+G9329Z100,VNTRF,Materials,Basic Materials,EQUITY,Venator Materials PLC,cusip_search,VENATOR MATLS PLC,SHS,,,Yahoo Finance search,2026-09-03
+G98239109,XP,Financials,Financial Services,EQUITY,XP Inc.,cusip_search,Xp Inc,CL A,,,Yahoo Finance search,2026-09-03
+H00263105,ACIU,Health Care,Healthcare,EQUITY,AC Immune SA,cusip_search,Ac Immune Sa,SHS,,,Yahoo Finance search,2026-09-03
+H1467J104,CB,Financials,Financial Services,EQUITY,Chubb Limited,cusip_search,CHUBB LIMITED,COM,,,Yahoo Finance search,2026-09-03
+H42097107,UBSG.SW,Financials,Financial Services,EQUITY,UBS Group AG,cusip_search,Ubs Group Ag,SHS,,,Yahoo Finance search,2026-09-03
+H82027105,SOPH,Health Care,Healthcare,EQUITY,SOPHiA GENETICS SA,cusip_search,SOPHIA GENETICS SA,ORDINARY SHARES,,,Yahoo Finance search,2026-09-03
+H8817H100,RIG,Energy,Energy,EQUITY,Transocean Ltd.,cusip_search,Transocean Ltd,REG SHS,,,Yahoo Finance search,2026-09-03
+L5140P101,,Unknown,,,,unresolved,Intelsat S A,COM,,,Yahoo Finance search,2026-09-03
+L8681T102,SPOT,Communication Services,Communication Services,EQUITY,Spotify Technology S.A.,cusip_search,Spotify Technology S A,SHS,,,Yahoo Finance search,2026-09-03
+M2682V108,,Unknown,,,,unresolved,Cyberark Software Ltd,SHS,,,Yahoo Finance search,2026-09-03
+M3760D101,ESLT,Industrials,Industrials,EQUITY,Elbit Systems Ltd.,reviewed_override,Elbit Sys Ltd,ORD,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+M51363113,,Unknown,,,,unresolved,Mellanox Tech's Ltd,SHS,,,Yahoo Finance search,2026-09-03
+M5216V106,GLBE,Consumer Discretionary,Consumer Cyclical,EQUITY,Global-E Online Ltd.,cusip_search,Global E Online Ltd,SHS,,,Yahoo Finance search,2026-09-03
+M87915274,TSEM,Information Technology,Technology,EQUITY,Tower Semiconductor Ltd.,cusip_search,Tower Semiconductor Ltd,SHS NEW,,,Yahoo Finance search,2026-09-03
+M98068105,WIX,Information Technology,Technology,EQUITY,Wix.com Ltd.,cusip_search,WIX COM LTD,SHS,,,Yahoo Finance search,2026-09-03
+N00985106,AER,Industrials,Industrials,EQUITY,AerCap Holdings N.V.,cusip_search,AERCAP HOLDINGS NV,SHS,,,Yahoo Finance search,2026-09-03
+N07059210,ASML,Information Technology,Technology,EQUITY,ASML Holding N.V.,cusip_search,ASML HOLDING N V,N Y REGISTRY SHS,,,Yahoo Finance search,2026-09-03
+N14506104,ESTC,Information Technology,Technology,EQUITY,Elastic N.V.,cusip_search,Elastic N V,ORD SHS,,,Yahoo Finance search,2026-09-03
+N20146101,CMPR,Industrials,Industrials,EQUITY,Cimpress plc,cusip_search,CIMPRESS N V,SHS EURO,,,Yahoo Finance search,2026-09-03
+N3168P101,FER,Industrials,Industrials,EQUITY,Ferrovial N.V.,reviewed_override,FERROVIAL SE,ORD SHS,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+N4732M103,JBS,Consumer Staples,Consumer Defensive,EQUITY,JBS N.V.,cusip_search,Jbs N.V.,CL A SHS,,,Yahoo Finance search,2026-09-03
+N53745100,LYB,Materials,Basic Materials,EQUITY,LyondellBasell Industries N.V.,cusip_search,Lyondellbasell Industries N,SHS - A -,,,Yahoo Finance search,2026-09-03
+N59465109,,Unknown,,,,unresolved,MYLAN N V,SHS EURO,,,Yahoo Finance search,2026-09-03
+N62509109,NAMS,Health Care,Healthcare,EQUITY,NewAmsterdam Pharma Company N.V.,cusip_search,Newamsterdam Pharma Company,ORDINARY SHARES,,,Yahoo Finance search,2026-09-03
+N6596X109,NXPI,Information Technology,Technology,EQUITY,NXP Semiconductors N.V.,cusip_search,NXP SEMICONDUCTORS N V,COM,,,Yahoo Finance search,2026-09-03
+N7902X106,,Unknown,,,,unresolved,Sensata Technologies Hldng NV,SHS,,,Yahoo Finance search,2026-09-03
+N82405106,STLAM.MI,Consumer Discretionary,Consumer Cyclical,EQUITY,Stellantis N.V.,cusip_search,Stellantis N.V,SHS,,,Yahoo Finance search,2026-09-03
+N97284108,NBIS,Communication Services,Communication Services,EQUITY,Nebius Group N.V.,cusip_search,Yandex N V,SHS CLASS A,,,Yahoo Finance search,2026-09-03
+Q4982L109,IREN,Financials,Financial Services,EQUITY,IREN Limited,cusip_search,Iren Limited,ORDINARY SHARES,,,Yahoo Finance search,2026-09-03
+V7780T103,RCL,Consumer Discretionary,Consumer Cyclical,EQUITY,Royal Caribbean Cruises Ltd.,cusip_search,Royal Carib'n Cruises Ltd,COM,,,Yahoo Finance search,2026-09-03
+Y09827109,,Unknown,,,,unresolved,Broadcom Ltd,SHS,,,Yahoo Finance search,2026-09-03
+Y2573F102,FLEX,Information Technology,Technology,EQUITY,Flex Ltd.,reviewed_override,Flex Ltd,ORD,,,Manual review: SEC/Nasdaq/issuer; Yahoo Finance sector taxonomy,2026-09-03
+Y8565J101,,Unknown,,,,unresolved,TEEKAY OFFSHORE PARTNERS L P,PARTNERSHIP UN,,,Yahoo Finance search,2026-09-03
+Y95308105,WVE,Health Care,Healthcare,EQUITY,"Wave Life Sciences, Inc.",cusip_search,Wave Life Sciences Ltd,SHS,,,Yahoo Finance search,2026-09-03
