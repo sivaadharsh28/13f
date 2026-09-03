@@ -18,6 +18,36 @@ SECTOR_MAP = {
     "INTC": "Information Technology", "AVGO": "Information Technology",
 }
 
+SECTOR_OPTIONS = (
+    "Communication Services",
+    "Consumer Discretionary",
+    "Consumer Staples",
+    "Energy",
+    "Financials",
+    "Health Care",
+    "Industrials",
+    "Information Technology",
+    "Materials",
+    "Real Estate",
+    "Utilities",
+)
+
+# Fixed colours keep sector categories consistent across all visualizations.
+SECTOR_COLORS = {
+    "Communication Services": "#4E79A7",
+    "Consumer Discretionary": "#F28E2B",
+    "Consumer Staples": "#E15759",
+    "Energy": "#76B7B2",
+    "Financials": "#59A14F",
+    "Health Care": "#EDC948",
+    "Industrials": "#B07AA1",
+    "Information Technology": "#FF9DA7",
+    "Materials": "#9C755F",
+    "Real Estate": "#BAB0AC",
+    "Utilities": "#86BCB6",
+    "Unknown": "#6B7280",
+}
+
 
 def load_security_master(path: str | Path) -> pd.DataFrame:
     master = pd.read_csv(path, dtype={"cusip": str})
@@ -55,6 +85,60 @@ def _resolve_master_columns(result: pd.DataFrame, master: pd.DataFrame) -> tuple
         pd.Series(ticker_values.to_numpy(), index=result.index),
         pd.Series(sector_values.to_numpy(), index=result.index),
     )
+
+
+def load_sector_overrides(path: str | Path) -> pd.DataFrame:
+    """Load user-reviewed CUSIP-level sector assignments."""
+    columns = ["cusip", "sector"]
+    source = Path(path)
+    if not source.exists():
+        return pd.DataFrame(columns=columns)
+    overrides = pd.read_csv(source, dtype={"cusip": str})
+    overrides.columns = overrides.columns.astype(str).str.strip().str.replace(r"\\n", "", regex=False)
+    missing = set(columns) - set(overrides.columns)
+    if missing:
+        raise KeyError(f"Sector overrides missing columns: {sorted(missing)}")
+    overrides = overrides[columns].copy()
+    overrides["cusip"] = overrides["cusip"].astype(str).str.strip().str.zfill(9)
+    overrides["sector"] = overrides["sector"].astype(str).str.strip()
+    overrides = overrides[overrides["sector"].isin(SECTOR_OPTIONS)]
+    return overrides.drop_duplicates("cusip", keep="last").reset_index(drop=True)
+
+
+def apply_sector_overrides(df: pd.DataFrame, overrides: pd.DataFrame) -> pd.DataFrame:
+    """Apply reviewed CUSIP assignments without changing other holding fields."""
+    result = df.copy()
+    if result.empty or overrides.empty or "cusip" not in result:
+        return result
+    lookup = overrides.drop_duplicates("cusip", keep="last").set_index("cusip")["sector"]
+    cusips = result["cusip"].astype(str).str.strip().str.zfill(9)
+    assigned = cusips.map(lookup)
+    current = result.get("sector", pd.Series("Unknown", index=result.index))
+    result["sector"] = assigned.fillna(current).fillna("Unknown")
+    return result
+
+
+def save_sector_overrides(assignments: pd.DataFrame, path: str | Path) -> pd.DataFrame:
+    """Merge valid editor assignments into the local versioned override CSV."""
+    required = {"cusip", "sector"}
+    missing = required - set(assignments.columns)
+    if missing:
+        raise KeyError(f"Sector assignments missing columns: {sorted(missing)}")
+    target = Path(path)
+    proposed = assignments[["cusip", "sector"]].copy()
+    proposed["cusip"] = proposed["cusip"].astype(str).str.strip().str.zfill(9)
+    proposed["sector"] = proposed["sector"].astype(str).str.strip()
+    proposed = proposed[proposed["sector"].isin(SECTOR_OPTIONS)].drop_duplicates("cusip", keep="last")
+    existing = load_sector_overrides(target)
+    combined = pd.concat(
+        [existing[~existing["cusip"].isin(proposed["cusip"])], proposed],
+        ignore_index=True,
+    ).sort_values("cusip").reset_index(drop=True)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary = target.with_name(f".{target.name}.tmp")
+    combined.to_csv(temporary, index=False)
+    temporary.replace(target)
+    return combined
 
 
 def assign_sector(

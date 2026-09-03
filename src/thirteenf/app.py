@@ -7,11 +7,17 @@ import pandas as pd
 import streamlit as st
 
 from thirteenf.backtest import STRATEGY_SPECS, performance_summary
-from thirteenf.config import PROCESSED_DATA_DIR, SEC_USER_AGENT_ENV
+from thirteenf.config import PROCESSED_DATA_DIR, SEC_USER_AGENT_ENV, SECTOR_OVERRIDE_PATH
 from thirteenf.dashboard import build_dashboard_data
 from thirteenf.quarterly_data import build_quarterly_sector_rotation_window
 from thirteenf.runner import run_sec_ingestion
-from thirteenf.sector import build_overall_sector_rotation
+from thirteenf.sector import (
+    SECTOR_OPTIONS,
+    apply_sector_overrides,
+    build_overall_sector_rotation,
+    load_sector_overrides,
+    save_sector_overrides,
+)
 from thirteenf.storage import load_snapshot
 from thirteenf.visuals import (
     build_backtest_comparison_chart,
@@ -28,6 +34,12 @@ def _modified_ns(path: Path) -> int:
 def _load_snapshot_cached(path_text: str, modified_ns: int) -> pd.DataFrame:
     _ = modified_ns
     return load_snapshot(path_text)
+
+
+@st.cache_data(show_spinner=False)
+def _load_sector_overrides_cached(path_text: str, modified_ns: int) -> pd.DataFrame:
+    _ = modified_ns
+    return load_sector_overrides(path_text)
 
 
 @st.cache_data(show_spinner=False)
@@ -78,7 +90,89 @@ def _load_snapshot() -> pd.DataFrame:
     data_path = PROCESSED_DATA_DIR / "sec_holdings_history.csv"
     if not data_path.exists():
         return pd.DataFrame()
-    return _load_snapshot_cached(str(data_path), _modified_ns(data_path))
+    snapshot = _load_snapshot_cached(str(data_path), _modified_ns(data_path))
+    overrides = _load_sector_overrides_cached(
+        str(SECTOR_OVERRIDE_PATH),
+        _modified_ns(SECTOR_OVERRIDE_PATH),
+    )
+    return apply_sector_overrides(snapshot, overrides)
+
+
+def _unknown_position_summary(snapshot: pd.DataFrame) -> pd.DataFrame:
+    columns = ["cusip", "ticker", "issuer", "latest_report", "reports", "disclosed_value_usd", "sector"]
+    sector = snapshot.get("sector", pd.Series("", index=snapshot.index))
+    unknown = snapshot[sector.eq("Unknown")].copy()
+    if unknown.empty:
+        return pd.DataFrame(columns=columns)
+    unknown["cusip"] = unknown["cusip"].astype(str).str.strip().str.zfill(9)
+    unknown["ticker"] = unknown.get("ticker_clean", unknown.get("ticker", "")).fillna("")
+    unknown["issuer"] = unknown.get("issuer", "").fillna("")
+    unknown["report_period"] = pd.to_datetime(unknown["report_period"], errors="coerce")
+    unknown["market_value_usd"] = pd.to_numeric(unknown["market_value_usd"], errors="coerce").fillna(0.0)
+    result = (
+        unknown.groupby(["cusip", "ticker", "issuer"], dropna=False, as_index=False)
+        .agg(
+            latest_report=("report_period", "max"),
+            reports=("report_period", "nunique"),
+            disclosed_value_usd=("market_value_usd", "sum"),
+        )
+        .sort_values("disclosed_value_usd", ascending=False)
+        .reset_index(drop=True)
+    )
+    result["latest_report"] = result["latest_report"].dt.strftime("%Y-%m-%d")
+    result["sector"] = ""
+    return result[columns]
+
+
+def _render_sector_override_editor(snapshot: pd.DataFrame) -> None:
+    with st.expander("Resolve unknown sector positions", expanded=False):
+        unknown = _unknown_position_summary(snapshot)
+        if unknown.empty:
+            st.success("Every displayed security has a reviewed sector assignment.")
+            return
+        st.caption(
+            "Assign a GICS sector by CUSIP. Saving applies the assignment to that security's "
+            "full disclosed history and writes data/sector_overrides.csv locally."
+        )
+        edited = st.data_editor(
+            unknown,
+            width="stretch",
+            hide_index=True,
+            disabled=["cusip", "ticker", "issuer", "latest_report", "reports", "disclosed_value_usd"],
+            column_config={
+                "latest_report": st.column_config.TextColumn("Latest report"),
+                "reports": st.column_config.NumberColumn("Reports", format="%d"),
+                "disclosed_value_usd": st.column_config.NumberColumn("Disclosed value", format="$%.0f"),
+                "sector": st.column_config.SelectboxColumn(
+                    "Sector assignment",
+                    options=list(SECTOR_OPTIONS),
+                    required=False,
+                    help="Choose the sector you have independently reviewed for this CUSIP.",
+                ),
+            },
+            key="sector_override_editor",
+        )
+        selected = edited[edited["sector"].isin(SECTOR_OPTIONS)][["cusip", "sector"]]
+        if st.button("Save assignments locally", disabled=selected.empty, key="save_sector_assignments"):
+            try:
+                save_sector_overrides(selected, SECTOR_OVERRIDE_PATH)
+            except OSError as exc:
+                st.error(f"Could not save local assignments: {exc}")
+            else:
+                st.cache_data.clear()
+                st.success(
+                    "Sector assignments saved. Commit data/sector_overrides.csv to GitHub so the "
+                    "published app receives the same reviewed mappings."
+                )
+                st.rerun()
+        template = unknown[["cusip", "ticker", "issuer", "sector"]]
+        st.download_button(
+            "Download assignment template",
+            template.to_csv(index=False).encode("utf-8"),
+            file_name="sector_overrides.csv",
+            mime="text/csv",
+            help="For a deployed app, edit this file locally, commit it, and push it to GitHub.",
+        )
 
 
 def _render_backtest_section(code: str, investor: str, fund_name: str) -> None:
@@ -230,12 +324,20 @@ def main() -> None:
 
     st.subheader("Quarterly sector rotation")
     st.plotly_chart(build_sector_rotation_chart(visible_rotation, selected_fund), width="stretch")
-    if not visible_rotation.empty and visible_rotation["sector"].eq("Unknown").any():
-        unknown_weight = (
-            visible_rotation[visible_rotation["sector"].eq("Unknown")]
-            .groupby(["fund", "quarter"])["portfolio_weight"].sum().max()
+    selected_rotation = visible_rotation[visible_rotation["fund"].eq(selected_fund)].copy()
+    if not selected_rotation.empty:
+        latest_quarter = selected_rotation["quarter"].max()
+        latest_details = (
+            selected_rotation[selected_rotation["quarter"].eq(latest_quarter)]
+            .sort_values("portfolio_weight", ascending=False)
+            .rename(columns={"sector": "Sector", "portfolio_weight": "Portfolio weight (%)"})
         )
-        st.warning(f"Worst displayed manager-quarter unmapped sector weight: {unknown_weight:.1f}%")
+        st.caption(f"Visible details: {selected_fund}, {latest_quarter}.")
+        st.dataframe(
+            latest_details[["Sector", "Portfolio weight (%)"]].style.format({"Portfolio weight (%)": "{:.2f}%"}),
+            width="stretch",
+            hide_index=True,
+        )
 
     st.subheader("Overall quarterly sector allocation")
     weighting_label = st.radio(
@@ -260,6 +362,7 @@ def main() -> None:
         "Each quarter is normalized to 100% of the contributing managers' disclosed long positions. "
         "Hover over the chart to see the number of managers represented."
     )
+    _render_sector_override_editor(snapshot)
 
     st.header("Point-in-time strategy backtests")
     st.caption(

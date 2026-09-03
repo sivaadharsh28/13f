@@ -80,9 +80,3 @@ thirteenf --backtest-manager DUQ `
 
 Demo data is never used implicitly. It is available only with
 `thirteenf --source demo`.
-
-## Publish
-
-The repository-level `streamlit_app.py` is the deployment entrypoint. Follow
-[`DEPLOYMENT.md`](DEPLOYMENT.md) to publish a shareable Streamlit Community
-Cloud URL and update its reviewed data snapshots.
