@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import time
+import re
 from dataclasses import dataclass, field
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 import pandas as pd
 import requests
@@ -21,6 +22,22 @@ FILING_COLUMNS = [
     "cik", "entity_name", "accession_number", "form", "filing_date",
     "report_period", "acceptance_datetime", "primary_document", "index_url",
 ]
+
+
+def filing_html_url(source_url: object) -> str:
+    """Link to the filing's HTML index without changing XML provenance."""
+    if not isinstance(source_url, str) or not source_url.strip():
+        return ""
+    source_url = source_url.strip()
+    parsed = urlsplit(source_url)
+    if parsed.hostname not in {"sec.gov", "www.sec.gov"}:
+        return source_url
+    match = re.match(r"^/Archives/edgar/data/(\d+)/(\d{18})(?:/|$)", parsed.path)
+    if match is None:
+        return source_url
+    cik, compact = match.groups()
+    accession = f"{compact[:10]}-{compact[10:12]}-{compact[12:]}"
+    return f"{SEC_BASE}/Archives/edgar/data/{cik}/{compact}/{accession}-index.html"
 
 
 @dataclass

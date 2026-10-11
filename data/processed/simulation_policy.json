@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "fixed_strategies": {
+    "DUQ": {
+      "manager_code": "DUQ",
+      "top_n": 10,
+      "max_holding_sessions": 63,
+      "transaction_cost_bps": 10.0,
+      "benchmark": "SPY",
+      "availability_model": "filing_date",
+      "execution_timing": "next_close",
+      "execution_delay_sessions": 0,
+      "minimum_coverage": 0.9
+    },
+    "AM": {
+      "manager_code": "AM",
+      "top_n": 10,
+      "max_holding_sessions": 63,
+      "transaction_cost_bps": 10.0,
+      "benchmark": "SPY",
+      "availability_model": "filing_date",
+      "execution_timing": "next_close",
+      "execution_delay_sessions": 0,
+      "minimum_coverage": 0.9
+    },
+    "THIEL": {
+      "manager_code": "THIEL",
+      "top_n": 10,
+      "max_holding_sessions": 63,
+      "transaction_cost_bps": 10.0,
+      "benchmark": "SPY",
+      "availability_model": "filing_date",
+      "execution_timing": "next_close",
+      "execution_delay_sessions": 0,
+      "minimum_coverage": 0.9
+    }
+  },
+  "evaluation_note": "One continuous historical simulation over the earliest common availability of all strategy funds; no development/test split. Existing positions carry into the common window.",
+  "unpriced_policy": "residual cash; below 90% original selected value coverage, whole event targets cash",
+  "valuation_policy": "reject missing/nonpositive held prices or ten unchanged closes; no forward fill",
+  "corporate_action_policy": "vendor-adjusted dividends/splits; only sourced share-class continuations; unresolved mergers/delistings excluded explicitly"
+}

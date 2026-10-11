@@ -1,0 +1,6 @@
+cusip,ticker,valid_from,valid_to,source_url,note
+38259P508,GOOGL,2004-08-19,2015-10-02,https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2015-156,Google Class A to Alphabet Class A; same share class continuous vendor-adjusted history
+38259P706,GOOG,2014-04-03,2015-10-02,https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2015-156,Google Class C to Alphabet Class C; same share class continuous vendor-adjusted history
+437076102,HD,2014-01-01,2026-09-11,https://www.sec.gov/Archives/edgar/data/1319067/000138713120007805/fintrust-npx_063020.htm,US Home Depot common shares; exclude foreign HDI.MU listing
+285512109,EA,2014-01-01,2026-09-11,https://www.sec.gov/Archives/edgar/data/1467631/000120677417002271/acap3289281-npx.htm,US Electronic Arts common shares; exclude foreign ERT.MU listing
+741503403,BKNG,2014-01-01,2018-02-26,https://www.sec.gov/Archives/edgar/data/1075531/000107553118000015/pcln-20171231_10k.htm,Priceline PCLN renamed Booking BKNG; continuous US listing; old CUSIP corroborated by SEC N-PX 000128986815000017

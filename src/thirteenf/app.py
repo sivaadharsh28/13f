@@ -1,15 +1,30 @@
 from __future__ import annotations
 
+from dataclasses import replace
 import os
+import json
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
-from thirteenf.backtest import STRATEGY_SPECS, performance_summary
+from thirteenf.backtest import (
+    AVAILABILITY_MODELS,
+    EXECUTION_PROFILES,
+    PORTFOLIO_SIZE_OPTIONS,
+    STRATEGY_SPECS,
+    TRANSACTION_COST_BPS_OPTIONS,
+    common_backtest_window,
+    full_period_comparison,
+    performance_summary,
+    run_parameter_sweep,
+    run_strategy_comparison,
+)
+from thirteenf.backtest_reporting import chart_assumptions, execution_steps, holding_period_explanation
 from thirteenf.config import PROCESSED_DATA_DIR, SEC_USER_AGENT_ENV, SECTOR_OVERRIDE_PATH
 from thirteenf.dashboard import build_dashboard_data
 from thirteenf.quarterly_data import build_quarterly_sector_rotation_window
+from thirteenf.monitor_ui import render_filing_change_monitor, render_sector_research_changes
 from thirteenf.runner import run_sec_ingestion
 from thirteenf.sector import (
     SECTOR_OPTIONS,
@@ -18,9 +33,12 @@ from thirteenf.sector import (
     load_sector_overrides,
     save_sector_overrides,
 )
+from thirteenf.ui import apply_theme, page_header
 from thirteenf.storage import load_snapshot
 from thirteenf.visuals import (
     build_backtest_comparison_chart,
+    build_backtest_sweep_distribution_chart,
+    build_backtest_sweep_scatter_chart,
     build_overall_sector_rotation_chart,
     build_sector_rotation_chart,
 )
@@ -63,6 +81,20 @@ def _read_backtest_csv(path_text: str, modified_ns: int) -> pd.DataFrame:
     return pd.read_csv(path_text, parse_dates=["date"])
 
 
+def _shared_backtest_window() -> tuple[pd.Timestamp, pd.Timestamp]:
+    histories = {}
+    for code in STRATEGY_SPECS:
+        path = PROCESSED_DATA_DIR / f"backtest_{code.lower()}.csv"
+        status_path = PROCESSED_DATA_DIR / f"backtest_{code.lower()}_status.json"
+        if not path.exists() or not status_path.exists():
+            raise ValueError(f"Backtest data for {code} is needed for the common period.")
+        status = json.loads(status_path.read_text(encoding="utf-8"))
+        if status.get("version") != 2 or status.get("status") != "valid":
+            raise ValueError(f"Backtest data for {code} must be rebuilt before comparing all funds.")
+        histories[code] = _read_backtest_csv(str(path), _modified_ns(path))
+    return common_backtest_window(histories)
+
+
 @st.cache_data(show_spinner=False)
 def _read_coverage_csv(path_text: str, modified_ns: int) -> pd.DataFrame:
     _ = modified_ns
@@ -74,17 +106,179 @@ def _performance_summary_cached(comparison: pd.DataFrame) -> pd.DataFrame:
     return performance_summary(comparison)
 
 
-def _app_secrets() -> tuple[str, str]:
-    try:
-        configured_user_agent = str(st.secrets.get(SEC_USER_AGENT_ENV, ""))
-        refresh_setting = str(st.secrets.get("THIRTEENF_ENABLE_SEC_REFRESH", "false"))
-    except Exception:
-        configured_user_agent = ""
-        refresh_setting = "false"
-    configured_user_agent = os.getenv(SEC_USER_AGENT_ENV, configured_user_agent)
-    refresh_setting = os.getenv("THIRTEENF_ENABLE_SEC_REFRESH", refresh_setting)
-    return configured_user_agent, refresh_setting
+@st.cache_data(show_spinner=False)
+def _read_events_csv(path_text: str, modified_ns: int) -> pd.DataFrame:
+    _ = modified_ns
+    return pd.read_csv(path_text, dtype={"cusip": str})
 
+
+@st.cache_data(show_spinner=False)
+def _read_price_csv(path_text: str, modified_ns: int) -> pd.DataFrame:
+    _ = modified_ns
+    return pd.read_csv(path_text, index_col=0, parse_dates=True)
+
+
+@st.cache_data(show_spinner=False)
+def _run_parameter_sweep_cached(
+    code: str,
+    events_path_text: str,
+    events_modified_ns: int,
+    prices_path_text: str,
+    prices_modified_ns: int,
+    open_prices_path_text: str,
+    open_prices_modified_ns: int,
+    benchmark_path_text: str,
+    benchmark_modified_ns: int,
+    top_n_values: tuple[int | None, ...],
+    availability_models: tuple[str, ...],
+    execution_labels: tuple[str, ...],
+    transaction_cost_bps_values: tuple[int | float, ...],
+    benchmark_open_modified_ns: int = 0,
+    evaluation_window: tuple | None = None,
+) -> pd.DataFrame:
+    events = _read_events_csv(events_path_text, events_modified_ns)
+    prices = _read_price_csv(prices_path_text, prices_modified_ns)
+    open_prices = _read_price_csv(open_prices_path_text, open_prices_modified_ns) if open_prices_path_text else None
+    benchmark_frame = _read_price_csv(benchmark_path_text, benchmark_modified_ns)
+    benchmark = benchmark_frame.iloc[:, 0]
+    benchmark_open_path = Path(benchmark_path_text).with_name(Path(benchmark_path_text).stem + "_open.csv")
+    benchmark_opens = (_read_price_csv(str(benchmark_open_path), benchmark_open_modified_ns).iloc[:, 0]
+                       if benchmark_open_path.exists() else None)
+    return run_parameter_sweep(
+        events,
+        prices,
+        benchmark,
+        STRATEGY_SPECS[code],
+        top_n_values=top_n_values,
+        availability_models=availability_models,
+        execution_labels=execution_labels,
+        transaction_cost_bps_values=transaction_cost_bps_values,
+        open_prices=open_prices,
+        benchmark_open_prices=benchmark_opens,
+        evaluation_window=evaluation_window,
+    )
+
+
+@st.cache_data(show_spinner=False)
+def _run_scenario_comparison_cached(
+    code: str,
+    events_path_text: str,
+    events_modified_ns: int,
+    prices_path_text: str,
+    prices_modified_ns: int,
+    open_prices_path_text: str,
+    open_prices_modified_ns: int,
+    benchmark_path_text: str,
+    benchmark_modified_ns: int,
+    top_n: int | None,
+    execution_label: str,
+    transaction_cost_bps: float,
+    benchmark_open_modified_ns: int = 0,
+    evaluation_window: tuple | None = None,
+) -> pd.DataFrame:
+    events = _read_events_csv(events_path_text, events_modified_ns)
+    prices = _read_price_csv(prices_path_text, prices_modified_ns)
+    open_prices = _read_price_csv(open_prices_path_text, open_prices_modified_ns) if open_prices_path_text else None
+    benchmark_frame = _read_price_csv(benchmark_path_text, benchmark_modified_ns)
+    benchmark = benchmark_frame.iloc[:, 0]
+    benchmark_open_path = Path(benchmark_path_text).with_name(Path(benchmark_path_text).stem + "_open.csv")
+    benchmark_opens = (_read_price_csv(str(benchmark_open_path), benchmark_open_modified_ns).iloc[:, 0]
+                       if benchmark_open_path.exists() else None)
+    execution = EXECUTION_PROFILES[execution_label]
+    spec = replace(
+        STRATEGY_SPECS[code],
+        top_n=top_n,
+        availability_model="filing_date",
+        execution_timing=execution["execution_timing"],
+        execution_delay_sessions=execution["execution_delay_sessions"],
+        transaction_cost_bps=float(transaction_cost_bps),
+    )
+    comparison, _ = run_strategy_comparison(events, prices, benchmark, spec, open_prices=open_prices, benchmark_open_prices=benchmark_opens)
+    return full_period_comparison(comparison, *evaluation_window, calendar=benchmark.index) if evaluation_window is not None else comparison
+
+
+def _configured_sec_user_agent() -> str:
+    try:
+        configured = str(st.secrets.get(SEC_USER_AGENT_ENV, ""))
+    except Exception:
+        configured = ""
+    return os.getenv(SEC_USER_AGENT_ENV, configured).strip()
+
+
+def _render_sec_refresh_controls(snapshot: pd.DataFrame, configured_user_agent: str) -> None:
+    notice = st.session_state.pop("sec_refresh_notice", None)
+    if notice:
+        if notice["kind"] == "success":
+            st.success(notice["message"])
+        else:
+            st.info(notice["message"])
+
+    with st.expander("Refresh data from SEC EDGAR", expanded=False):
+        st.caption(
+            "Checks all ten tracked managers for unseen 13F accessions. Only affected report periods are "
+            "downloaded and reconciled; the saved history from 2014 onward is retained."
+        )
+        if configured_user_agent:
+            st.success("SEC request identity is configured.")
+            active_user_agent = configured_user_agent
+        else:
+            active_user_agent = st.text_input(
+                "SEC user agent",
+                placeholder="Your organization your-email@example.com",
+                help=(
+                    "The SEC asks automated clients to identify the organization and contact email. "
+                    "For a deployed app, configure THIRTEENF_SEC_USER_AGENT in Streamlit secrets."
+                ),
+                key="sec_refresh_user_agent",
+            ).strip()
+        bootstrap_quarters = st.selectbox(
+            "Initial bootstrap depth",
+            [2, 4, 8],
+            index=0,
+            format_func=lambda value: f"Latest {value} report quarters",
+            help="Used only for a manager with no saved accessions. Normal refreshes fetch every unseen recent accession.",
+            key="sec_refresh_bootstrap_quarters",
+        )
+        st.caption(
+            "The request is manual and rate-limited. On hosted Streamlit services, files written by the app may "
+            "be ephemeral and can disappear when the container restarts."
+        )
+        if st.button("Fetch latest EDGAR filings", type="primary", key="refresh_sec_edgar"):
+            if not active_user_agent or "@" not in active_user_agent:
+                st.error("Enter an SEC user agent containing an organization/name and contact email.")
+                return
+            before_accessions = set(
+                snapshot.get("accession_number", pd.Series(dtype=str)).dropna().astype(str)
+            )
+            try:
+                with st.spinner("Checking EDGAR and reconciling unseen filings..."):
+                    refreshed = run_sec_ingestion(
+                        user_agent=active_user_agent,
+                        quarters=int(bootstrap_quarters),
+                        incremental=True,
+                    )
+            except Exception as exc:
+                st.error(f"EDGAR refresh failed; the existing snapshot was kept unchanged. {exc}")
+                return
+
+            after_accessions = set(
+                refreshed.get("accession_number", pd.Series(dtype=str)).dropna().astype(str)
+            )
+            new_accessions = after_accessions - before_accessions
+            if new_accessions:
+                report_dates = pd.to_datetime(refreshed.get("report_period"), errors="coerce")
+                latest_report = report_dates.max().strftime("%Y-%m-%d") if report_dates.notna().any() else "unknown"
+                message = (
+                    f"EDGAR refresh complete: {len(new_accessions)} new accepted filing(s) incorporated. "
+                    f"Latest report period: {latest_report}."
+                )
+                kind = "success"
+            else:
+                message = "EDGAR check complete: no unseen accepted filings were found."
+                kind = "info"
+            st.session_state["sec_refresh_notice"] = {"kind": kind, "message": message}
+            st.cache_data.clear()
+            st.rerun()
 
 def _load_snapshot() -> pd.DataFrame:
     data_path = PROCESSED_DATA_DIR / "sec_holdings_history.csv"
@@ -175,27 +369,295 @@ def _render_sector_override_editor(snapshot: pd.DataFrame) -> None:
         )
 
 
+
+def _render_assumption_sweep(code: str, investor: str, fund_name: str, evaluation_window: tuple) -> None:
+    with st.expander("Assumption sweep: return distribution", expanded=False):
+        st.caption(
+            "Run a local grid across execution, portfolio breadth, and transaction-cost assumptions. "
+            "All scenarios use the actual SEC acceptance timestamp. Next open uses adjusted open prices when selected."
+        )
+        events_path = PROCESSED_DATA_DIR / "sec_holdings_events_resolved.csv"
+        prices_dir = PROCESSED_DATA_DIR.parent / "prices"
+        prices_path = prices_dir / "adjusted_close.csv"
+        open_prices_path = prices_dir / "adjusted_open.csv"
+        benchmark_files = {
+            "SPY": prices_dir / "spy.csv",
+            "QQQ": prices_dir / "qqq.csv",
+        }
+        missing_core = [
+            str(path) for path in [events_path, prices_path]
+            if not path.exists()
+        ]
+        if missing_core:
+            st.info(
+                "Scenario sweeps need the saved SEC event file and local price snapshot. "
+                "Run `python scripts/build_backtests.py --start 2014-01-01` after SEC ingestion."
+            )
+            return
+
+        left, right = st.columns(2)
+        selected_availability = ["Actual SEC filing"]
+        left.caption("Disclosure availability: Actual SEC filing timestamp")
+        benchmark_symbol = left.selectbox(
+            "Benchmark",
+            list(benchmark_files),
+            key=f"benchmark_sweep_{code}",
+        )
+        benchmark_path = benchmark_files[benchmark_symbol]
+        if not benchmark_path.exists():
+            st.info(
+                f"{benchmark_symbol} benchmark prices are not available yet. "
+                "Run `python scripts/build_backtests.py --start 2014-01-01` to rebuild prices with SPY and QQQ."
+            )
+            return
+        selected_execution = left.multiselect(
+            "Execution assumption",
+            list(EXECUTION_PROFILES),
+            default=["Next close", "5-day delay"],
+            key=f"execution_sweep_{code}",
+        )
+        selected_portfolios = right.multiselect(
+            "Portfolio breadth",
+            list(PORTFOLIO_SIZE_OPTIONS),
+            default=["Top 10", "Full disclosed book"],
+            key=f"portfolio_sweep_{code}",
+        )
+        selected_costs = right.multiselect(
+            "Transaction cost bps",
+            list(TRANSACTION_COST_BPS_OPTIONS),
+            default=[10, 100],
+            key=f"cost_sweep_{code}",
+        )
+        scenario_count = (
+            len(selected_availability)
+            * len(selected_execution)
+            * len(selected_portfolios)
+            * len(selected_costs)
+        )
+        st.caption(f"Selected grid: {scenario_count} scenarios. Larger grids may take longer on first run.")
+        min_coverage_percent = st.slider(
+            "Minimum historical event coverage (%)",
+            min_value=0,
+            max_value=100,
+            value=0,
+            step=5,
+            help="Filters scenario results. Trading always requires 90% original selected-value coverage; rejected events hold cash.",
+            key=f"coverage_sweep_{code}",
+        )
+        if st.button("Run scenario sweep", key=f"run_sweep_{code}"):
+            st.session_state[f"show_sweep_{code}"] = True
+        if not st.session_state.get(f"show_sweep_{code}", False):
+            st.caption("Choose the assumptions to test, then run the sweep.")
+            return
+        if not selected_execution or not selected_portfolios or not selected_costs:
+            st.warning("Select at least one option in each assumption group.")
+            return
+
+        top_n_values = tuple(PORTFOLIO_SIZE_OPTIONS[label] for label in selected_portfolios)
+        availability_models = tuple(AVAILABILITY_MODELS[label] for label in selected_availability)
+        transaction_costs = tuple(float(cost) for cost in selected_costs)
+        with st.spinner(f"Running {fund_name} scenario grid..."):
+            sweep = _run_parameter_sweep_cached(
+                code,
+                str(events_path),
+                _modified_ns(events_path),
+                str(prices_path),
+                _modified_ns(prices_path),
+                str(open_prices_path) if open_prices_path.exists() else "",
+                _modified_ns(open_prices_path),
+                str(benchmark_path),
+                _modified_ns(benchmark_path),
+                top_n_values,
+                availability_models,
+                tuple(selected_execution),
+                transaction_costs,
+                _modified_ns(benchmark_path.with_name(benchmark_path.stem + "_open.csv")),
+                evaluation_window,
+            )
+        if sweep.empty:
+            st.warning("No executable scenarios were produced for this assumption grid.")
+            return
+
+        invalid = sweep[sweep["status"].eq("invalid")]
+        if not invalid.empty:
+            st.warning(f"{len(invalid)} scenarios failed data-quality checks and are excluded.")
+            st.dataframe(invalid[["portfolio_size", "execution", "error"]], hide_index=True)
+        filtered = sweep[sweep["status"].eq("valid") & sweep["minimum_coverage"].ge(min_coverage_percent / 100)].copy()
+        if filtered.empty:
+            st.warning("No valid scenarios meet the selected coverage filter.")
+            return
+        cagr = filtered["cagr"].dropna()
+        stats = st.columns(4)
+        stats[0].metric("Scenarios", len(filtered))
+        stats[1].metric("Median CAGR", f"{cagr.median():.1%}" if not cagr.empty else "n/a")
+        stats[2].metric("10th percentile", f"{cagr.quantile(0.10):.1%}" if not cagr.empty else "n/a")
+        stats[3].metric("90th percentile", f"{cagr.quantile(0.90):.1%}" if not cagr.empty else "n/a")
+
+        st.plotly_chart(
+            build_backtest_sweep_distribution_chart(filtered, f"{fund_name}: CAGR distribution by assumptions"),
+            width="stretch",
+        )
+        st.plotly_chart(
+            build_backtest_sweep_scatter_chart(filtered, f"{fund_name}: return versus drawdown"),
+            width="stretch",
+        )
+
+        ranked = filtered.copy()
+        ranked = ranked.sort_values(["portfolio_size", "execution", "transaction_cost_bps"])
+        columns = [
+            "portfolio_size", "availability", "execution", "transaction_cost_bps",
+            "cagr", "total_return", "max_drawdown", "annualized_volatility",
+            "excess_cagr", "sector_balanced_cagr", "mean_coverage", "minimum_coverage",
+            "start_date", "end_date",
+        ]
+        st.caption("Historical sensitivity scenarios, ordered by assumptions. These results are not return forecasts.")
+        st.dataframe(
+            ranked[columns].style.format({
+                "transaction_cost_bps": "{:.0f}",
+                "cagr": "{:.1%}",
+                "total_return": "{:.1%}",
+                "max_drawdown": "{:.1%}",
+                "annualized_volatility": "{:.1%}",
+                "excess_cagr": "{:.1%}",
+                "sector_balanced_cagr": "{:.1%}",
+                "mean_coverage": "{:.1%}",
+                "minimum_coverage": "{:.1%}",
+            }),
+            width="stretch",
+            hide_index=True,
+        )
+
+        chart_rows = filtered.reset_index(drop=True).copy()
+        chart_rows["scenario"] = chart_rows.apply(
+            lambda row: (
+                f"{row['portfolio_size']} | {row['execution']} | "
+                f"{row['transaction_cost_bps']:.0f} bps | CAGR {row['cagr']:.1%} | DD {row['max_drawdown']:.1%}"
+            ),
+            axis=1,
+        )
+        selected_scenario = st.selectbox(
+            "Scenario return path",
+            chart_rows["scenario"].tolist(),
+            key=f"scenario_path_{code}",
+        )
+        scenario = chart_rows.loc[chart_rows["scenario"].eq(selected_scenario)].iloc[0]
+        scenario_top_n = None if scenario["top_n"] == "full" else int(scenario["top_n"])
+        comparison = _run_scenario_comparison_cached(
+            code,
+            str(events_path),
+            _modified_ns(events_path),
+            str(prices_path),
+            _modified_ns(prices_path),
+                str(open_prices_path) if open_prices_path.exists() else "",
+                _modified_ns(open_prices_path),
+            str(benchmark_path),
+            _modified_ns(benchmark_path),
+            scenario_top_n,
+            str(scenario["execution"]),
+            float(scenario["transaction_cost_bps"]),
+            _modified_ns(benchmark_path.with_name(benchmark_path.stem + "_open.csv")),
+            evaluation_window,
+        )
+        scenario_spec = replace(
+            STRATEGY_SPECS[code], top_n=scenario_top_n, benchmark=benchmark_symbol,
+            transaction_cost_bps=float(scenario["transaction_cost_bps"]),
+            **EXECUTION_PROFILES[str(scenario["execution"])],
+        )
+        st.plotly_chart(
+            build_backtest_comparison_chart(
+                comparison,
+                f"{fund_name}: selected scenario versus {benchmark_symbol}",
+                benchmark_label=benchmark_symbol,
+                assumptions=chart_assumptions(scenario_spec),
+            ),
+            width="stretch",
+        )
+        _render_execution_and_metrics(comparison, scenario_spec)
+
+        st.download_button(
+            "Download sweep CSV",
+            filtered.to_csv(index=False).encode("utf-8"),
+            file_name=f"{code.lower()}_assumption_sweep.csv",
+            mime="text/csv",
+            key=f"download_sweep_{code}",
+        )
+def _render_execution_and_metrics(comparison, spec) -> None:
+    st.markdown("##### Execution guide and assumptions")
+    dates = pd.to_datetime(comparison["date"])
+    st.caption(f"{dates.min():%d %b %Y} – {dates.max():%d %b %Y} · {len(comparison):,} sessions · Returns include modeled strategy trading costs.")
+    with st.expander("How to follow these rules", expanded=True):
+        for step in execution_steps(spec):
+            st.markdown(step)
+    metrics = _performance_summary_cached(comparison)
+    strategy = metrics.set_index("portfolio").loc["Disclosed top positions"]
+    columns = st.columns(4)
+    for column, (key, label) in zip(columns, [("cagr", "Annualized return"), ("max_drawdown", "Maximum drawdown"), ("annualized_volatility", "Annualized volatility"), ("sharpe_ratio", "Sharpe ratio")]):
+        value = strategy[key]
+        column.metric(label, "—" if pd.isna(value) else (f"{value:.2f}" if key == "sharpe_ratio" else f"{value:.1%}"))
+    _render_metrics_table(metrics)
+    with st.expander("How to read the statistics"):
+        st.markdown(
+            "- **Maximum drawdown:** largest loss from a previous portfolio peak, including initial trading costs.\n"
+            "- **Volatility:** daily return standard deviation × √252.\n"
+            "- **Sharpe:** mean daily return × 252 / annualized volatility, assuming a 0% risk-free rate.\n"
+            "- **Sortino:** annualized mean return / downside deviation; downside uses all sessions and a 0% target.\n"
+            "- **Calmar:** compound annual growth rate (CAGR) / absolute maximum drawdown.\n"
+            "- **Tracking error / information ratio:** annualized volatility of daily strategy-minus-benchmark returns, and annualized mean excess return divided by that volatility.\n"
+            "- **Average exposure:** mean end-of-session invested weight; the remainder is cash.\n"
+            "- **Annual gross turnover:** buys plus sells, annualized using 252 sessions. 200% means trading twice the portfolio value per year.\n"
+            "- CAGR uses calendar time; other annualized statistics use 252 trading sessions and population standard deviation. Undefined ratios appear as —.\n"
+            "Short samples, cash-heavy periods, data gaps and sensitivity to assumptions affect interpretation. These statistics describe the observed simulation; they do not establish future reliability."
+        )
+
+
+def _render_metrics_table(metrics) -> None:
+    labels = {
+        "portfolio": "Portfolio", "total_return": "Total return", "cagr": "CAGR",
+        "annualized_volatility": "Volatility", "max_drawdown": "Max drawdown",
+        "sharpe_ratio": "Sharpe (0% risk-free)", "sortino_ratio": "Sortino (0% target)",
+        "calmar_ratio": "Calmar", "tracking_error": "Tracking error",
+        "information_ratio": "Information ratio", "worst_daily_return": "Worst session",
+        "average_exposure": "Average exposure", "annualized_turnover": "Annual gross turnover",
+        "sessions": "Sessions", "window": "Evaluation window", "start_date": "Start", "end_date": "End",
+    }
+    percentages = ["total_return", "cagr", "annualized_volatility", "max_drawdown", "tracking_error", "worst_daily_return", "average_exposure", "annualized_turnover"]
+    formats = {labels[key]: "{:.1%}" for key in percentages}
+    formats.update({labels[key]: "{:.2f}" for key in ["sharpe_ratio", "sortino_ratio", "calmar_ratio", "information_ratio"]})
+    formats["Sessions"] = "{:,.0f}"
+    st.dataframe(metrics.rename(columns=labels).style.format(formats, na_rep="—"), width="stretch", hide_index=True)
+
+
 def _render_backtest_section(code: str, investor: str, fund_name: str) -> None:
     spec = STRATEGY_SPECS[code]
-    st.markdown(f"#### {investor}-inspired disclosed-book strategy")
+    st.markdown(f"#### {investor}-inspired historical simulation")
+    st.caption("Fixed rules applied to delayed disclosures. Results are historical simulations, not fund performance or projected returns.")
     rules = pd.DataFrame({
         "Rule": [
             "Signal", "Availability", "Execution", "Rebalance",
-            "Maximum holding period", "Transaction costs", "Benchmark", "Sector baseline",
+            "Maximum holding period", "Transaction costs", "Benchmark", "Sector baseline", "Coverage policy",
         ],
         "Definition": [
             f"Top {spec.top_n} reported common-equity positions, value weighted",
-            "SEC acceptance timestamp, including later amendment events",
-            "Close of the first trading session strictly after acceptance",
+            "SEC acceptance timestamp; amendments to older report periods do not replace newer portfolios",
+            "Configurable in the assumption sweep; headline uses next close after acceptance",
             "At each new filing event; otherwise weights drift with market returns",
-            f"{spec.max_holding_sessions} trading sessions, then cash if no newer filing",
-            f"{spec.transaction_cost_bps:.0f} bps per unit of one-way turnover",
-            f"{spec.benchmark} buy-and-hold from the first executable signal",
-            "Equal capital per represented sector, then equal weight within each sector",
+            holding_period_explanation(spec),
+            f"{spec.transaction_cost_bps:.0f} bps per unit of gross turnover (buys plus sells)",
+            f"{spec.benchmark} buy-and-hold from the same first execution timestamp",
+            "Equal capital per represented sector before filtering; unavailable allocations remain in cash",
+            "At least 90% original selected-value coverage; rejected events hold cash. Missing held prices invalidate the simulation.",
         ],
     })
     st.dataframe(rules, width="stretch", hide_index=True)
 
+    status_path = PROCESSED_DATA_DIR / f"backtest_{code.lower()}_status.json"
+    if not status_path.exists():
+        st.warning("The repaired historical simulation has not been built yet.")
+        return
+    status = json.loads(status_path.read_text(encoding="utf-8"))
+    if status.get("version") != 2 or status.get("status") != "valid":
+        st.error(f"Simulation unavailable: {status.get('error', 'rebuild required')}")
+        return
     result_path = PROCESSED_DATA_DIR / f"backtest_{code.lower()}.csv"
     coverage_path = PROCESSED_DATA_DIR / f"backtest_{code.lower()}_coverage.csv"
     if not result_path.exists():
@@ -216,96 +678,43 @@ def _render_backtest_section(code: str, investor: str, fund_name: str) -> None:
         st.warning("No executable signals had sufficient price data for this manager.")
         return
 
+    try:
+        start, end = _shared_backtest_window()
+    except ValueError as exc:
+        st.warning(str(exc))
+        return
+    comparison = full_period_comparison(comparison, start, end)
+    st.caption(f"Full backtest · {start:%d %b %Y} – {end:%d %b %Y}. Same continuous period for all three strategy funds, starting at their earliest shared data availability. Existing positions carry into this period; growth is rebased to its starting capital.")
+
     st.plotly_chart(
-        build_backtest_comparison_chart(comparison, f"{fund_name}: strategy comparison"),
+        build_backtest_comparison_chart(comparison, f"{fund_name}: strategy comparison", benchmark_label=spec.benchmark, assumptions=chart_assumptions(spec)),
         width="stretch",
     )
-    metrics = _performance_summary_cached(comparison)
-    st.dataframe(
-        metrics.style.format({
-            "total_return": "{:.1%}",
-            "cagr": "{:.1%}",
-            "annualized_volatility": "{:.1%}",
-            "max_drawdown": "{:.1%}",
-        }),
-        width="stretch",
-        hide_index=True,
-    )
+    _render_execution_and_metrics(comparison, spec)
     if coverage_path.exists():
         try:
             coverage = _read_coverage_csv(str(coverage_path), _modified_ns(coverage_path))
         except Exception as exc:
             st.warning(f"Coverage diagnostics are not readable yet: {exc}")
             return
-        mean_coverage = coverage["weight_coverage"].mean() if not coverage.empty else 0.0
-        minimum_coverage = coverage["weight_coverage"].min() if not coverage.empty else 0.0
-        st.caption(
-            f"Executable price coverage of selected disclosed weight: mean {mean_coverage:.1%}; "
-            f"worst event {minimum_coverage:.1%}."
-        )
-        if minimum_coverage < 0.90:
-            st.warning(
-                "At least one rebalance had under 90% original signal-price coverage. The remaining "
-                "positions were renormalized, which can materially bias this result."
-            )
+        execution_dates = pd.to_datetime(coverage["execution_date"], errors="coerce")
+        coverage = coverage.loc[execution_dates.between(start, end)]
+        active = coverage[coverage["status"].isin(["accepted", "rejected_low_coverage"])]
+        columns = st.columns(3)
+        columns[0].metric("Full-universe mapping", f"{active['universe_mapping_coverage'].mean():.1%}")
+        columns[1].metric("Selected-value mapping", f"{active['mapping_coverage'].mean():.1%}")
+        columns[2].metric("Selected-value executable", f"{active['executable_value_coverage'].mean():.1%}")
+        rejected = int(coverage["status"].eq("rejected_low_coverage").sum())
+        ignored = int(coverage["status"].eq("stale_report_ignored").sum())
+        st.caption(f"{rejected} events target cash for insufficient coverage; {ignored} older-report amendments ignored. Coverage figures are averages across nonempty current-report events.")
+        with st.expander("Per-filing coverage and unresolved securities"):
+            st.dataframe(coverage, width="stretch", hide_index=True)
+    _render_assumption_sweep(code, investor, fund_name, (start, end))
 
-
-def main() -> None:
-    st.title("13F Disclosed-Book Research")
-    st.caption("SEC Form 13F positions are delayed disclosures and exclude short positions and many non-13(f) assets.")
-
-    configured_user_agent, refresh_setting = _app_secrets()
-    refresh_enabled = refresh_setting.lower() == "true"
-
-    if refresh_enabled and st.button("Refresh from SEC"):
-        try:
-            with st.spinner("Retrieving and reconciling SEC filings from 2014..."):
-                run_sec_ingestion(
-                    user_agent=configured_user_agent,
-                    quarters=None,
-                    start_date="2014-01-01",
-                )
-            st.cache_data.clear()
-            st.success("SEC history refreshed.")
-        except Exception as exc:
-            st.error(f"Refresh failed: {exc}")
-    elif not refresh_enabled:
-        st.caption("SEC refresh is disabled in the web UI; publish reviewed data snapshots from the ingestion CLI.")
-
-    try:
-        snapshot = _load_snapshot()
-    except Exception as exc:
-        st.error(f"Saved data rejected: {exc}")
-        snapshot = pd.DataFrame()
-
-    if snapshot.empty:
-        st.warning(
-            f"No production SEC dataset is available. Set {SEC_USER_AGENT_ENV} and run "
-            '`thirteenf --source sec --sec-user-agent "Organization email@example.com"`.'
-        )
-        st.stop()
-
-    market_values = pd.to_numeric(
-        snapshot.get("market_value_usd", pd.Series(0.0, index=snapshot.index)),
-        errors="coerce",
-    ).fillna(0.0)
-    unknown_mask = snapshot.get("sector", pd.Series("Unknown", index=snapshot.index)).eq("Unknown")
-    unmapped_value_share = market_values[unknown_mask].sum() / market_values.sum() if market_values.sum() else 0.0
-
-    # The date metrics need wider columns; Streamlit otherwise truncates a
-    # large metric value such as 2014-03-31 with an ellipsis.
-    status_columns = st.columns([0.8, 1.45, 1.45, 1.3])
-    first_report = pd.Timestamp(snapshot["report_period"].min()).strftime("%Y-%m-%d")
-    latest_report = pd.Timestamp(snapshot["report_period"].max()).strftime("%Y-%m-%d")
-    status_columns[0].metric("Managers", snapshot["manager_code"].nunique())
-    status_columns[1].metric("First report", first_report)
-    status_columns[2].metric("Latest report", latest_report)
-    status_columns[3].metric("Unmapped disclosed value", f"{unmapped_value_share:.2%}")
-
-    with st.spinner("Preparing dashboard data..."):
-        payload = _build_dashboard_payload(snapshot)
-        rotation = _build_rotation(snapshot)
-
+def _render_sector_research(snapshot: pd.DataFrame) -> None:
+    render_sector_research_changes(snapshot)
+    st.divider()
+    rotation = _build_rotation(snapshot)
     quarters = sorted(rotation["quarter"].dropna().unique()) if not rotation.empty else []
     if len(quarters) > 1:
         selected_quarters = st.select_slider(
@@ -362,24 +771,124 @@ def main() -> None:
         "Each quarter is normalized to 100% of the contributing managers' disclosed long positions. "
         "Hover over the chart to see the number of managers represented."
     )
-    _render_sector_override_editor(snapshot)
 
-    st.header("Point-in-time strategy backtests")
-    st.caption(
-        "Signals use the SEC acceptance timestamp - not quarter-end - and execute at the close of the "
-        "next available trading session. Results shown here are long-only disclosed-book simulations."
+
+def _render_overview(snapshot: pd.DataFrame) -> None:
+    st.markdown(
+        '<div class="research-hero"><h2>13f Position Tracker</h2></div>',
+        unsafe_allow_html=True,
     )
+    values = pd.to_numeric(snapshot["market_value_usd"], errors="coerce").fillna(0)
+    unknown = snapshot.get("sector", pd.Series("Unknown", index=snapshot.index)).eq("Unknown")
+    unmapped = values[unknown].sum() / values.sum() if values.sum() else 0
+    dates = pd.to_datetime(snapshot["report_period"], errors="coerce")
+    columns = st.columns(4)
+    columns[0].metric("Tracked managers", snapshot["manager_code"].nunique())
+    columns[1].metric("First report", dates.min().strftime("%d %b %Y"))
+    columns[2].metric("Latest report", dates.max().strftime("%d %b %Y"))
+    columns[3].metric("Unmapped value · all history", f"{unmapped:.2%}")
+    st.subheader("Latest manager disclosures")
+    latest = snapshot.copy()
+    latest["report_period"] = dates
+    latest = latest[latest["report_period"].eq(latest.groupby("manager_code")["report_period"].transform("max"))]
+    latest["market_value_usd"] = pd.to_numeric(latest["market_value_usd"], errors="coerce").fillna(0)
+    summary = latest.groupby("fund", as_index=False).agg(
+        report_period=("report_period", "max"), positions=("cusip", "nunique"),
+        disclosed_value=("market_value_usd", "sum"),
+    ).sort_values("disclosed_value", ascending=False)
+    st.dataframe(summary, width="stretch", hide_index=True, column_config={
+        "fund": st.column_config.TextColumn("Manager"),
+        "report_period": st.column_config.DateColumn("Latest report", format="DD MMM YYYY"),
+        "positions": st.column_config.NumberColumn("Disclosed securities", format="%d"),
+        "disclosed_value": st.column_config.NumberColumn("Disclosed value", format="$%,.0f"),
+    })
+    st.caption("Each manager is shown at their own latest report period; reporting dates may differ.")
+    st.info("Use the sidebar to explore allocations, filing changes and strategy results.")
 
-    strategy_sections = {
-        "DUQ": ("Stanley Druckenmiller", "Duquesne Family Office"),
-        "AM": ("David Tepper", "Appaloosa"),
-        "THIEL": ("Peter Thiel", "Thiel Macro"),
+
+def _render_holdings(snapshot: pd.DataFrame) -> None:
+    dated_snapshot = snapshot.copy()
+    dated_snapshot["quarter"] = pd.to_datetime(
+        dated_snapshot["report_period"], errors="coerce"
+    ).dt.to_period("Q").astype("string")
+    data = _build_dashboard_payload(dated_snapshot)["quarterly_holdings"]
+    left, right = st.columns(2)
+    quarters = sorted(data["quarter"].dropna().unique())
+    quarter = left.selectbox("Report quarter", quarters, index=len(quarters) - 1 if quarters else None)
+    managers = right.multiselect("Managers", sorted(data["fund"].dropna().unique()), placeholder="All managers")
+    search = st.text_input("Find a ticker", placeholder="Search symbols, e.g. AAPL")
+    visible = data[data["quarter"].eq(quarter)]
+    if managers:
+        visible = visible[visible["fund"].isin(managers)]
+    if search.strip():
+        visible = visible[visible["ticker_clean"].str.contains(search.strip(), case=False, regex=False, na=False)]
+    st.caption(f"{len(visible):,} holdings in this view")
+    st.dataframe(visible, width="stretch", hide_index=True, column_config={
+        "ticker_clean": "Ticker", "fund": "Manager", "quarter": "Quarter",
+        "portfolio_weight": st.column_config.NumberColumn("Portfolio weight", format="%.2f%%"),
+    })
+    st.download_button("Export holdings", visible.to_csv(index=False).encode("utf-8"),
+                       "quarterly_holdings.csv", "text/csv")
+
+
+def main() -> None:
+    st.set_page_config(page_title="13F | Research workspace", page_icon="📊", layout="wide")
+    apply_theme()
+    pages = {
+        "Overview": "Snapshot of the latest disclosed positions and summary of tracked managers.",
+        "[All Funds] Sector research": "Compare manager allocations and sector rotation over time.",
+        "[Short-Term Funds] Asset Changes": "Track material position changes in accepted quarterly filings.",
+        "[Short-Term Funds] Sector changes": "See where short-term managers shifted their disclosed allocations.",
+        "[Short-Term Funds] Strategy backtests": "Test disclosed-book strategies using actual SEC acceptance timestamps.",
+        "[All Funds] Holdings explorer": "Filter and export the quarterly disclosed positions.",
+        "Data & methodology": "Refresh SEC filings, review sector mappings and understand the research limits.",
     }
-    tabs = st.tabs([f"{investor} - {fund}" for investor, fund in strategy_sections.values()])
-    for tab, (code, (investor, fund_name)) in zip(tabs, strategy_sections.items()):
-        with tab:
-            _render_backtest_section(code, investor, fund_name)
+    with st.sidebar:
+        st.image(str(Path(__file__).resolve().parents[1] / "NUSSIF_logo.jpg"), width=200)
+        st.markdown("## ◈ 13F Research")
+        st.caption("INSTITUTIONAL HOLDINGS")
+        st.divider()
+        page = st.radio("Workspace", list(pages), key="workspace_page", label_visibility="collapsed")
+        st.divider()
+        st.caption("SOURCE · SEC EDGAR")
+        st.caption("Delayed disclosures. Long positions only. Reported holdings may have changed since filing.")
+    page_header(page, pages[page])
+    try:
+        snapshot = _load_snapshot()
+    except Exception as exc:
+        st.error(f"Saved data rejected: {exc}")
+        snapshot = pd.DataFrame()
+    if snapshot.empty:
+        st.warning("No saved SEC holdings are available. Fetch filings to begin exploring the workspace.")
+        _render_sec_refresh_controls(snapshot, _configured_sec_user_agent())
+        return
+    if page == "Overview":
+        _render_overview(snapshot)
+    elif page == "[All Funds] Sector research":
+        _render_sector_research(snapshot)
+    elif page in {"[Short-Term Funds] Asset Changes", "[Short-Term Funds] Sector changes"}:
+        section = "Asset Changes" if page == "[Short-Term Funds] Asset Changes" else "Sector changes"
+        render_filing_change_monitor(snapshot, section=section)
+    elif page == "[Short-Term Funds] Strategy backtests":
+        strategies = {
+            "Duquesne Family Office": ("DUQ", "Stanley Druckenmiller"),
+            "Appaloosa": ("AM", "David Tepper"),
+            "Thiel Macro": ("THIEL", "Peter Thiel"),
+        }
+        fund = st.selectbox("Strategy manager", list(strategies), key="strategy_manager")
+        code, investor = strategies[fund]
+        _render_backtest_section(code, investor, fund)
+        st.caption("Review Data & methodology for coverage assumptions and research limitations.")
+    elif page == "[All Funds] Holdings explorer":
+        _render_holdings(snapshot)
+    else:
+        st.subheader("Data management")
+        _render_sec_refresh_controls(snapshot, _configured_sec_user_agent())
+        _render_sector_override_editor(snapshot)
+        _render_methodology()
 
+
+def _render_methodology() -> None:
     with st.expander("Backtest and data limitations", expanded=True):
         st.markdown(
             """
@@ -391,11 +900,6 @@ def main() -> None:
 - Thiel Macro filings are sparse and sometimes contain no public positions, so its sample can be too small for reliable inference.
             """
         )
-
-    st.subheader("Point-in-time consensus")
-    st.dataframe(payload["consensus"], width="stretch")
-    st.subheader("Quarterly holdings")
-    st.dataframe(payload["quarterly_holdings"], width="stretch")
 
 
 if __name__ == "__main__":

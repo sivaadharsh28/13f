@@ -26,14 +26,14 @@ from thirteenf.sec_pipeline import (
     reconcile_amendments,
 )
 from thirteenf.sector import assign_sector, load_security_master
-from thirteenf.storage import save_raw_artifact, save_snapshot
+from thirteenf.storage import load_snapshot, save_raw_artifact, save_snapshot
 
 
 def _is_valid_ticker(value: object) -> bool:
     if value is None:
         return False
     text = str(value).strip().upper().replace(".", "")
-    return bool(re.fullmatch(r"[A-Z0-9-]+", text)) and text not in {"≡", "—", "-"}
+    return bool(re.fullmatch(r"[A-Z0-9-]+", text)) and text not in {"Ã¢â€°Â¡", "Ã¢â‚¬â€", "-"}
 
 
 def rebuild_processed_snapshot(raw_dir: str | Path | None = None, output_path: str | Path | None = None) -> pd.DataFrame:
@@ -120,6 +120,7 @@ def fetch_manager_holdings(
     quarters: int | None = 8,
     raw_dir: str | Path | None = None,
     start_date: str | None = None,
+    known_accessions: set[str] | None = None,
 ) -> pd.DataFrame:
     """Fetch and normalize SEC 13F holdings for one configured manager."""
     metadata = FUND_CONFIG[manager_code]
@@ -127,16 +128,22 @@ def fetch_manager_holdings(
         return pd.DataFrame()
 
     cik = normalize_cik(metadata["cik"])
-    filings = fetch_sec_company_filings(
-        cik,
-        count=None if start_date else quarters,
-        client=client,
-        start_date=start_date,
-    )
+    filings = fetch_sec_company_filings(cik, count=None, client=client, start_date=start_date)
     if filings.empty:
         return pd.DataFrame()
     validate_manager_identity(str(filings.iloc[0]["entity_name"]), list(metadata.get("aliases", [])))
-    selected = _selected_periods(filings, quarters=quarters, start_date=start_date)
+    if known_accessions is None:
+        selected = _selected_periods(filings, quarters=quarters, start_date=start_date)
+    else:
+        known = {str(accession) for accession in known_accessions}
+        unseen = filings[~filings["accession_number"].astype(str).isin(known)]
+        if unseen.empty:
+            return pd.DataFrame()
+        if not known and quarters is not None:
+            unseen = _selected_periods(unseen, quarters=quarters, start_date=start_date)
+        changed_periods = set(unseen["report_period"].dropna().astype(str))
+        selected = filings[filings["report_period"].astype(str).isin(changed_periods)]
+        selected = selected.sort_values("acceptance_datetime").reset_index(drop=True)
 
     target_root = Path(raw_dir) if raw_dir is not None else RAW_DATA_DIR / "sec"
     frames: list[pd.DataFrame] = []
@@ -175,22 +182,47 @@ def run_sec_ingestion(
     quarters: int | None = 8,
     user_agent: str | None = None,
     start_date: str | None = None,
+    incremental: bool = False,
 ) -> pd.DataFrame:
-    """Fetch configured SEC managers and save reconciled history plus event snapshots."""
+    """Fetch SEC filings and save reconciled history plus as-of events.
+
+    Incremental mode downloads only accessions absent from the saved dataset.
+    Every affected report period is rebuilt from all of its filings, then merged
+    into the existing history so a UI refresh cannot truncate older quarters.
+    """
     client = SECClient(user_agent or os.getenv(SEC_USER_AGENT_ENV, ""))
     target_dir = Path(output_dir) if output_dir else PROCESSED_DATA_DIR
+    history_path = target_dir / "sec_holdings_history.csv"
+    events_path = target_dir / "sec_holdings_events.csv"
+    existing_history = load_snapshot(history_path) if incremental and history_path.exists() else pd.DataFrame()
+    existing_events = load_snapshot(events_path) if incremental and events_path.exists() else pd.DataFrame()
+
     frames: list[pd.DataFrame] = []
     for code, metadata in FUND_CONFIG.items():
         if metadata.get("source") != "sec":
             continue
+        known_accessions: set[str] | None = None
+        if incremental:
+            known_accessions = set()
+            for existing in (existing_history, existing_events):
+                if not existing.empty and {"manager_code", "accession_number"}.issubset(existing.columns):
+                    manager_rows = existing[existing["manager_code"].eq(code)]
+                    known_accessions.update(manager_rows["accession_number"].dropna().astype(str))
         try:
-            frame = fetch_manager_holdings(code, client, quarters=quarters, start_date=start_date)
+            frame = fetch_manager_holdings(
+                code,
+                client,
+                quarters=quarters,
+                start_date=start_date,
+                known_accessions=known_accessions,
+            )
         except Exception as exc:
             raise RuntimeError(f"{code}: {type(exc).__name__}: {exc}") from exc
         if not frame.empty:
             frames.append(frame)
+
     if not frames:
-        return pd.DataFrame()
+        return existing_history.copy() if incremental else pd.DataFrame()
 
     combined = pd.concat(frames, ignore_index=True)
     events = build_as_of_snapshots(combined)
@@ -200,11 +232,35 @@ def run_sec_ingestion(
         master = load_security_master(master_path)
         events = assign_sector(events, security_master=master)
         history = assign_sector(history, security_master=master)
-    save_snapshot(events, target_dir / "sec_holdings_events.csv")
-    save_snapshot(history, target_dir / "sec_holdings_history.csv")
+
+    if incremental:
+        refreshed = combined[["manager_code", "report_period"]].drop_duplicates()
+
+        def replace_refreshed_periods(existing: pd.DataFrame, replacement: pd.DataFrame) -> pd.DataFrame:
+            if existing.empty:
+                return replacement.copy()
+            tagged = existing.merge(
+                refreshed.assign(_refreshed=True),
+                on=["manager_code", "report_period"],
+                how="left",
+            )
+            retained = tagged[tagged["_refreshed"].isna()].drop(columns="_refreshed")
+            return pd.concat([retained, replacement], ignore_index=True, sort=False)
+
+        events = replace_refreshed_periods(existing_events, events)
+        history = replace_refreshed_periods(existing_history, history)
+
+    history = history.sort_values(
+        ["manager_code", "report_period", "portfolio_weight"],
+        ascending=[True, True, False],
+    ).reset_index(drop=True)
+    events = events.sort_values(
+        ["manager_code", "available_at", "portfolio_weight"],
+        ascending=[True, True, False],
+    ).reset_index(drop=True)
+    save_snapshot(events, events_path)
+    save_snapshot(history, history_path)
     return history
-
-
 def build_live_snapshot() -> pd.DataFrame:
     """Attempt to build a live snapshot from the configured sources."""
     frames: list[pd.DataFrame] = []
